@@ -1,0 +1,275 @@
+.page-header {
+	background-color: $space-light;
+
+	&__top {
+		position: fixed;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		min-height: 60px;
+		padding-left: $phones-paddings;
+		padding-right: $phones-paddings;
+		background-color: $space-light;
+
+		@media (min-width: $tablet) {
+			padding-left: $tablets-paddings;
+			padding-right: $tablets-paddings;
+		}
+
+		@media (min-width: $desktop) {
+			padding-left: $desktops-paddings;
+			padding-right: $desktops-paddings;
+		}
+	}
+
+	&__logo-link {
+		display: flex;
+		align-items: center;
+		margin-right: auto;
+		height: 60px;
+
+		svg {
+			width: 115px;
+			height: 16px;
+		}
+	}
+
+	&__nav {
+		order: -1;
+
+		&-button {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			left: -12px;
+			width: 50px;
+			height: 60px;
+			padding: 0;
+			justify-self: end;
+			border: none;
+			background-color: transparent;
+			user-select: none;
+			outline: transparent;
+
+			&-text {
+				display: none;
+
+				@media (min-width: $tablet) {
+					display: block;
+				}
+			}
+
+			&-burger {
+				position: relative;
+				display: inline-block;
+				width: 25px;
+				height: 2px;
+				background: $white;
+				transition: background .2s .4s;
+
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					width: 100%;
+					height: 2px;
+					background: $white;
+					transform-origin: 50% 50%;
+					transition: top .2s .2s, transform .2s;
+				}
+
+				&::before {
+					top: 10px;
+				}
+
+				&::after {
+					top: -10px;
+				}
+
+				@media (min-width: $tablet) {
+					display: none;
+				}
+			}
+		}
+
+		&-list {
+			position: fixed;
+			display: none;
+			top: 60px;
+			left: 0;
+			@include reset-list-style;
+			padding-bottom: 15px;
+			width: 100%;
+			background-color: $space-light;
+
+			@media (min-width: $tablet) {
+				position: static;
+				display: block;
+			}
+		}
+
+		&-item {
+			background-color: $space-light;
+		}
+
+		&-link {
+			display: block;
+			padding-left: 70px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			color: $white;
+			font-family: Roboto, Arial, sans-serif;
+			font-size: 16px;
+			line-height: 20px;
+			text-decoration: none;
+			background-color: $space-light;
+		}
+	}
+
+	@keyframes yo_navi {
+		0% { transform: translateX(-2000px); }
+		100% { transform: translateX(0); }
+	}
+
+	@keyframes yo_search {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+	}
+
+	.show-navigation {
+		display: block;
+		animation-name: yo_navi;
+		animation-duration: .4s;
+	}
+
+	.nav-button--open {
+		.page-header__nav-button-burger {
+			background: 0 0;
+			transition: background .2s 0;
+
+			&::before,
+			&::after {
+				top: 0;
+				transition: top .2s, transform .2s .4s;
+			}
+
+			&::before {
+				transform: rotate3d(0,0,1,45deg);
+			}
+
+			&::after {
+				transform: rotate3d(0,0,1,-45deg);
+			}
+		}
+	}
+
+	&__search-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		outline: transparent;
+
+		&--open {
+			position: absolute;
+			right: 0;
+			z-index: 2;
+			animation-name: yo_search;
+			animation-duration: .2s;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				left: 18px;
+				width: 23px;
+				height: 2px;
+				background-color: $white;
+			}
+
+			&::before {
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
+
+			svg {
+				display: none;
+			}
+		}
+	}
+
+	&__search-wrapper {
+		position: absolute;
+		display: none;
+		top: 0;
+		left: 0;
+		padding-left: $phones-paddings;
+		padding-right: $phones-paddings;
+		width: 100%;
+		height: 60px;
+		background-color: $space-light;
+
+		&--open {
+			display: block;
+			animation-name: yo_search;
+			animation-duration: .2s;
+		}
+	}
+
+	&__search-form {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 60px;
+
+		&-field {
+			padding: 0;
+			padding-left: 42px;
+			padding-right: 42px;
+			flex-grow: 1;
+			height: 60px;
+			background-color: transparent;
+			border: none;
+			outline: transparent;
+		}
+
+		&-button {
+			position: absolute;
+			left: -20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			padding: 0;
+			background-color: transparent;
+			border: none;
+		}
+	}
+
+	&__login-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+		height: 60px;
+		background-color: transparent;
+		border: none;
+	}
+
+	&__player {
+		padding-top: 60px;
+		min-height: 300px;
+	}
+}

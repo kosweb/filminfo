@@ -11,31 +11,41 @@
   </head>
   <body>
 		<header class="page-header">
-			<section class="page-header__nav">
+			<section class="page-header__top">
 				<h1 class="visually-hidden">Информация про кинематограф со всей планеты</h1>
 
-				<div class="page-header__logo-wrapper">
-					<a href="index.html" class="page-header__logo-link">
-						<svg width="184" height="23" role="image" aria-label="Логотип Filminfo">
-							<use xlink:href="./img/svg-sprite.svg#logo"></use>
-						</svg>
-					</a>
-				</div>
+				<a href="index.html" class="page-header__logo-link">
+					<svg width="184" height="23" role="image" aria-label="Логотип Filminfo">
+						<use xlink:href="./img/svg-sprite.svg#logo"></use>
+					</svg>
+				</a>
 
-				<nav class="page-header__nav main-nav">
-					<button class="main-nav__button" type="button"><span class="main-nav__button-text">Меню</span></button>
-					<ul class="main-nav__list">
-						<li class="main-nav__item">Фильмы</li>
-						<li class="main-nav__item">Сериалы</li>
-						<li class="main-nav__item">Персоны</li>
+				<nav class="page-header__nav">
+					<button class="page-header__nav-button" type="button"><span class="page-header__nav-button-text">Меню</span><span class="page-header__nav-button-burger"></span></button>
+					<ul class="page-header__nav-list">
+						<li class="page-header__nav-item">
+							<a href="#" class="page-header__nav-link">Фильмы</a>
+						</li>
+						<li class="page-header__nav-item">
+							<a href="#" class="page-header__nav-link">Сериалы</a>
+						</li>
+						<li class="page-header__nav-item">
+							<a href="#" class="page-header__nav-link">Персоны</a>
+						</li>
 					</ul>
 				</nav>
 
+				<button class="page-header__search-button" type="button" aria-label="Кнопка открытия поля поиска">
+					<svg width="32" height="32">
+						<use xlink:href="./img/svg-sprite.svg#search"></use>
+					</svg>
+				</button>
+
 				<div class="page-header__search-wrapper">
-					<form action="#" method="get" class="page-header__search-form search-form">
+					<form action="#" method="get" class="page-header__search-form">
 						<label class="visually-hidden" for="search-input">Поиск по сайту</label>
-						<input class="search-form__field" id="search-input" type="text" placeholder="Фильмы, сериалы, персоны">
-						<button class="search-form__button" type="submit" aria-label="Кнопка поиска">
+						<input class="page-header__search-form-field" id="search-input" type="text">
+						<button class="page-header__search-form-button" type="submit" aria-label="Кнопка подтверждения поиска">
 							<svg width="32" height="32">
 								<use xlink:href="./img/svg-sprite.svg#search"></use>
 							</svg>
@@ -43,9 +53,7 @@
 					</form>
 				</div>
 
-				<div class="page-header__login-button-wrapper">
-					<button class="page-header__login-button" type="button">Войти</button>
-				</div>
+				<button class="page-header__login-button" type="button">Войти</button>
 			</section>
 
 			<section class="page-header__player"></section>
