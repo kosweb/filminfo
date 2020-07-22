@@ -1,6 +1,64 @@
 .extended-films {
+
 	&__title-wrapper {
+		position: relative;
+		margin-bottom: 25px;
+	}
+
+	&__description {
+		margin: 0;
+		margin-bottom: 40px;
+	}
+
+	&__link {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+
+	&__list {
+		@include reset-list-style;
+		display: grid;
+	}
+
+	&__item {
+		text-align: center;
+	}
+
+	&__poster-wrapper {
 		position: relative;
 	}
 
+	&__poster-link {
+		display: block;
+	}
+
+	&__button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: transparent;
+		border: none;
+		outline: none;
+
+		svg	{
+			transition: transform 0.1s;
+
+			circle {
+				transition: fill-opacity 0.1s;
+			}
+		}
+
+		&:active {
+			svg	{
+				transform: scale(1.1);
+
+				circle {
+					fill-opacity: 1;
+				}
+			}
+		}
+	}
 }
