@@ -16,20 +16,20 @@
 	src: local('Robotomedium'),
 		local('Roboto Medium'),
     local('Roboto-Medium'),
-    url('../fonts/oswaldmedium.woff2') format('woff2'),
-    url('../fonts/oswaldmedium.woff') format('woff');
+    url('../fonts/robotomedium.woff2') format('woff2'),
+    url('../fonts/robotomedium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: Montserrat;
-  src: local('Montserratbold'),
-    local('Montserrat Bold'),
-    local('Montserrat-Bold'),
-    url('../fonts/montserratbold.woff2') format('woff2'),
-    url('../fonts/montserratbold.woff') format('woff');
+  font-family: Robotobold;
+	src: local('Robotobold'),
+		local('Roboto Bold'),
+    local('Roboto-Bold'),
+    url('../fonts/robotobold.woff2') format('woff2'),
+    url('../fonts/robotobold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;

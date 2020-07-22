@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preload" href="./fonts/roboto.woff2" as="font">
 		<link rel="preload" href="./fonts/robotomedium.woff2" as="font">
-		<link rel="preload" href="./fonts/montserratbold.woff2" as="font">
+		<link rel="preload" href="./fonts/robotobold.woff2" as="font">
 		<link rel="stylesheet" href="./css/style.min.css">
     <title>Filminfo</title>
   </head>
@@ -44,7 +44,7 @@
 				<div class="page-header__search-wrapper">
 					<form action="#" method="get" class="page-header__search-form">
 						<label class="visually-hidden" for="search-input">Поиск по сайту</label>
-						<input class="page-header__search-form-field" id="search-input" type="text">
+						<input class="page-header__search-form-field" id="search-input" type="text" autocomplete="off">
 						<button class="page-header__search-form-button" type="submit" aria-label="Кнопка подтверждения поиска">
 							<svg width="32" height="32">
 								<use xlink:href="./img/svg-sprite.svg#search"></use>
@@ -56,17 +56,19 @@
 				<button class="page-header__login-button" type="button">Войти</button>
 			</section>
 
-			<section class="page-header__player"></section>
+			<section class="page-header__videoplayer-wrapper">
+				<video class="page-header__videoplayer" controls src="./video/joker.mp4" width="100%" poster="./img/content/top-joker.jpg"></video>
+			</section>
 		</header>
 
 		<main class="page-main">
 			<section class="page-main__extended-films extended-films">
 				<div class="extended-films__title-wrapper">
-					<h2 class="extended-films__title main-title">5 самых ожидаемых фильмов</h2>
+					<h2 class="extended-films__title main-title">
+						Топ 5 самых<br><span class="main-title__stroke">ожидаемых</span><br> фильмов
+						<a href="#" class="main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
+					</h2>
 					<p class="extended-films__description">Примьеры, которые выйдут в ближайшее время</p>
-					<div class="extended-films__link-wrapper">
-						<a href="#" class="extended-films__link main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
-					</div>
 				</div>
 				<div class="extended-films__list-wrapper">
 					<ul class="extended-films__list">
@@ -161,11 +163,11 @@
 
 			<section class="page-main__digital-release digital-release">
 				<div class="digital-release__title-wrapper">
-					<h2 class="digital-release__title main-title">Цифровые релизы</h2>
-					<p class="digital-release__description">Фильмы, которые в скором времени появятся в онлайн кинотеатрах, стриминговых сервисах и на DVD</p>
-					<div class="digital-release__link-wrapper">
+					<h2 class="digital-release__title main-title">
+						Цифровые релизы
 						<a href="#" class="digital-release__link main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
-					</div>
+					</h2>
+					<p class="digital-release__description">Фильмы, которые в скором времени появятся в онлайн кинотеатрах, стриминговых сервисах и на DVD</p>
 				</div>
 				<div class="digital-release__list-wrapper">
 					<ul class="digital-release__list">
@@ -205,10 +207,10 @@
 
 			<section class="page-main__famous-movies famous-movies">
 				<div class="famous-movies__title-wrapper">
-					<h2 class="famous-movies__title main-title">Популярные фильмы</h2>
-					<div class="famous-movies__link-wrapper">
+					<h2 class="famous-movies__title main-title">
+						Популярные фильмы
 						<a href="#" class="famous-movies__link main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
-					</div>
+					</h2>
 				</div>
 				<div class="famous-movies__slider-toggles">
 					<button class="famous-movies__slider-button" type="button" aria-label="Назад"></button>

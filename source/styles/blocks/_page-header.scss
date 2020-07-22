@@ -1,8 +1,10 @@
 .page-header {
+	margin-bottom: 15px;
 	background-color: $space-light;
 
 	&__top {
 		position: fixed;
+		z-index: 1;
 		display: flex;
 		align-items: center;
 		width: 100%;
@@ -32,6 +34,16 @@
 			width: 115px;
 			height: 16px;
 		}
+	}
+
+	@keyframes yo_navi {
+		0% { transform: translateX(-2000px); }
+		100% { transform: translateX(0); }
+	}
+
+	@keyframes yo_search {
+		0% { transform: scale(0); opacity: 0; }
+		100% { transform: scale(1); opacity: 1; }
 	}
 
 	&__nav {
@@ -92,6 +104,28 @@
 					display: none;
 				}
 			}
+
+			&--open {
+
+				.page-header__nav-button-burger {
+					background: 0 0;
+					transition: background .2s 0;
+
+					&::before,
+					&::after {
+						top: 0;
+						transition: top .2s, transform .2s .4s;
+					}
+
+					&::before {
+						transform: rotate3d(0,0,1,45deg);
+					}
+
+					&::after {
+						transform: rotate3d(0,0,1,-45deg);
+					}
+				}
+			}
 		}
 
 		&-list {
@@ -103,6 +137,12 @@
 			padding-bottom: 15px;
 			width: 100%;
 			background-color: $space-light;
+
+			&--show {
+				display: block;
+				animation-name: yo_navi;
+				animation-duration: .4s;
+			}
 
 			@media (min-width: $tablet) {
 				position: static;
@@ -125,43 +165,6 @@
 			line-height: 20px;
 			text-decoration: none;
 			background-color: $space-light;
-		}
-	}
-
-	@keyframes yo_navi {
-		0% { transform: translateX(-2000px); }
-		100% { transform: translateX(0); }
-	}
-
-	@keyframes yo_search {
-		0% { opacity: 0; }
-		100% { opacity: 1; }
-	}
-
-	.show-navigation {
-		display: block;
-		animation-name: yo_navi;
-		animation-duration: .4s;
-	}
-
-	.nav-button--open {
-		.page-header__nav-button-burger {
-			background: 0 0;
-			transition: background .2s 0;
-
-			&::before,
-			&::after {
-				top: 0;
-				transition: top .2s, transform .2s .4s;
-			}
-
-			&::before {
-				transform: rotate3d(0,0,1,45deg);
-			}
-
-			&::after {
-				transform: rotate3d(0,0,1,-45deg);
-			}
 		}
 	}
 
@@ -268,8 +271,12 @@
 		border: none;
 	}
 
-	&__player {
+	&__videoplayer-wrapper {
 		padding-top: 60px;
-		min-height: 300px;
+		background-color: $space;
+	}
+
+	&__videoplayer {
+		display: block;
 	}
 }
