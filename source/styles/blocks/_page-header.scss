@@ -12,6 +12,7 @@
 		padding-left: $phones-paddings;
 		padding-right: $phones-paddings;
 		background-color: $space-light;
+		border-bottom: 1px solid $space;
 
 		@media (min-width: $tablet) {
 			padding-left: $tablets-paddings;
@@ -27,7 +28,7 @@
 	&__logo-link {
 		display: flex;
 		align-items: center;
-		margin-right: auto;
+		margin-right: 20px;
 		height: 60px;
 
 		svg {
@@ -131,10 +132,9 @@
 		&-list {
 			position: fixed;
 			display: none;
-			top: 60px;
+			top: 61px;
 			left: 0;
 			@include reset-list-style;
-			padding-bottom: 15px;
 			width: 100%;
 			background-color: $space-light;
 
@@ -152,6 +152,7 @@
 
 		&-item {
 			background-color: $space-light;
+			border-bottom: 1px solid $space;
 		}
 
 		&-link {
@@ -172,6 +173,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin-left: auto;
 		width: 60px;
 		height: 60px;
 		padding: 0;
@@ -264,8 +266,9 @@
 		align-items: center;
 		justify-content: center;
 		padding: 0;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-right: -5px;
 		height: 60px;
 		background-color: transparent;
 		border: none;
