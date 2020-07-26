@@ -56,9 +56,4 @@ img {
 		color: transparent;
 		-webkit-text-stroke: 1px $turquoise;
 	}
-
-	@media (min-width: $tablet) {
-		font-size: 60px;
-		line-height: 70px;
-	}
 }

@@ -70,10 +70,10 @@
 					<a href="#" class="extended-films__link"><span class="visually-hidden">Просмотреть все</span></a>
 				</div>
 				<p class="extended-films__title-description">Примьеры, которые выйдут в ближайшее время</p>
-				<div class="extended-films__slider">
-					<div class="extended-films__slider-wrapper">
+				<div class="extended-films__slider-wrapper">
+					<div class="extended-films__slider">
 						<ul class="extended-films__slider-list">
-							<li class="extended-films__slider-item">
+							<li class="extended-films__slider-item extended-films__slider-item--active">
 								<div class="extended-films__poster-wrapper">
 									<a class="extended-films__poster-link" href="#">
 										<picture>
@@ -146,8 +146,8 @@
 								</p>
 							</li>
 						</ul>
-						<div class="extended-films__control-wrapper">
-							<button class="extended-films__slider-control extended-films__slider-control--prev" type="button" aria-label="Предыдущий слайд">
+						<div class="extended-films__slider-control-wrapper">
+							<button class="extended-films__slider-control extended-films__slider-control--prev" type="button" aria-label="Предыдущий постер фильма">
 								<div class="slider-control-inner">
 									<svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 										<g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
@@ -157,7 +157,7 @@
 									</svg>
 								</div>
 							</button>
-							<button class="extended-films__slider-control extended-films__slider-control--play" type="button" aria-label="Предыдущий слайд">
+							<button class="extended-films__slider-trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
 								<div class="slider-control-inner">
 									<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 										<g>
@@ -166,7 +166,7 @@
 									</svg>
 								</div>
 							</button>
-							<button class="extended-films__slider-control extended-films__slider-control--next" type="button" aria-label="Следующий слайд">
+							<button class="extended-films__slider-control extended-films__slider-control--next" type="button" aria-label="Следующий постер фильма">
 								<div class="slider-control-inner">
 									<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 										<g>
@@ -176,6 +176,13 @@
 									</svg>
 								</div>
 							</button>
+						</div>
+						<div class="extended-films__dots-wrapper">
+							<div class="extended-films__dot extended-films__dot--active"></div>
+							<div class="extended-films__dot"></div>
+							<div class="extended-films__dot"></div>
+							<div class="extended-films__dot"></div>
+							<div class="extended-films__dot"></div>
 						</div>
 					</div>
 				</div>

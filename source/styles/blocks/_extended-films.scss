@@ -35,30 +35,15 @@
 	&__slider {
 		position: relative;
 		overflow: hidden;
-		max-width: 640px;
+		padding-top: 50px;
+		max-width: 300px;
 		margin-left: auto;
 		margin-right: auto;
-		padding-top: 45px;
-		padding-left: 10px;
-		padding-right: 10px;
 		user-select: none;
-		background-color: $space-light;
-
-		@media (min-width: 340px) {
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-	}
-
-	&__slider-wrapper {
-		position: relative;
-		overflow: hidden;
-		padding-bottom: 80px;
 	}
 
 	&__control-wrapper {
 		position: relative;
-		max-width: 300px;
 		height: 60px;
 		margin: 0 auto;
 	}
@@ -78,28 +63,10 @@
 
 		&--prev {
 			left: 0;
-
-			@media (min-width: 340px) {
-			}
-		}
-
-		&--play {
-			left: 50%;
-			transform: translate(-50%, -50%);
-
-			svg	{
-				margin-left: 20px;
-			}
-
-			@media (min-width: 340px) {
-			}
 		}
 
 		&--next {
 			right: 0;
-
-			@media (min-width: 340px) {
-			}
 		}
 
 		.slider-control-inner {
@@ -142,6 +109,46 @@
 		}
 	}
 
+	&__slider-trailer-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 60px;
+		height: 60px;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		overflow: hidden;
+		border: 2px solid $turquoise;
+		border-radius: 50%;
+
+		svg	{
+			margin-left: 20px;
+		}
+
+		.slider-control-inner {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+
+			svg {
+				width: 60%;
+				height: 60%;
+				fill: $white;
+				overflow: visible;
+
+				path {
+					transition: fill 0.2s;
+				}
+				&:active path {
+					fill: $turquoise;
+				}
+			}
+		}
+	}
+
 	&__slider-list {
 		@include reset-list-style;
 		display: grid;
@@ -163,7 +170,6 @@
 
 	&__poster-wrapper {
 		position: relative;
-		max-width: 300px;
 		margin: 0 auto;
 		margin-bottom: 15px;
 	}
@@ -181,7 +187,6 @@
 		align-items: flex-start;
 		justify-content: space-between;
 		margin: 0 auto;
-		max-width: 300px;
 	}
 
 	&__name {
@@ -198,5 +203,27 @@
 		text-align: right;
 		font-weight: 400;
 		color: $turquoise;
+	}
+
+	&__dots-wrapper {
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	&__dot {
+		width: 15px;
+		height: 15px;
+		border: 1px solid $turquoise;
+		border-radius: 50%;
+
+		&--active {
+			background-color: $turquoise;
+		}
 	}
 }

@@ -67,10 +67,6 @@
 
 			&-text {
 				display: none;
-
-				@media (min-width: $tablet) {
-					display: block;
-				}
 			}
 
 			&-burger {
@@ -99,10 +95,6 @@
 
 				&::after {
 					top: -10px;
-				}
-
-				@media (min-width: $tablet) {
-					display: none;
 				}
 			}
 
@@ -142,11 +134,6 @@
 				display: block;
 				animation-name: yo_navi;
 				animation-duration: .4s;
-			}
-
-			@media (min-width: $tablet) {
-				position: static;
-				display: block;
 			}
 		}
 
