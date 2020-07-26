@@ -1,10 +1,19 @@
 .movie-news {
 
+	&__header {
+		margin-bottom: 25px;
+	}
+
 	&__title {
-		margin-bottom: 15px;
+		margin-bottom: 25px;
 		display: flex;
 		flex-direction: column;
+		font-size: 25px;
 		align-items: center;
+
+		.main-title__stroke {
+			font-size: 30px;
+		}
 	}
 
 	&__nav-list {
@@ -14,5 +23,30 @@
 		display: flex;
 		justify-content: space-between;
 		list-style: none;
+	}
+
+	&__nav-link {
+		color: $turquoise;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 13px;
+		animation: pulse-color 0.5s infinite alternate;
+	}
+
+	&__list {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+		list-style: none;
+	}
+
+	&__list-item {
+		margin-bottom: 25px;
+	}
+
+	&__text-link {
+		display: block;
+		color: $turquoise;
+		text-align: right;
 	}
 }

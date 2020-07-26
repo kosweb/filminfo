@@ -69,6 +69,7 @@ img {
 		background-image: url('../../img/content/arrow-small.svg');
 		background-repeat: no-repeat;
 		background-position: center center;
+		animation: pulse-soso 1.5s infinite alternate;
 	}
 
 	&__description {
@@ -76,4 +77,28 @@ img {
 		margin-bottom: 30px;
 		color: rgba(109, 109, 109, 0.4);
 	}
+}
+
+@keyframes pulse {
+	0% { border-color: $turquoise; }
+	100% { border-color: rgba(0, 204, 255, 0.1); }
+}
+
+@keyframes active-pulse {
+	0% { background-color: $turquoise; }
+	100% { background-color: rgba(0, 204, 255, 0.6); }
+}
+
+@keyframes pulse-soso {
+	0% { border-color: $turquoise; }
+	100% { border-color: rgba(0, 204, 255, 0.6); }
+}
+
+@keyframes pulse-color {
+	0% { color: $turquoise; }
+	100% { color: rgba(0, 204, 255, 0.8); }
+}
+
+.anime-pulse {
+	animation: pulse 1.5s infinite alternate;
 }

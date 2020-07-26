@@ -1,0 +1,9 @@
+.page-footer {
+	padding-left: $phones-paddings;
+	padding-right: $phones-paddings;
+	background-color: $space-light;
+
+	&__logo-wrapper {
+		text-align: center;
+	}
+}
