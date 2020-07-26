@@ -1,0 +1,18 @@
+.movie-news {
+
+	&__title {
+		margin-bottom: 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__nav-list {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+	}
+}

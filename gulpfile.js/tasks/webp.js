@@ -12,7 +12,7 @@ task('webp', function () {
   return src(`${cfg.paths.src.images.content}**/*.{jpg,png}`)
     .pipe(changed(cfg.paths.dest.images.content))
     .pipe(imagemin([imageminWebp({
-      quality: 80
+      quality: 90
     })]))
     .pipe(rename({
       extname: '.webp'

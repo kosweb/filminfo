@@ -21,7 +21,7 @@ task('images', function () {
     imagemin.optipng(),
     imagemin.svgo({ plugins: pluginsSvgo }),
     imageminJpegoptim({
-      max: 80,
+      max: 90,
       progressive: true
     })
   ];

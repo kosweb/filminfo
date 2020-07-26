@@ -20,6 +20,12 @@
 	}
 
 	&__famous-movies {
+		margin-bottom: 25px;
+	}
+
+	&__movie-news {
+		padding-left: $phones-paddings;
+		padding-right: $phones-paddings;
 		margin-bottom: 35px;
 	}
 }

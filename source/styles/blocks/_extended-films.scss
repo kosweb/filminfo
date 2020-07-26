@@ -7,9 +7,19 @@
 		margin-bottom: 25px;
 	}
 
+	&__title {
+		flex: 0 0 ;
+	}
+
 	&__slider-wrapper {
-		background-color: $space-light;
 		border-radius: 15px;
+		max-width: 420px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media (min-width: 370px) {
+			background-color: $space-light;
+		}
 	}
 
 	&__slider {
@@ -38,14 +48,6 @@
 		overflow: hidden;
 		border: 2px solid $turquoise;
 		border-radius: 50%;
-
-		&--prev {
-			left: 0;
-		}
-
-		&--next {
-			right: 0;
-		}
 
 		.slider-control-inner {
 			display: flex;
@@ -124,7 +126,9 @@
 	}
 
 	&__slider-list {
-		@include reset-list-style;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
 		display: grid;
 		grid-template-columns: repeat(5, 100%);
 		grid-gap: 50px;
@@ -132,6 +136,7 @@
 		overflow-x: scroll;
 		scroll-behavior: smooth;
 		scrollbar-width: none;
+		list-style: none;
 
 		&::-webkit-scrollbar {
 			width: 0;
@@ -161,7 +166,10 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
 	&__name {
@@ -182,7 +190,7 @@
 
 	&__dots-wrapper {
 		position: absolute;
-		top: 15px;
+		top: 20px;
 		left: 50%;
 		transform: translateX(-50%);
 		display: flex;
