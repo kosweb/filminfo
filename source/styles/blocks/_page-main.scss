@@ -9,12 +9,13 @@
 	&__digital-release {
 		padding-left: $phones-paddings;
 		padding-right: $phones-paddings;
-		margin-bottom: 35px;
 	}
 
 	&__top-movies {
 		padding-left: $phones-paddings;
 		padding-right: $phones-paddings;
-		margin-bottom: 35px;
+		padding-top: 35px;
+		padding-bottom: 35px;
+		margin-bottom: 20px;
 	}
 }

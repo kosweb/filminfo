@@ -221,107 +221,106 @@
 			</section>
 
 			<section class="page-main__top-movies top-movies">
-				<div class="top-movies__wrapper">
+				<div class="top-movies__title-wrapper">
 					<h2 class="top-movies__title main-title">Топ 10<br><span class="main-title__stroke">фильмов</span><br>к просмотру</h2>
-					<p class="top-movies__description">Десятка лучших фильмов по версии нашего сайта, которые заслуживают вашего внимания</p>
-					<div class="top-movies__link-wrapper">
-						<a href="#" class="top-movies__link">Смотреть</a>
-					</div>
+					<a href="#" class="digital-release__link main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
 				</div>
+				<p class="top-movies__description main-title__description">Десятка лучших фильмов по версии нашего сайта, которые заслуживают вашего внимания!</p>
+				<div class="top-movies__overlay"></div>
 			</section>
 
 			<section class="page-main__famous-movies famous-movies">
 				<div class="famous-movies__title-wrapper">
-					<h2 class="famous-movies__title main-title">
-						Популярные фильмы
-						<a href="#" class="famous-movies__link main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
-					</h2>
+					<h2 class="famous-movies__title main-title">Популярные<br><span class="main-title__stroke">фильмы</span></h2>
+					<a href="#" class="famous-movies__link main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
 				</div>
-				<div class="famous-movies__slider-toggles">
-					<button class="famous-movies__slider-button" type="button" aria-label="Назад"></button>
-					<button class="famous-movies__slider-button" type="button" aria-label="Вперед"></button>
-				</div>
-				<div class="famous-movies__list-wrapper">
-					<ul class="famous-movies__list">
-						<li class="famous-movies__item">
-							<a href="#" class="famous-movies__image-link">
-								<picture>
-									<source type="image/webp" srcset="./img/content/sm.webp">
-									<img class="famous-movies__image" src="./img/content/sm.jpg" alt="Кадр из фильма «Человек-паук»">
-								</picture>
-							</a>
-							<p class="famous-movies__description">
-								<a class="famous-movies__name" href="#">Человек-паук</a>
-								<b class="famous-movies__rating">7.6 / 10</b>
-								<span class="famous-movies__year">2002</span>
-							</p>
-						</li>
-						<li class="famous-movies__item">
-							<a href="#" class="famous-movies__image-link">
-								<picture>
-									<source type="image/webp" srcset="./img/content/avengers.webp">
-									<img class="famous-movies__image" src="./img/content/avengers.jpg" alt="Кадр из фильма «Мстители‎»">
-								</picture>
-							</a>
-							<p class="famous-movies__description">
-								<a class="famous-movies__name" href="#">Мстители</a>
-								<b class="famous-movies__rating">7.9 / 10</b>
-								<span class="famous-movies__year">2012</span>
-							</p>
-						</li>
-						<li class="famous-movies__item">
-							<a href="#" class="famous-movies__image-link">
-								<picture>
-									<source type="image/webp" srcset="./img/content/hp.webp">
-									<img class="famous-movies__image" src="./img/content/hp.jpg" alt="Кадр из фильма «Гарри Поттер и философский камень‎»">
-								</picture>
-							</a>
-							<p class="famous-movies__description">
-								<a class="famous-movies__name" href="#">Гарри Поттер и философский камень‎</a>
-								<b class="famous-movies__rating">8.2 / 10</b>
-								<span class="famous-movies__year">2001</span>
-							</p>
-						</li>
-						<li class="famous-movies__item">
-							<a href="#" class="famous-movies__image-link">
-								<picture>
-									<source type="image/webp" srcset="./img/content/sw.webp">
-									<img class="famous-movies__image" src="./img/content/sw.jpg" alt="Кадр из фильма «Звёздные войны: Месть ситхов»">
-								</picture>
-							</a>
-							<p class="famous-movies__description">
-								<a class="famous-movies__name" href="#">Звёздные войны: Месть ситхов</a>
-								<b class="famous-movies__rating">8.1 / 10</b>
-								<span class="famous-movies__year">2005</span>
-							</p>
-						</li>
-						<li class="famous-movies__item">
-							<a href="#" class="famous-movies__image-link">
-								<picture>
-									<source type="image/webp" srcset="./img/content/prison.webp">
-									<img class="famous-movies__image" src="./img/content/prison.jpg" alt="Кадр из фильма «Побег из Шоушенка‎»">
-								</picture>
-							</a>
-							<p class="famous-movies__description">
-								<a class="famous-movies__name" href="#">Побег из Шоушенка</a>
-								<b class="famous-movies__rating">9.1 / 10</b>
-								<span class="famous-movies__year">1994</span>
-							</p>
-						</li>
-						<li class="famous-movies__item">
-							<a href="#" class="famous-movies__image-link">
-								<picture>
-									<source type="image/webp" srcset="./img/content/lotr.webp">
-									<img class="famous-movies__image" src="./img/content/lotr.jpg" alt="Кадр из фильма «Властелин колец: Братство кольца‎»">
-								</picture>
-							</a>
-							<p class="famous-movies__description">
-								<a class="famous-movies__name" href="#">Властелин колец: Братство кольца‎</a>
-								<b class="famous-movies__rating">8.6 / 10</b>
-								<span class="famous-movies__year">2001</span>
-							</p>
-						</li>
-					</ul>
+				<div class="famous-movies__slider-wrapper">
+					<div class="famous-movies__slider">
+						<ul class="famous-movies__slider-list">
+							<li class="famous-movies__slider-item famous-movies__slider-item--active">
+								<a href="#" class="famous-movies__image-link">
+									<picture>
+										<source type="image/webp" srcset="./img/content/sm.webp">
+										<img class="famous-movies__image" src="./img/content/sm.jpg" alt="Кадр из фильма «Человек-паук»">
+									</picture>
+								</a>
+								<p class="famous-movies__description">
+									<a class="famous-movies__name" href="#">Человек-паук</a>
+									<b class="famous-movies__rating">7.6 / 10</b>
+									<span class="famous-movies__year">2002</span>
+								</p>
+							</li>
+							<li class="famous-movies__slider-item">
+								<a href="#" class="famous-movies__image-link">
+									<picture>
+										<source type="image/webp" srcset="./img/content/avengers.webp">
+										<img class="famous-movies__image" src="./img/content/avengers.jpg" alt="Кадр из фильма «Мстители‎»">
+									</picture>
+								</a>
+								<p class="famous-movies__description">
+									<a class="famous-movies__name" href="#">Мстители</a>
+									<b class="famous-movies__rating">7.9 / 10</b>
+									<span class="famous-movies__year">2012</span>
+								</p>
+							</li>
+							<li class="famous-movies__slider-item">
+								<a href="#" class="famous-movies__image-link">
+									<picture>
+										<source type="image/webp" srcset="./img/content/hp.webp">
+										<img class="famous-movies__image" src="./img/content/hp.jpg" alt="Кадр из фильма «Гарри Поттер и философский камень‎»">
+									</picture>
+								</a>
+								<p class="famous-movies__description">
+									<a class="famous-movies__name" href="#">Гарри Поттер и философский камень‎</a>
+									<b class="famous-movies__rating">8.2 / 10</b>
+									<span class="famous-movies__year">2001</span>
+								</p>
+							</li>
+							<li class="famous-movies__slider-item">
+								<a href="#" class="famous-movies__image-link">
+									<picture>
+										<source type="image/webp" srcset="./img/content/sw.webp">
+										<img class="famous-movies__image" src="./img/content/sw.jpg" alt="Кадр из фильма «Звёздные войны: Месть ситхов»">
+									</picture>
+								</a>
+								<p class="famous-movies__description">
+									<a class="famous-movies__name" href="#">Звёздные войны: Месть ситхов</a>
+									<b class="famous-movies__rating">8.1 / 10</b>
+									<span class="famous-movies__year">2005</span>
+								</p>
+							</li>
+							<li class="famous-movies__slider-item">
+								<a href="#" class="famous-movies__image-link">
+									<picture>
+										<source type="image/webp" srcset="./img/content/prison.webp">
+										<img class="famous-movies__image" src="./img/content/prison.jpg" alt="Кадр из фильма «Побег из Шоушенка‎»">
+									</picture>
+								</a>
+								<p class="famous-movies__description">
+									<a class="famous-movies__name" href="#">Побег из Шоушенка</a>
+									<b class="famous-movies__rating">9.1 / 10</b>
+									<span class="famous-movies__year">1994</span>
+								</p>
+							</li>
+							<li class="famous-movies__slider-item">
+								<a href="#" class="famous-movies__image-link">
+									<picture>
+										<source type="image/webp" srcset="./img/content/lotr.webp">
+										<img class="famous-movies__image" src="./img/content/lotr.jpg" alt="Кадр из фильма «Властелин колец: Братство кольца‎»">
+									</picture>
+								</a>
+								<p class="famous-movies__description">
+									<a class="famous-movies__name" href="#">Властелин колец: Братство кольца‎</a>
+									<b class="famous-movies__rating">8.6 / 10</b>
+									<span class="famous-movies__year">2001</span>
+								</p>
+							</li>
+						</ul>
+						<div class="famous-movies__control-wrapper">
+							<button class="famous-movies__slider-button famous-movies__slider-button--prev" type="button" aria-label="Назад"></button>
+							<button class="famous-movies__slider-button famous-movies__slider-button--next" type="button" aria-label="Вперед"></button>
+						</div>
+					</div>
 				</div>
 			</section>
 

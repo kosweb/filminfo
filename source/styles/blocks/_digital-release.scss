@@ -13,20 +13,6 @@
 		margin-bottom: 0;
 		padding-left: 0;
 		list-style: none;
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			width: 100vw;
-			height: 1px;
-			background-color: #2c3333;
-		}
-
-		&::after {
-			right: 0;
-		}
 	}
 
 	&__item {
@@ -51,7 +37,7 @@
 			top: 0;
 			width: 100vw;
 			height: 1px;
-			background-color: #2c3333;
+			background-color: $space-light;
 		}
 
 		&::after {
