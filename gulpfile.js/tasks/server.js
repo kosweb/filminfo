@@ -13,7 +13,8 @@ task('server', function (done) {
     ghostMode: false,
 		open: true,
 		port: 6969,
-    ui: false,
+		ui: false,
+		reloadDelay: 1000,
   });
 
   done();

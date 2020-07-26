@@ -45,7 +45,7 @@ img {
 	font-family: Robotobold, Arial, sans-serif;
 	color: $turquoise;
 	font-size: 20px;
-	line-height: 24px;
+	line-height: 40px;
 	font-weight: 700;
 	text-transform: uppercase;
 
@@ -55,5 +55,22 @@ img {
 		letter-spacing: 2px;
 		color: transparent;
 		-webkit-text-stroke: 1px $turquoise;
+	}
+
+	&__link {
+		display: block;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: 2px solid $turquoise;
+		background-image: url('../../img/content/arrow-small.svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	&__description {
+		margin-top: 0;
+		margin-bottom: 30px;
+		color: rgba(109, 109, 109, 0.4);
 	}
 }
