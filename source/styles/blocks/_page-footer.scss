@@ -1,9 +1,29 @@
 .page-footer {
+	padding-top: 35px;
 	padding-left: $phones-paddings;
 	padding-right: $phones-paddings;
+	padding-bottom: 35px;
 	background-color: $space-light;
 
 	&__logo-wrapper {
+		margin-bottom: 20px;
 		text-align: center;
+	}
+
+	&__nav-list {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+	}
+
+	&__nav-link {
+		color: $turquoise;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 16px;
+		animation: pulse-color 2s infinite alternate;
 	}
 }
