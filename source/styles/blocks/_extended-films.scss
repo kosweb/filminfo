@@ -76,23 +76,21 @@
 	}
 
 	&__slider-list {
+		// position: relative;
 		margin-top: 0;
 		margin-bottom: 0;
 		padding-left: 0;
 		display: grid;
 		grid-template-columns: repeat(5, 100%);
-		grid-gap: 50px;
-		overflow: hidden;
+		min-height: 485px;
+		// overflow: hidden;
+		transition: transform 0.6s ease;
 		list-style: none;
-
-		&::-webkit-scrollbar {
-			width: 0;
-		}
 	}
 
 	&__poster-wrapper {
 		position: relative;
-		min-height: 429px;
+		min-height: 430px;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 15px;
@@ -103,7 +101,6 @@
 	}
 
 	&__poster {
-		display: block;
 		pointer-events: none;
 	}
 
@@ -133,6 +130,49 @@
 		color: $turquoise;
 	}
 
+	&__control-wrapper {
+		display: flex;
+		justify-content: space-between;
+		height: 60px;
+	}
+
+	&__slider-control,
+	&__slider-trailer-play {
+		width: 60px;
+		height: 60px;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: transparent;
+		border: none;
+		overflow: hidden;
+		border: 2px solid $turquoise;
+		border-radius: 50%;
+		animation: pulse 1.5s infinite alternate;
+
+
+		svg {
+			width: 60%;
+			height: 60%;
+			fill: $white;
+			pointer-events: none;
+			transition: fill 0.2s;
+		}
+
+		&:active svg {
+			fill: $turquoise;
+		}
+	}
+
+	&__slider-trailer-play {
+		animation-delay: 1.5s;
+
+		svg {
+			margin-left: 20px;
+		}
+	}
+
 	&__dots-wrapper {
 		position: absolute;
 		top: 20px;
@@ -149,10 +189,10 @@
 		height: 15px;
 		border: 1px solid $turquoise;
 		border-radius: 50%;
-		animation: pulse-soso 1.5s infinite alternate;
+		transition: background-color 0.3s;
 
 		&--active {
-			animation: active-pulse 1.5s infinite alternate;
+			background-color: $turquoise;
 		}
 	}
 }

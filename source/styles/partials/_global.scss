@@ -84,11 +84,6 @@ img {
 	100% { border-color: rgba(0, 204, 255, 0.1); }
 }
 
-@keyframes active-pulse {
-	0% { background-color: $turquoise; }
-	100% { background-color: rgba(0, 204, 255, 0.6); }
-}
-
 @keyframes pulse-soso {
 	0% { border-color: $turquoise; }
 	100% { border-color: rgba(0, 204, 255, 0.6); }
@@ -97,6 +92,21 @@ img {
 @keyframes pulse-color {
 	0% { color: $turquoise; }
 	100% { color: rgba(0, 204, 255, 0.6); }
+}
+
+@keyframes slider-show {
+	0% { transform: translateX(500px); }
+	100% { transform: translateX(0) }
+}
+
+@keyframes slider-show-reverse {
+	0% { transform: translateX(-500px); }
+	100% { transform: translateX(0) }
+}
+
+@keyframes slider-hide {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-500px) }
 }
 
 .anime-pulse {
