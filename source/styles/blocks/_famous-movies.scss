@@ -80,7 +80,7 @@
 
 	&__slider-list {
 		margin-top: 0;
-		margin-bottom: 0;
+		margin-bottom: 20px;
 		padding-left: 0;
 		display: grid;
 		grid-template-columns: repeat(6, 100%);
@@ -146,7 +146,7 @@
 
 	&__dots-wrapper {
 		position: absolute;
-		top: 5px;
+		top: 10px;
 		left: 50%;
 		transform: translateX(-50%);
 		display: flex;

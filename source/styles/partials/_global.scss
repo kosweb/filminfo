@@ -60,7 +60,6 @@ img {
 	}
 
 	&__link {
-		display: block;
 		flex: 0 0 60px;
 		width: 60px;
 		height: 60px;
@@ -79,6 +78,11 @@ img {
 	}
 }
 
+@keyframes yo_navi {
+	0% { transform: translateX(-2000px); }
+	100% { transform: translateX(0); }
+}
+
 @keyframes pulse {
 	0% { border-color: $turquoise; }
 	100% { border-color: rgba(0, 204, 255, 0.1); }
@@ -94,21 +98,11 @@ img {
 	100% { color: rgba(0, 204, 255, 0.6); }
 }
 
-@keyframes slider-show {
-	0% { transform: translateX(500px); }
-	100% { transform: translateX(0) }
-}
-
-@keyframes slider-show-reverse {
-	0% { transform: translateX(-500px); }
-	100% { transform: translateX(0) }
-}
-
-@keyframes slider-hide {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(-500px) }
-}
-
 .anime-pulse {
 	animation: pulse 1.5s infinite alternate;
+}
+
+.swiper-container {
+	width: 280px;
+	min-height: 300px;
 }

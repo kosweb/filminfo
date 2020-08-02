@@ -38,16 +38,6 @@
 		}
 	}
 
-	@keyframes yo_navi {
-		0% { transform: translateX(-2000px); }
-		100% { transform: translateX(0); }
-	}
-
-	@keyframes yo_search {
-		0% { transform: scale(0); opacity: 0; }
-		100% { transform: scale(1); opacity: 1; }
-	}
-
 	&__nav {
 		order: -1;
 
@@ -173,8 +163,6 @@
 			position: absolute;
 			right: 0;
 			z-index: 2;
-			animation-name: yo_search;
-			animation-duration: .2s;
 
 			&::before,
 			&::after {
@@ -213,8 +201,6 @@
 
 		&--open {
 			display: block;
-			animation-name: yo_search;
-			animation-duration: .2s;
 		}
 	}
 

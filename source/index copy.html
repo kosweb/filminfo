@@ -6,7 +6,6 @@
 		<link rel="preload" href="./fonts/roboto.woff2" as="font">
 		<link rel="preload" href="./fonts/robotomedium.woff2" as="font">
 		<link rel="preload" href="./fonts/robotobold.woff2" as="font">
-		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 		<link rel="stylesheet" href="./css/style.min.css">
     <title>Filminfo</title>
   </head>
@@ -72,11 +71,10 @@
 				</div>
 				<p class="extended-films__title-description main-title__description">Примьеры, которые выйдут в ближайшее время</p>
 
-				<div class="extended-films__slider">
-					<div class="swiper-container">
-
-						<ul class="swiper-wrapper">
-							<li class="swiper-slide">
+				<div class="extended-films__slider-wrapper glide">
+					<div class="extended-films__slider glide__track" data-glide-el="track">
+						<ul class="extended-films__slider-list glide__slides">
+							<li class="extended-films__slider-item glide__slide">
 								<div class="extended-films__poster-wrapper">
 									<a class="extended-films__poster-link" href="#">
 										<picture>
@@ -90,7 +88,7 @@
 									<b class="extended-films__year">17.09.2020</b>
 								</p>
 							</li>
-							<li class="swiper-slide">
+							<li class="extended-films__slider-item glide__slide">
 								<div class="extended-films__poster-wrapper">
 									<a class="extended-films__poster-link" href="#">
 										<picture>
@@ -104,7 +102,7 @@
 									<b class="extended-films__year">22.10.2020</b>
 								</p>
 							</li>
-							<li class="swiper-slide">
+							<li class="extended-films__slider-item glide__slide">
 								<div class="extended-films__poster-wrapper">
 									<a class="extended-films__poster-link" href="#">
 										<picture>
@@ -118,7 +116,7 @@
 									<b class="extended-films__year">8.10.2020</b>
 								</p>
 							</li>
-							<li class="swiper-slide">
+							<li class="extended-films__slider-item glide__slide">
 								<div class="extended-films__poster-wrapper">
 									<a class="extended-films__poster-link" href="#">
 										<picture>
@@ -132,7 +130,7 @@
 									<b class="extended-films__year">17.12.2020</b>
 								</p>
 							</li>
-							<li class="swiper-slide">
+							<li class="extended-films__slider-item glide__slide">
 								<div class="extended-films__poster-wrapper">
 									<a class="extended-films__poster-link" href="#">
 										<picture>
@@ -149,11 +147,31 @@
 								</p>
 							</li>
 						</ul>
+					</div>
 
-						<div class="swiper-pagination"></div>
+					<div class="extended-films__control-wrapper glide__arrows" data-glide-el="controls">
+						<button class="extended-films__slider-control glide__arrow glide__arrow--left" data-glide-dir="<">
+							<svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<g transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+									<polygon points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+									<path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+								</g>
+							</svg>
+						</button>
+						<button class="extended-films__slider-control glide__arrow glide__arrow--right" data-glide-dir=">">
+							<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<polygon points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+								<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+						</svg>
+						</button>
+					</div>
 
-						<button class="swiper-button-prev" type="button" aria-label="Предыдущий слайд"></button>
-						<button class="swiper-button-next" type="button" aria-label="Следующий слайд"></button>
+					<div class="extended-films__dots-wrapper " data-glide-el="controls[nav]">
+						<button type="button" class="extended-films__dot glide__bullet" data-glide-dir="=0"></button>
+						<button type="button" class="extended-films__dot glide__bullet" data-glide-dir="=1"></button>
+						<button type="button" class="extended-films__dot glide__bullet" data-glide-dir="=2"></button>
+						<button type="button" class="extended-films__dot glide__bullet" data-glide-dir="=3"></button>
+						<button type="button" class="extended-films__dot glide__bullet" data-glide-dir="=4"></button>
 					</div>
 				</div>
 			</section>
@@ -405,7 +423,7 @@
 			</nav>
 		</footer>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/@glidejs/glide"></script> -->
 		<script src="./js/index.min.js"></script>
   </body>
 </html>

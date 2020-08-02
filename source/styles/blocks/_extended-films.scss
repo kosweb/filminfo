@@ -7,192 +7,58 @@
 		margin-bottom: 25px;
 	}
 
-	&__title {
-		flex: 0 0 ;
-	}
-
-	&__slider-wrapper {
-		border-radius: 30px;
-		max-width: 420px;
-		margin-left: auto;
-		margin-right: auto;
-
-		@media (min-width: 370px) {
-			background-color: $space-light;
-			box-shadow: 0 0 3px 3px rgba(0,22,22,1);
-		}
-	}
-
 	&__slider {
-		position: relative;
-		overflow: hidden;
-		padding-top: 50px;
-		padding-bottom: 20px;
-		max-width: 300px;
-		margin-left: auto;
-		margin-right: auto;
-		user-select: none;
-	}
 
-	&__control-wrapper {
-		display: flex;
-		justify-content: space-between;
-		height: 60px;
-	}
-
-	&__slider-control,
-	&__slider-trailer-play {
-		width: 60px;
-		height: 60px;
-		padding: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: transparent;
-		border: none;
-		overflow: hidden;
-		border: 2px solid $turquoise;
-		border-radius: 50%;
-		animation: pulse 1.5s infinite alternate;
-
-		svg {
-			width: 60%;
-			height: 60%;
-			fill: $white;
-			transition: fill 0.2s;
+		.swiper-container {
+			width: 100%;
+			height: 500px;
+			padding-top: 40px;
 		}
 
-		&:active svg {
-			fill: $turquoise;
-		}
-	}
-
-	&__slider-trailer-play {
-		animation-delay: 1.5s;
-
-		svg {
-			margin-left: 20px;
-		}
-	}
-
-	&__slider-list {
-		// position: relative;
-		margin-top: 0;
-		margin-bottom: 0;
-		padding-left: 0;
-		display: grid;
-		grid-template-columns: repeat(5, 100%);
-		min-height: 485px;
-		// overflow: hidden;
-		transition: transform 0.6s ease;
-		list-style: none;
-	}
-
-	&__poster-wrapper {
-		position: relative;
-		min-height: 430px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 15px;
-	}
-
-	&__poster-link {
-		display: block;
-	}
-
-	&__poster {
-		pointer-events: none;
-	}
-
-	&__description {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-
-	&__name {
-		flex-shrink: 0 0 65%;
-		color: $white;
-		text-decoration: none;
-		max-width: 65%;
-		text-align: left;
-	}
-
-	&__year	{
-		flex-shrink: 0 0 35%;
-		width: 35%;
-		text-align: right;
-		font-weight: 400;
-		color: $turquoise;
-	}
-
-	&__control-wrapper {
-		display: flex;
-		justify-content: space-between;
-		height: 60px;
-	}
-
-	&__slider-control,
-	&__slider-trailer-play {
-		width: 60px;
-		height: 60px;
-		padding: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: transparent;
-		border: none;
-		overflow: hidden;
-		border: 2px solid $turquoise;
-		border-radius: 50%;
-		animation: pulse 1.5s infinite alternate;
-
-
-		svg {
-			width: 60%;
-			height: 60%;
-			fill: $white;
-			pointer-events: none;
-			transition: fill 0.2s;
+		.swiper-wrapper {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-left: 0;
+			list-style: none;
 		}
 
-		&:active svg {
-			fill: $turquoise;
+		.swiper-pagination {
+			top: 10px;
+			bottom: unset;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
-	}
 
-	&__slider-trailer-play {
-		animation-delay: 1.5s;
+		.swiper-pagination-bullet {
+			width: 15px;
+			height: 15px;
+			border: 1px solid $turquoise;
+			background-color: transparent;
+			opacity: 1;
+			transition: background-color 0.2s;
 
-		svg {
-			margin-left: 20px;
+			&-active {
+				background-color: $turquoise;
+			}
 		}
-	}
 
-	&__dots-wrapper {
-		position: absolute;
-		top: 20px;
-		left: 50%;
-		transform: translateX(-50%);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-	}
+		.swiper-button-prev::after,
+		.swiper-button-next::after {
+			display: none;
+		}
 
-	&__dot {
-		width: 15px;
-		height: 15px;
-		border: 1px solid $turquoise;
-		border-radius: 50%;
-		transition: background-color 0.3s;
-
-		&--active {
+		.swiper-button-prev,
+		.swiper-button-next {
+			width: 10px;
+			height: 10px;
+			border: none;
 			background-color: $turquoise;
+			animation: pulse 1.5s infinite alternate;
 		}
+
+		// .swiper-button-prev {
+		// 	left: -10px;
+		// }
 	}
 }
