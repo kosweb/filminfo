@@ -69,11 +69,28 @@
 	}
 
 	&__poster-link {
+		position: relative;
 		display: block;
-		user-select: none;
+		min-height: 237px;
 
 		picture {
 			box-shadow: 0 0 30px 30px rgba(0, 0, 0, 1);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0);
+			z-index: 0;
+			transition: background-color 0.2s;
+		}
+
+		&:active::before{
+			background-color: rgba(0, 0, 0, 1);
 		}
 	}
 

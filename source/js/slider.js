@@ -1,5 +1,14 @@
+const headerSlider = document.querySelector('.page-header__slider-container');
 const extendedSlider = document.querySelector('.swiper-container');
 const famousSlider = document.querySelector('.famous-movies__slider-container');
+
+let mySwiperHead = new Swiper(headerSlider, {
+	slidesPerView: 1,
+	loop: true,
+	autoplay: {
+    delay: 2400,
+  },
+})
 
 let mySwiperEx = new Swiper(extendedSlider, {
 	slidesPerView: 1,

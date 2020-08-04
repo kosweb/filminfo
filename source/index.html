@@ -54,12 +54,78 @@
 					</form>
 				</div>
 
-				<button class="page-header__login-button" type="button">Войти</button>
+				<button class="page-header__login-button" type="button"><span>Войти</span></button>
 			</section>
 
-			<section class="page-header__videoplayer-wrapper">
-				<video class="page-header__videoplayer" controls src="./video/joker.mp4" width="100%" poster="./img/content/top-joker.jpg"></video>
-			</section>
+			<div class="page-header__slider">
+				<div class="page-header__slider-container">
+
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<div class="page-header__poster-wrapper">
+								<a href="#" class="page-header__poster-link">
+									<picture>
+										<source type="image/webp" srcset="./img/content/header-slider1.webp">
+										<img class="page-header__image" src="./img/content/header-slider1.jpg" alt="Кадр из фильма «Человек-паук»">
+									</picture>
+								</a>
+								<button class="page-header__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<span>New trailer</span>
+								</button>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<div class="page-header__poster-wrapper">
+								<a href="#" class="page-header__poster-link">
+									<picture>
+										<source type="image/webp" srcset="./img/content/header-slider2.webp">
+										<img class="page-header__image" src="./img/content/header-slider2.jpg" alt="Кадр из фильма «Мстители‎»">
+									</picture>
+								</a>
+								<button class="page-header__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<span>New trailer</span>
+								</button>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<div class="page-header__poster-wrapper">
+								<a href="#" class="page-header__poster-link">
+									<picture>
+										<source type="image/webp" srcset="./img/content/header-slider3.webp">
+										<img class="page-header__image" src="./img/content/header-slider3.jpg" alt="Кадр из фильма «Гарри Поттер и философский камень‎»">
+									</picture>
+								</a>
+								<button class="page-header__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<span>New trailer</span>
+								</button>
+							</div>
+						</li>
+					</ul>
+
+					<!-- <div class="swiper-pagination famous-pagination"></div> -->
+
+					<!-- <div class="page-header__control-block">
+						<div class="page-header__control-wrapper">
+							<button class="page-header__slider-control swiper-button-prev" type="button" aria-label="Предыдущий постер фильма">
+								<svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+										<polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+										<path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+									</g>
+								</svg>
+							</button>
+							<button class="page-header__slider-control swiper-button-next" type="button" aria-label="Следующий постер фильма">
+								<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<g>
+										<polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+										<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+									</g>
+								</svg>
+							</button>
+						</div>
+					</div> -->
+				</div>
+			</div>
 		</header>
 
 		<main class="page-main">
@@ -488,6 +554,16 @@
 				</ul>
 			</nav>
 		</footer>
+
+		<!-- <video class=" videoplayer videoplayer--1 videoplayer--hiden" width="100%" controls autoplay>
+			<source src="./video/new-trailer1.mp4" type="video/mp4">
+		</video>
+		<video class=" videoplayer videoplayer--2 videoplayer--hiden" width="100%" controls autoplay>
+			<source src="./video/new-trailer2.mp4" type="video/mp4">
+		</video>
+		<video class=" videoplayer videoplayer--3 videoplayer--hiden" width="100%" controls autoplay>
+			<source src="./video/new-trailer3.mp4" type="video/mp4">
+		</video> -->
 		<script src="./js/index.js"></script>
   </body>
 </html>

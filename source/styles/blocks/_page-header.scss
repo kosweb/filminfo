@@ -143,6 +143,7 @@
 			font-size: 16px;
 			line-height: 20px;
 			text-decoration: none;
+			text-transform: uppercase;
 			background-color: $space-light;
 		}
 	}
@@ -244,16 +245,121 @@
 		padding-right: 5px;
 		margin-right: -5px;
 		height: 60px;
+		text-transform: uppercase;
 		background-color: transparent;
 		border: none;
+
+		span {
+			margin-top: 2px;
+		}
 	}
 
-	&__videoplayer-wrapper {
+	&__slider {
 		padding-top: 60px;
-		background-color: $space;
+		background-color: $black;
+
+		&-container {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.swiper-wrapper {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-left: 0;
+			list-style: none;
+		}
+
+		// .swiper-pagination {
+		// 	padding-left: $phones-paddings;
+		// 	padding-right: $phones-paddings;
+		// 	top: 15px;
+		// 	bottom: unset;
+		// 	display: flex;
+		// 	align-items: center;
+		// 	justify-content: space-between;
+		// }
+
+		// .swiper-pagination-bullet {
+		// 	margin: 0 !important;
+		// 	width: 15px;
+		// 	height: 15px;
+		// 	border: 1px solid $turquoise;
+		// 	background-color: transparent;
+		// 	opacity: 1;
+		// 	transition: background-color 0.2s;
+
+		// 	&-active {
+		// 		background-color: $turquoise;
+		// 	}
+		// }
 	}
 
-	&__videoplayer {
+	&__poster-wrapper {
+		position: relative;
+	}
+
+	&__poster-link {
+		position: relative;
 		display: block;
+		min-height: 211px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0);
+			z-index: 0;
+			transition: background-color 0.2s;
+		}
+
+		&:active::before{
+			background-color: rgba(0, 0, 0, 1);
+		}
+	}
+
+
+	&__trailer-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80px;
+		height: 80px;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.7);
+		border: none;
+		overflow: hidden;
+		border: 2px solid $turquoise;
+		box-shadow: 0 0 3px 3px rgba(0, 0, 0, 1);
+		border-radius: 50%;
+		animation: pulse 1.5s infinite alternate;
+		animation-delay: 1.5s;
+		transition: background-color 0.2s;
+
+		span {
+			font-family: Robotobold, Arial, Helvetica, sans-serif;
+			color: $white;
+			text-transform: uppercase;
+			font-size: 14px;
+			line-height: 16px;
+			transition: all 0.2s;
+		}
+
+		&:active {
+			animation: none;
+			background-color: rgba(0, 0, 0, 1);
+		}
+
+		&:active span {
+			color: $turquoise;
+		}
 	}
 }
