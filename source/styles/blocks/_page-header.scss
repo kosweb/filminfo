@@ -1,10 +1,8 @@
 .page-header {
-	margin-bottom: 40px;
-	background-color: $space-light;
 
 	&__top {
 		position: fixed;
-		z-index: 10;
+		z-index: 15;
 		display: flex;
 		align-items: center;
 		width: 100%;
@@ -12,8 +10,9 @@
 		padding-left: $phones-paddings;
 		padding-right: $phones-paddings;
 		background-color: $space-light;
-		border-bottom: 1px solid $space;
-		box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.6);
+		border-bottom: 1px solid $black;
+		box-shadow: 0px 0px 3px 3px rgba(0,0,0,1);
+
 
 		@media (min-width: $tablet) {
 			padding-left: $tablets-paddings;
@@ -130,7 +129,7 @@
 
 		&-item {
 			background-color: $space-light;
-			border-bottom: 1px solid $space;
+			border-bottom: 1px solid $black;
 		}
 
 		&-link {

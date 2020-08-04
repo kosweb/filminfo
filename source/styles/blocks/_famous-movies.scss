@@ -1,35 +1,122 @@
 .famous-movies {
+	position: relative;
+	padding-left: $phones-paddings;
+	padding-right: $phones-paddings;
 
 	&__title-wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 25px;
-		padding-left: $phones-paddings;
-		padding-right: $phones-paddings;
 	}
 
 	&__title-description {
-		padding-left: $phones-paddings;
-		padding-right: $phones-paddings;
 		margin-bottom: 30px;
 	}
 
-	&__slider-wrapper {
-		padding-bottom: 5px;
+	&__slider {
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 30px;
+		background-color: $black;
+		box-shadow: 0 0 3px 1px rgba(0, 204, 255, 1);
+
+		&-container {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+			padding-top: 45px;
+			padding-bottom: 15px;
+		}
+
+		.swiper-wrapper {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-left: 0;
+			list-style: none;
+		}
+
+		.swiper-pagination {
+			padding-left: 5px;
+			padding-right: 5px;
+			top: 15px;
+			bottom: unset;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.swiper-pagination-bullet {
+			margin: 0 !important;
+			width: 15px;
+			height: 15px;
+			border: 1px solid $turquoise;
+			background-color: transparent;
+			opacity: 1;
+			transition: background-color 0.2s;
+
+			&-active {
+				background-color: $turquoise;
+			}
+		}
 	}
 
-	&__slider {
+	&__poster-wrapper {
 		position: relative;
-		overflow: hidden;
-		padding-top: 50px;
+	}
+
+	&__poster-link {
+		display: block;
 		user-select: none;
 	}
 
+	&__poster {
+		pointer-events: none;
+	}
+
+	&__trailer-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80px;
+		height: 80px;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.7);
+		border: none;
+		overflow: hidden;
+		border: 2px solid $turquoise;
+		box-shadow: 0 0 3px 3px rgba(0, 0, 0, 1);
+		border-radius: 50%;
+		animation: pulse 1.5s infinite alternate;
+		animation-delay: 1.5s;
+		transition: background-color 0.2s;
+
+		svg {
+			margin-left: 25px;
+			width: 60%;
+			height: 60%;
+			fill: $white;
+			transition: fill 0.2s;
+			pointer-events: none;
+		}
+
+		&:active {
+			background-color: rgba(0, 0, 0, 1);
+			animation: none;
+		}
+
+		&:active svg {
+			fill: $turquoise;
+		}
+	}
+
 	&__control-block {
-		position: relative;
 		padding-left: 10px;
 		padding-right: 10px;
+		display: none;
 	}
 
 	&__control-wrapper {
@@ -37,13 +124,12 @@
 		justify-content: space-between;
 		margin-bottom: 5px;
 		padding: 10px;
-		background-color: $space-light;
 		border-radius: 40px;
 		box-shadow: 0 0 3px 3px rgba(0,22,22,1);
 	}
 
-	&__slider-control,
-	&__slider-trailer-play {
+	&__slider-control {
+		position: static;
 		width: 60px;
 		height: 60px;
 		padding: 0;
@@ -56,6 +142,10 @@
 		border: 2px solid $turquoise;
 		border-radius: 50%;
 		animation: pulse 1.5s infinite alternate;
+
+		&::after {
+			display: none;
+		}
 
 		svg {
 			width: 60%;
@@ -70,102 +160,36 @@
 		}
 	}
 
-	&__slider-trailer-play {
-		animation-delay: 1.5s;
-
-		svg {
-			margin-left: 20px;
-		}
-	}
-
-	&__slider-list {
-		margin-top: 0;
-		margin-bottom: 20px;
-		padding-left: 0;
-		display: grid;
-		grid-template-columns: repeat(6, 100%);
-		list-style: none;
-		transition: transform 0.6s ease;
-	}
-
-	&__poster-wrapper {
-		position: relative;
-		margin-bottom: 15px;
-	}
-
-	&__poster-link {
-		display: block;
-	}
-
-	&__poster {
-		pointer-events: none;
-	}
-
 	&__description {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		margin-top: 0;
-		margin-bottom: 0;
-		padding-left: $phones-paddings;
-		padding-right: $phones-paddings;
+		padding-left: 5px;
+		padding-right: 5px;
+		display: block;
+		text-decoration: none;
+
+		&-wrapper {
+			display: flex;
+			font-size: 20px;
+			line-height: 24px;
+			justify-content: space-between;
+		}
 	}
 
 	&__name {
-		flex: 0 0 65%;
-		max-width: 65%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		display: block;
 		color: $white;
 		text-decoration: none;
-		text-align: left;
-		font-size: 16px;
-		line-height: 24px;
-
-		@media (min-width: 370px) {
-			font-size: 20px;
-		}
+		font-weight: normal;
 	}
 
 	&__year	{
-		flex: 0 0 40px;
-		max-width: 40px;
-		margin-top: 5px;
-		font-size: 16px;
-		line-height: 20px;
-		text-align: left;
-		font-weight: 400;
+		font-weight: 800;
 		color: $turquoise;
 	}
 
 	&__rating {
-		flex: 0 0 65px;
-		max-width: 65px;
-		margin-top: 5px;
 		color: $turquoise;
 		text-align: right;
-	}
-
-	&__dots-wrapper {
-		position: absolute;
-		top: 10px;
-		left: 50%;
-		transform: translateX(-50%);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-left: $phones-paddings;
-		padding-right: $phones-paddings;
-		width: 100%;
-	}
-
-	&__dot {
-		width: 15px;
-		height: 15px;
-		border: 1px solid $turquoise;
-		border-radius: 50%;
-		transition: background-color 0.3s;
-
-		&--active {
-			background-color: $turquoise;
-		}
 	}
 }
