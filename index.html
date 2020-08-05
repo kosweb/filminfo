@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="preload" href="./fonts/roboto.woff2" as="font">
-		<link rel="preload" href="./fonts/robotomedium.woff2" as="font">
-		<link rel="preload" href="./fonts/robotobold.woff2" as="font">
+		<link rel="preload" href="./fonts/roboto.woff2" as="font" crossorigin>
+		<link rel="preload" href="./fonts/roboto-bold.woff2" as="font" crossorigin>
+		<link rel="preload" href="./fonts/montserrat-black.woff2" as="font" crossorigin>
 		<link rel="stylesheet" href="./css/style.css">
     <title>Filminfo</title>
   </head>
@@ -57,86 +57,62 @@
 				<button class="page-header__login-button" type="button"><span>Войти</span></button>
 			</section>
 
-			<div class="page-header__slider">
-				<div class="page-header__slider-container">
-
+			<section class="page-header__slider">
+				<h3 class="visually-hidden">Новые трейлеры</h3>
+				<button class="page-header__trailer-play" type="button" aria-label="Перейти на станицу новых трейлеров">
+					<span>Новые трейлеры</span>
+				</button>
+				<div class="page-header__slider-container swiper-no-swiping">
 					<ul class="swiper-wrapper">
 						<li class="swiper-slide">
-							<div class="page-header__poster-wrapper">
-								<a href="#" class="page-header__poster-link">
-									<picture>
-										<source type="image/webp" srcset="./img/content/header-slider1.webp">
-										<img class="page-header__image" src="./img/content/header-slider1.jpg" alt="Кадр из фильма «Человек-паук»">
-									</picture>
-								</a>
-								<button class="page-header__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
-									<span>New trailer</span>
-								</button>
-							</div>
+							<picture>
+								<source type="image/webp" srcset="./img/content/header-slider1.webp">
+								<img class="page-header__image" src="./img/content/header-slider1.jpg" alt="Кадр из мультфильма «Скуби»">
+							</picture>
 						</li>
 						<li class="swiper-slide">
-							<div class="page-header__poster-wrapper">
-								<a href="#" class="page-header__poster-link">
-									<picture>
-										<source type="image/webp" srcset="./img/content/header-slider2.webp">
-										<img class="page-header__image" src="./img/content/header-slider2.jpg" alt="Кадр из фильма «Мстители‎»">
-									</picture>
-								</a>
-								<button class="page-header__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
-									<span>New trailer</span>
-								</button>
-							</div>
+							<picture>
+								<source type="image/webp" srcset="./img/content/header-slider2.webp">
+								<img class="page-header__image" src="./img/content/header-slider2.jpg" alt="Кадр из сериала «Boys»">
+							</picture>
 						</li>
 						<li class="swiper-slide">
-							<div class="page-header__poster-wrapper">
-								<a href="#" class="page-header__poster-link">
-									<picture>
-										<source type="image/webp" srcset="./img/content/header-slider3.webp">
-										<img class="page-header__image" src="./img/content/header-slider3.jpg" alt="Кадр из фильма «Гарри Поттер и философский камень‎»">
-									</picture>
-								</a>
-								<button class="page-header__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
-									<span>New trailer</span>
-								</button>
-							</div>
+							<picture>
+								<source type="image/webp" srcset="./img/content/header-slider3.webp">
+								<img class="page-header__image" src="./img/content/header-slider3.jpg" alt="Кадр из сериала «Очень странные дела»">
+							</picture>
+						</li>
+						<li class="swiper-slide">
+							<picture>
+								<source type="image/webp" srcset="./img/content/header-slider4.webp">
+								<img class="page-header__image" src="./img/content/header-slider4.jpg" alt="Кадр из аниме «Атака титанов»">
+							</picture>
+						</li>
+						<li class="swiper-slide">
+							<picture>
+								<source type="image/webp" srcset="./img/content/header-slider5.webp">
+								<img class="page-header__image" src="./img/content/header-slider5.jpg" alt="Кадр из фильма «Морбиус»">
+							</picture>
 						</li>
 					</ul>
-
-					<!-- <div class="swiper-pagination famous-pagination"></div> -->
-
-					<!-- <div class="page-header__control-block">
-						<div class="page-header__control-wrapper">
-							<button class="page-header__slider-control swiper-button-prev" type="button" aria-label="Предыдущий постер фильма">
-								<svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									<g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
-										<polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
-										<path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
-									</g>
-								</svg>
-							</button>
-							<button class="page-header__slider-control swiper-button-next" type="button" aria-label="Следующий постер фильма">
-								<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									<g>
-										<polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
-										<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
-									</g>
-								</svg>
-							</button>
-						</div>
-					</div> -->
 				</div>
-			</div>
+			</section>
 		</header>
 
 		<main class="page-main">
 			<section class="page-main__extended-films extended-films">
 				<div class="extended-films__title-wrapper main-title__wrapper">
 					<h2 class="extended-films__title main-title">
-						Топ 5 самых<br><span class="main-title__stroke">ожидаемых</span><br> фильмов
+						Ожидаемые<br><span class="main-title__stroke">фильмы</span>
 					</h2>
-					<a href="#" class="extended-films__link main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
+					<a href="#" class="extended-films__link main-title__link">
+						<span class="visually-hidden">Просмотреть все</span>
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
+						</svg>
+					</a>
 				</div>
-				<p class="extended-films__title-description main-title__description">Примьеры, которые выйдут в ближайшее время</p>
+				<p class="extended-films__title-description main-title__description">Примьеры, которые выйдут на большие экраны в ближайшее время</p>
 
 				<div class="extended-films__slider">
 					<div class="extended-films__slider-container swiper-container">
@@ -150,7 +126,7 @@
 											<img class="extended-films__poster" src="./img/content/extended-film1.jpg" alt="Постер фильма «‎King's man: Начало»‎">
 										</picture>
 									</a>
-									<button class="extended-films__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="extended-films__trailer-play extended-films__trailer-play-1" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -171,7 +147,7 @@
 											<img class="extended-films__poster" src="./img/content/extended-film2.jpg" alt="Постер мульфильма «‎На связи»‎">
 										</picture>
 									</a>
-									<button class="extended-films__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="extended-films__trailer-play extended-films__trailer-play-2" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -192,7 +168,7 @@
 											<img class="extended-films__poster" src="./img/content/extended-film3.jpg" alt="Постер фильма «‎Бесславные крепостные»‎">
 										</picture>
 									</a>
-									<button class="extended-films__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="extended-films__trailer-play extended-films__trailer-play-3" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -213,7 +189,7 @@
 											<img class="extended-films__poster" src="./img/content/extended-film4.jpg" alt="Постер фильма «‎Дюна»‎">
 										</picture>
 									</a>
-									<button class="extended-films__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="extended-films__trailer-play extended-films__trailer-play-4" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -230,13 +206,13 @@
 								<div class="extended-films__poster-wrapper">
 									<a class="extended-films__poster-link" href="#">
 										<picture>
-											<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/extended-film5.webp">
+											<!-- <source type="image/webp" media="(min-width: 768px)" srcset="./img/content/extended-film5.webp"> -->
 											<source type="image/webp" srcset="./img/content/extended-film5-mobile.webp">
-											<source media="(min-width: 768px)" srcset="./img/content/extended-film5.jpg">
+											<!-- <source media="(min-width: 768px)" srcset="./img/content/extended-film5.jpg"> -->
 											<img class="extended-films__poster" src="./img/content/extended-film5-mobile.jpg" alt="Постер фильма «‎Веном 2»‎">
 										</picture>
 									</a>
-									<button class="extended-films__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="extended-films__trailer-play extended-films__trailer-play-5" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -259,10 +235,15 @@
 
 			<section class="page-main__digital-release digital-release">
 				<div class="digital-release__title-wrapper main-title__wrapper">
-					<h2 class="digital-release__title main-title">Лучшие<br><span class="main-title__stroke">цифровые</span><br>релизы</h2>
-					<a href="#" class="digital-release__link main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
+					<h2 class="digital-release__title main-title">Цифровые<br><span class="main-title__stroke">релизы</span></h2>
+					<a href="#" class="digital-release__link main-title__link">
+						<span class="visually-hidden">Просмотреть все</span>
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
+						</svg>
+					</a>
 				</div>
-				<p class="digital-release__title-description main-title__description">Фильмы, которые в скором времени появятся в онлайн кинотеатрах, стриминговых сервисах и на DVD</p>
+				<p class="digital-release__title-description main-title__description">Фильмы, которые появились в онлайн кинотеатрах и на DVD </p>
 				<div class="digital-release__list-wrapper">
 					<ul class="digital-release__list">
 						<li class="digital-release__item">
@@ -292,15 +273,25 @@
 			<section class="page-main__top-movies top-movies">
 				<div class="top-movies__title-wrapper main-title__wrapper">
 					<h2 class="top-movies__title main-title">Топ 10<br><span class="main-title__stroke">фильмов</span><br>к просмотру</h2>
-					<a href="#" class="top-movies__link main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
+					<a href="#" class="top-movies__link main-title__link">
+						<span class="visually-hidden">Просмотреть все</span>
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
+						</svg>
+					</a>
 				</div>
-				<p class="top-movies__description main-title__description">Десятка лучших фильмов по версии нашего сайта, которые заслуживают вашего внимания!</p>
+				<p class="top-movies__description main-title__description">Подборка лучших фильмов этой недели по версии нашего сайта, которые заслуживают вашего внимания!</p>
 			</section>
 
 			<section class="page-main__famous-movies famous-movies">
 				<div class="famous-movies__title-wrapper main-title__wrapper">
 					<h2 class="famous-movies__title main-title">Популярные<br><span class="main-title__stroke">фильмы</span></h2>
-					<a href="#" class="famous-movies__link main-title__link"><span class="visually-hidden">Просмотреть все</span></a>
+					<a href="#" class="famous-movies__link main-title__link">
+						<span class="visually-hidden">Просмотреть все</span>
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
+						</svg>
+					</a>
 				</div>
 				<p class="famous-movies__title-description main-title__description">Список фильмов с высоким рейтингом</p>
 				<div class="famous-movies__slider">
@@ -315,7 +306,7 @@
 											<img class="famous-movies__image" src="./img/content/sm.jpg" alt="Кадр из фильма «Человек-паук»">
 										</picture>
 									</a>
-									<button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="famous-movies__trailer-play famous-movies__trailer-play-1" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -338,7 +329,7 @@
 											<img class="famous-movies__image" src="./img/content/avengers.jpg" alt="Кадр из фильма «Мстители‎»">
 										</picture>
 									</a>
-									<button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="famous-movies__trailer-play famous-movies__trailer-play-2" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -361,7 +352,7 @@
 											<img class="famous-movies__image" src="./img/content/hp.jpg" alt="Кадр из фильма «Гарри Поттер и философский камень‎»">
 										</picture>
 									</a>
-									<button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="famous-movies__trailer-play famous-movies__trailer-play-3" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -384,7 +375,7 @@
 											<img class="famous-movies__image" src="./img/content/sw.jpg" alt="Кадр из фильма «Звёздные войны: Месть ситхов»">
 										</picture>
 									</a>
-									<button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="famous-movies__trailer-play famous-movies__trailer-play-4" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -407,7 +398,7 @@
 											<img class="famous-movies__image" src="./img/content/prison.jpg" alt="Кадр из фильма «Побег из Шоушенка‎»">
 										</picture>
 									</a>
-									<button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="famous-movies__trailer-play famous-movies__trailer-play-5" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -430,7 +421,7 @@
 											<img class="famous-movies__image" src="./img/content/lotr.jpg" alt="Кадр из фильма «Властелин колец: Братство кольца‎»">
 										</picture>
 									</a>
-									<button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
+									<button class="famous-movies__trailer-play famous-movies__trailer-play-6" type="button" aria-label="Воспроизвести трейлер фильма">
 										<svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<g>
 												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
@@ -555,15 +546,73 @@
 			</nav>
 		</footer>
 
-		<!-- <video class=" videoplayer videoplayer--1 videoplayer--hiden" width="100%" controls autoplay>
-			<source src="./video/new-trailer1.mp4" type="video/mp4">
-		</video>
-		<video class=" videoplayer videoplayer--2 videoplayer--hiden" width="100%" controls autoplay>
-			<source src="./video/new-trailer2.mp4" type="video/mp4">
-		</video>
-		<video class=" videoplayer videoplayer--3 videoplayer--hiden" width="100%" controls autoplay>
-			<source src="./video/new-trailer3.mp4" type="video/mp4">
-		</video> -->
+		<div class="modal modal__extended-1">
+			<video class="modal__video ex-modal__video-1" width="100%" controls>
+				<source src="./video/extended-trailer1.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close ex-modal__close-1" type="button" aria-label="Закрыть модалку"></button>
+		</div>
+		<div class="modal modal__extended-2">
+			<video class="modal__video ex-modal__video-2" width="100%" controls>
+				<source src="./video/extended-trailer2.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close ex-modal__close-2" type="button" aria-label="Закрыть модалку"></button>
+		</div>
+		<div class="modal modal__extended-3">
+			<video class="modal__video ex-modal__video-3" width="100%" controls>
+				<source src="./video/extended-trailer3.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close ex-modal__close-3" type="button" aria-label="Закрыть модалку"></button>
+		</div>
+		<div class="modal modal__extended-4">
+			<video class="modal__video ex-modal__video-4" width="100%" controls>
+				<source src="./video/extended-trailer4.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close ex-modal__close-4" type="button" aria-label="Закрыть модалку"></button>
+		</div>
+		<div class="modal modal__extended-5">
+			<video class="modal__video ex-modal__video-5" width="100%" controls>
+				<source src="./video/extended-trailer5.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close ex-modal__close-5" type="button" aria-label="Закрыть модалку"></button>
+		</div>
+
+		<div class="modal modal__famous-1">
+			<video class="modal__video fms-modal__video-1" width="100%" controls>
+				<source src="./video/famous-trailer1.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close fms-modal__close-1" type="button" aria-label="Закрыть модалку"></button>
+		</div>
+		<div class="modal modal__famous-2">
+			<video class="modal__video fms-modal__video-2" width="100%" controls>
+				<source src="./video/famous-trailer2.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close fms-modal__close-2" type="button" aria-label="Закрыть модалку"></button>
+		</div>
+		<div class="modal modal__famous-3">
+			<video class="modal__video fms-modal__video-3" width="100%" controls>
+				<source src="./video/famous-trailer3.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close fms-modal__close-3" type="button" aria-label="Закрыть модалку"></button>
+		</div>
+		<div class="modal modal__famous-4">
+			<video class="modal__video fms-modal__video-4" width="100%" controls>
+				<source src="./video/famous-trailer4.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close fms-modal__close-4" type="button" aria-label="Закрыть модалку"></button>
+		</div>
+		<div class="modal modal__famous-5">
+			<video class="modal__video fms-modal__video-5" width="100%" controls>
+				<source src="./video/famous-trailer5.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close fms-modal__close-5" type="button" aria-label="Закрыть модалку"></button>
+		</div>
+		<div class="modal modal__famous-6">
+			<video class="modal__video fms-modal__video-6" width="100%" controls>
+				<source src="./video/famous-trailer6.mp4" type="video/mp4">
+			</video>
+			<button class="modal__close fms-modal__close-6" type="button" aria-label="Закрыть модалку"></button>
+		</div>
 		<script src="./js/index.js"></script>
   </body>
 </html>
