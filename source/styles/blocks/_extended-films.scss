@@ -7,21 +7,19 @@
 	}
 
 	&__slider {
-		max-width: 335px;
-		margin-left: auto;
-		margin-right: auto;
+		position: relative;
+		z-index: 1;
 
 		@media (min-width: 360px) {
-			padding-left: 20px;
-			padding-right: 20px;
+			padding-left: 10px;
+			padding-right: 10px;
 			border-radius: 20px;
 			background-color: $black;
 			box-shadow: 0 0 3px 1px rgba(0, 204, 255, 1);
 		}
 
 		&-container {
-			width: 280px;
-			padding-top: 45px;
+			padding-top: 30px;
 		}
 
 		.swiper-wrapper {
@@ -32,17 +30,21 @@
 		}
 
 		.swiper-pagination {
-			top: 15px;
+			top: 9px;
 			bottom: unset;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+
+			@media (min-width: 360px) {
+				justify-content: space-around;
+			}
 		}
 
 		.swiper-pagination-bullet {
 			margin: 0 !important;
-			width: 15px;
-			height: 15px;
+			width: 12px;
+			height: 12px;
 			border: 1px solid $turquoise;
 			background-color: transparent;
 			opacity: 1;
@@ -103,7 +105,7 @@
 		border-radius: 50%;
 		animation: pulse 1.5s infinite alternate;
 		animation-delay: 1.5s;
-		transition: background-color 0.2s;
+		transition: all 0.2s;
 
 		svg {
 			margin-left: 25px;
@@ -116,6 +118,7 @@
 
 		&:active {
 			background-color: rgba(0, 0, 0, 1);
+			box-shadow: 0 0 3px 1px rgba(0, 204, 255, 1);
 			animation: none;
 		}
 
@@ -128,7 +131,11 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
-		margin-bottom: 25px;
+		margin-bottom: 15px;
+
+		@media (min-width: 360px) {
+			justify-content: space-around;
+		}
 	}
 
 	&__name {
@@ -141,7 +148,7 @@
 		flex: 0 0 85px;
 		width: 85px;
 		text-align: right;
-		font-weight: 400;
+		font-weight: 700;
 		color: $turquoise;
 	}
 }

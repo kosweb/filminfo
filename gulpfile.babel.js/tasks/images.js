@@ -21,7 +21,7 @@ const pluginsImagemin = [
   imagemin.optipng(),
   imagemin.svgo({ plugins: pluginsSvgo }),
   imagemin.mozjpeg({
-    quality: 80,
+    quality: 90,
     progressive: true
   })
 ];

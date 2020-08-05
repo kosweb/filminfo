@@ -71,7 +71,6 @@
 	&__poster-link {
 		position: relative;
 		display: block;
-		min-height: 237px;
 
 		picture {
 			box-shadow: 0 0 30px 30px rgba(0, 0, 0, 1);
@@ -117,7 +116,7 @@
 		border-radius: 50%;
 		animation: pulse 1.5s infinite alternate;
 		animation-delay: 1.5s;
-		transition: background-color 0.2s;
+		transition: all 0.2s;
 
 		svg {
 			margin-left: 25px;
@@ -130,6 +129,7 @@
 
 		&:active {
 			background-color: rgba(0, 0, 0, 1);
+			box-shadow: 0 0 3px 1px rgba(0, 204, 255, 1);
 			animation: none;
 		}
 
@@ -211,12 +211,13 @@
 	}
 
 	&__year	{
-		font-weight: 800;
+		font-weight: 700;
 		color: $turquoise;
 	}
 
 	&__rating {
 		color: $turquoise;
 		text-align: right;
+		font-weight: 700;
 	}
 }

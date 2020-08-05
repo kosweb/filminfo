@@ -5,8 +5,10 @@ const famousSlider = document.querySelector('.famous-movies__slider-container');
 let mySwiperHead = new Swiper(headerSlider, {
 	slidesPerView: 1,
 	loop: true,
+	effect: 'fade',
+	speed: 500,
 	autoplay: {
-    delay: 2400,
+		delay: 2800,
   },
 })
 

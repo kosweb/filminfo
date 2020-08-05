@@ -1,36 +1,23 @@
 @font-face {
   font-family: Roboto;
-	src: local('Roboto'),
-		local('Robotoregular')
-    local('Roboto Regular'),
-    local('Roboto-Regular'),
-    url('../fonts/roboto.woff2') format('woff2'),
-    url('../fonts/roboto.woff') format('woff');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+	font-display: swap;
+	src: url('../fonts/roboto.woff2') format('woff2');
+
+	@font-face {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url('../fonts/roboto-bold.woff2') format('woff2');
+	}
 }
 
 @font-face {
-  font-family: Robotomedium;
-	src: local('Robotomedium'),
-		local('Roboto Medium'),
-    local('Roboto-Medium'),
-    url('../fonts/robotomedium.woff2') format('woff2'),
-    url('../fonts/robotomedium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Robotobold;
-	src: local('Robotobold'),
-		local('Roboto Bold'),
-    local('Roboto-Bold'),
-    url('../fonts/robotobold.woff2') format('woff2'),
-    url('../fonts/robotobold.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url('../fonts/montserrat-black.woff2') format('woff2');
 }
