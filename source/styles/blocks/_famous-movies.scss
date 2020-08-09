@@ -1,5 +1,6 @@
 .famous-movies {
 	position: relative;
+	background-color: $black;
 
 	&__title-wrapper {
 		padding-left: $phones-paddings;
@@ -16,16 +17,9 @@
 	}
 
 	&__slider {
-		// padding-left: 20px;
-		// padding-right: 20px;
-		// border-radius: 30px;
-		// background-color: $black;
-		// box-shadow: 0 0 3px 1px rgba(0, 204, 255, 1);
 
 		&-container {
 			position: relative;
-			width: 100%;
-			overflow: hidden;
 			padding-top: 45px;
 			padding-bottom: 20px;
 		}
@@ -71,10 +65,7 @@
 	&__poster-link {
 		position: relative;
 		display: block;
-
-		picture {
-			box-shadow: 0 0 30px 30px rgba(0, 0, 0, 1);
-		}
+		background-color: $black;
 
 		&::before {
 			content: '';
