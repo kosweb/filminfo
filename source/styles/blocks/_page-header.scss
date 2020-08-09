@@ -218,6 +218,7 @@
 		height: 60px;
 
 		&-field {
+			user-select: text;
 			padding: 0;
 			padding-left: 42px;
 			padding-right: 42px;
@@ -260,6 +261,10 @@
 		position: relative;
 		margin-top: 61px;
 		background-color: $black;
+
+		&-container {
+			overflow: hidden;
+		}
 
 		.swiper-wrapper {
 			margin-top: 0;
