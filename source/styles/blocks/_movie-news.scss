@@ -48,8 +48,9 @@
 		overflow-x: scroll;
 		scroll-snap-type: x mandatory;
 
-		&::-webkit-scrollbar { width: 0; }
 	}
+
+	&__list::-webkit-scrollbar { width: 0; }
 
 	&__list-item {
 		flex: 0 0 80%;
