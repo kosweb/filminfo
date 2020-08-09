@@ -47,10 +47,9 @@
 		list-style: none;
 		overflow-x: scroll;
 		scroll-snap-type: x mandatory;
-
 	}
 
-	&__list::-webkit-scrollbar { width: 0; }
+	.movie-news__list::-webkit-scrollbar { width: 0; }
 
 	&__list-item {
 		flex: 0 0 80%;
