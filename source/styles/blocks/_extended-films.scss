@@ -114,15 +114,14 @@
 	&__description {
 		display: flex;
 		align-items: flex-start;
-		justify-content: space-between;
+		justify-content: space-around;
 		margin-bottom: 15px;
-
-		@media (min-width: 360px) {
-			justify-content: space-around;
-		}
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	&__name {
+		margin-right: auto;
 		color: $white;
 		text-decoration: none;
 		text-align: left;
