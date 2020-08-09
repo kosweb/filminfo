@@ -8,7 +8,7 @@ let mySwiperHead = new Swiper(headerSlider, {
 	effect: 'fade',
 	speed: 500,
 	autoplay: {
-		delay: 2800,
+		delay: 2000,
   },
 })
 
