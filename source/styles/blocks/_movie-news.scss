@@ -40,6 +40,8 @@
 	}
 
 	&__list {
+		position: relative;
+		z-index: 1;
 		display: flex;
 		margin-top: 0;
 		margin-bottom: 0;
