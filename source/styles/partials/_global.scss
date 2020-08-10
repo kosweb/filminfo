@@ -131,6 +131,10 @@ img {
 	animation: pulse 1.5s infinite alternate;
 }
 
+.anime-pulse-soso {
+	animation: pulse-soso 1.5s infinite alternate;
+}
+
 @keyframes yo_navi {
 	0% { transform: translateX(-2000px); }
 	50% { transform: translateX(0); }
