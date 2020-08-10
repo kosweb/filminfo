@@ -1,4 +1,6 @@
 .page-main {
+	overflow-x: hidden;
+	box-shadow: 0 0 60px 60px $black;
 
 	&__extended-films {
 		padding-top: 60px;
@@ -27,9 +29,7 @@
 	}
 
 	&__movie-news {
-		padding-left: $phones-paddings;
-		padding-right: $phones-paddings;
 		padding-top: 60px;
-		padding-bottom: 30px;
+		box-shadow: 0 0 60px 60px $black;
 	}
 }

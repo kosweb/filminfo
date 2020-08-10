@@ -1,6 +1,7 @@
 const headerSlider = document.querySelector('.page-header__slider-container');
 const extendedSlider = document.querySelector('.swiper-container');
 const famousSlider = document.querySelector('.famous-movies__slider-container');
+const newsSlider = document.querySelector('.movie-news__slider-container');
 
 let mySwiperHead = new Swiper(headerSlider, {
 	slidesPerView: 1,
@@ -36,4 +37,14 @@ let mySwiperFms = new Swiper(famousSlider, {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+})
+
+let mySwiperNews = new Swiper(newsSlider, {
+	slidesPerView: 1,
+	spaceBetween: 20,
+	loop: true,
+	pagination: {
+    el: '.news-pagination',
+		type: 'fraction',
+	},
 })
