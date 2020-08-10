@@ -21,14 +21,14 @@ const pluginsImagemin = [
   imagemin.optipng(),
   imagemin.svgo({ plugins: pluginsSvgo }),
   imagemin.mozjpeg({
-    quality: 90,
+    quality: 20,
     progressive: true
   })
 ];
 
 gulp.task("images", () => {
   return gulp.src(paths.images.src)
-    .pipe(gulpif(production, imagemin(pluginsImagemin)))
+    // .pipe(gulpif(production, imagemin(pluginsImagemin)))
     .pipe(gulp.dest(paths.images.dist))
     // .pipe(debug({
     //     "title": "Images"

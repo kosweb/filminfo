@@ -1,4 +1,5 @@
 // EXTEND VIDEO BLOCK
+const body = document.querySelector('body');
 
 // VIDEO 1
 
@@ -10,6 +11,7 @@ let exModalClose1 = document.querySelector('.ex-modal__close-1');
 exTrailer1.addEventListener('click', function(evt) {
   evt.preventDefault();
 	exModal1.classList.add('modal__show');
+	body.style.position = 'fixed';
 	exModalVideo1.autoplay = true;
 	exModalVideo1.load();
 });
@@ -19,6 +21,7 @@ window.addEventListener('keydown', function(evt) {
     if (exModal1.classList.contains('modal__show')) {
       evt.preventDefault();
 			exModal1.classList.remove('modal__show');
+			body.style.position = '';
 			exModalVideo1.autoplay = false;
 			exModalVideo1.load();
     }
@@ -29,6 +32,7 @@ exModalClose1.addEventListener('click', function(evt) {
 	if (exModal1.classList.contains('modal__show')) {
 		evt.preventDefault();
 		exModal1.classList.remove('modal__show');
+		body.style.position = '';
 		exModalVideo1.autoplay = false;
 		exModalVideo1.load();
 	}
@@ -44,6 +48,7 @@ let exModalClose2 = document.querySelector('.ex-modal__close-2');
 exTrailer2.addEventListener('click', function(evt) {
   evt.preventDefault();
 	exModal2.classList.add('modal__show');
+	body.style.position = 'fixed';
 	exModalVideo2.autoplay = true;
 	exModalVideo2.load();
 });
@@ -53,6 +58,7 @@ window.addEventListener('keydown', function(evt) {
     if (exModal2.classList.contains('modal__show')) {
       evt.preventDefault();
 			exModal2.classList.remove('modal__show');
+			body.style.position = '';
 			exModalVideo2.autoplay = false;
 			exModalVideo2.load();
     }
@@ -63,6 +69,7 @@ exModalClose2.addEventListener('click', function(evt) {
 	if (exModal2.classList.contains('modal__show')) {
 		evt.preventDefault();
 		exModal2.classList.remove('modal__show');
+		body.style.position = '';
 		exModalVideo2.autoplay = false;
 		exModalVideo2.load();
 	}
@@ -78,6 +85,7 @@ let exModalClose3 = document.querySelector('.ex-modal__close-3');
 exTrailer3.addEventListener('click', function(evt) {
   evt.preventDefault();
 	exModal3.classList.add('modal__show');
+	body.style.position = 'fixed';
 	exModalVideo3.autoplay = true;
 	exModalVideo3.load();
 });
@@ -87,6 +95,7 @@ window.addEventListener('keydown', function(evt) {
     if (exModal3.classList.contains('modal__show')) {
       evt.preventDefault();
 			exModal3.classList.remove('modal__show');
+			body.style.position = '';
 			exModalVideo3.autoplay = false;
 			exModalVideo3.load();
     }
@@ -97,6 +106,7 @@ exModalClose3.addEventListener('click', function(evt) {
 	if (exModal3.classList.contains('modal__show')) {
 		evt.preventDefault();
 		exModal3.classList.remove('modal__show');
+		body.style.position = '';
 		exModalVideo3.autoplay = false;
 		exModalVideo3.load();
 	}
@@ -112,6 +122,7 @@ let exModalClose4 = document.querySelector('.ex-modal__close-4');
 exTrailer4.addEventListener('click', function(evt) {
   evt.preventDefault();
 	exModal4.classList.add('modal__show');
+	body.style.position = 'fixed';
 	exModalVideo4.autoplay = true;
 	exModalVideo4.load();
 });
@@ -121,6 +132,7 @@ window.addEventListener('keydown', function(evt) {
     if (exModal4.classList.contains('modal__show')) {
       evt.preventDefault();
 			exModal4.classList.remove('modal__show');
+			body.style.position = '';
 			exModalVideo4.autoplay = false;
 			exModalVideo4.load();
     }
@@ -131,6 +143,7 @@ exModalClose4.addEventListener('click', function(evt) {
 	if (exModal4.classList.contains('modal__show')) {
 		evt.preventDefault();
 		exModal4.classList.remove('modal__show');
+		body.style.position = '';
 		exModalVideo4.autoplay = false;
 		exModalVideo4.load();
 	}
@@ -146,6 +159,7 @@ let exModalClose5 = document.querySelector('.ex-modal__close-5');
 exTrailer5.addEventListener('click', function(evt) {
   evt.preventDefault();
 	exModal5.classList.add('modal__show');
+	body.style.position = 'fixed';
 	exModalVideo5.autoplay = true;
 	exModalVideo5.load();
 });
@@ -155,6 +169,7 @@ window.addEventListener('keydown', function(evt) {
     if (exModal5.classList.contains('modal__show')) {
       evt.preventDefault();
 			exModal5.classList.remove('modal__show');
+			body.style.position = '';
 			exModalVideo5.autoplay = false;
 			exModalVideo5.load();
     }
@@ -165,14 +180,11 @@ exModalClose5.addEventListener('click', function(evt) {
 	if (exModal5.classList.contains('modal__show')) {
 		evt.preventDefault();
 		exModal5.classList.remove('modal__show');
+		body.style.position = '';
 		exModalVideo5.autoplay = false;
 		exModalVideo5.load();
 	}
 });
-
-
-
-
 
 
 
@@ -188,6 +200,7 @@ let fmsModalClose1 = document.querySelector('.fms-modal__close-1');
 fmsTrailer1.addEventListener('click', function(evt) {
   evt.preventDefault();
 	fmsModal1.classList.add('modal__show');
+	body.style.position = 'fixed';
 	fmsModalVideo1.autoplay = true;
 	fmsModalVideo1.load();
 });
@@ -197,6 +210,7 @@ window.addEventListener('keydown', function(evt) {
     if (fmsModal1.classList.contains('modal__show')) {
       evt.preventDefault();
 			fmsModal1.classList.remove('modal__show');
+			body.style.position = '';
 			fmsModalVideo1.autoplay = false;
 			fmsModalVideo1.load();
     }
@@ -207,6 +221,7 @@ fmsModalClose1.addEventListener('click', function(evt) {
 	if (fmsModal1.classList.contains('modal__show')) {
 		evt.preventDefault();
 		fmsModal1.classList.remove('modal__show');
+		body.style.position = '';
 		fmsModalVideo1.autoplay = false;
 		fmsModalVideo1.load();
 	}
@@ -222,6 +237,7 @@ let fmsModalClose2 = document.querySelector('.fms-modal__close-2');
 fmsTrailer2.addEventListener('click', function(evt) {
   evt.preventDefault();
 	fmsModal2.classList.add('modal__show');
+	body.style.position = 'fixed';
 	fmsModalVideo2.autoplay = true;
 	fmsModalVideo2.load();
 });
@@ -231,6 +247,7 @@ window.addEventListener('keydown', function(evt) {
     if (fmsModal2.classList.contains('modal__show')) {
       evt.preventDefault();
 			fmsModal2.classList.remove('modal__show');
+			body.style.position = '';
 			fmsModalVideo2.autoplay = false;
 			fmsModalVideo2.load();
     }
@@ -241,6 +258,7 @@ fmsModalClose2.addEventListener('click', function(evt) {
 	if (fmsModal2.classList.contains('modal__show')) {
 		evt.preventDefault();
 		fmsModal2.classList.remove('modal__show');
+		body.style.position = '';
 		fmsModalVideo2.autoplay = false;
 		fmsModalVideo2.load();
 	}
@@ -256,6 +274,7 @@ let fmsModalClose3 = document.querySelector('.fms-modal__close-3');
 fmsTrailer3.addEventListener('click', function(evt) {
   evt.preventDefault();
 	fmsModal3.classList.add('modal__show');
+	body.style.position = 'fixed';
 	fmsModalVideo3.autoplay = true;
 	fmsModalVideo3.load();
 });
@@ -265,6 +284,7 @@ window.addEventListener('keydown', function(evt) {
     if (fmsModal3.classList.contains('modal__show')) {
       evt.preventDefault();
 			fmsModal3.classList.remove('modal__show');
+			body.style.position = '';
 			fmsModalVideo3.autoplay = false;
 			fmsModalVideo3.load();
     }
@@ -275,6 +295,7 @@ fmsModalClose3.addEventListener('click', function(evt) {
 	if (fmsModal3.classList.contains('modal__show')) {
 		evt.preventDefault();
 		fmsModal3.classList.remove('modal__show');
+		body.style.position = '';
 		fmsModalVideo3.autoplay = false;
 		fmsModalVideo3.load();
 	}
@@ -290,6 +311,7 @@ let fmsModalClose4 = document.querySelector('.fms-modal__close-4');
 fmsTrailer4.addEventListener('click', function(evt) {
   evt.preventDefault();
 	fmsModal4.classList.add('modal__show');
+	body.style.position = 'fixed';
 	fmsModalVideo4.autoplay = true;
 	fmsModalVideo4.load();
 });
@@ -299,6 +321,7 @@ window.addEventListener('keydown', function(evt) {
     if (fmsModal4.classList.contains('modal__show')) {
       evt.preventDefault();
 			fmsModal4.classList.remove('modal__show');
+			body.style.position = '';
 			fmsModalVideo4.autoplay = false;
 			fmsModalVideo4.load();
     }
@@ -309,6 +332,7 @@ fmsModalClose4.addEventListener('click', function(evt) {
 	if (fmsModal4.classList.contains('modal__show')) {
 		evt.preventDefault();
 		fmsModal4.classList.remove('modal__show');
+		body.style.position = '';
 		fmsModalVideo4.autoplay = false;
 		fmsModalVideo4.load();
 	}
@@ -324,6 +348,7 @@ let fmsModalClose5 = document.querySelector('.fms-modal__close-5');
 fmsTrailer5.addEventListener('click', function(evt) {
   evt.preventDefault();
 	fmsModal5.classList.add('modal__show');
+	body.style.position = 'fixed';
 	fmsModalVideo5.autoplay = true;
 	fmsModalVideo5.load();
 });
@@ -333,6 +358,7 @@ window.addEventListener('keydown', function(evt) {
     if (fmsModal5.classList.contains('modal__show')) {
       evt.preventDefault();
 			fmsModal5.classList.remove('modal__show');
+			body.style.position = '';
 			fmsModalVideo5.autoplay = false;
 			fmsModalVideo5.load();
     }
@@ -343,6 +369,7 @@ fmsModalClose5.addEventListener('click', function(evt) {
 	if (fmsModal5.classList.contains('modal__show')) {
 		evt.preventDefault();
 		fmsModal5.classList.remove('modal__show');
+		body.style.position = '';
 		fmsModalVideo5.autoplay = false;
 		fmsModalVideo5.load();
 	}
@@ -358,6 +385,7 @@ let fmsModalClose6 = document.querySelector('.fms-modal__close-6');
 fmsTrailer6.addEventListener('click', function(evt) {
   evt.preventDefault();
 	fmsModal6.classList.add('modal__show');
+	body.style.position = 'fixed';
 	fmsModalVideo6.autoplay = true;
 	fmsModalVideo6.load();
 });
@@ -367,6 +395,7 @@ window.addEventListener('keydown', function(evt) {
     if (fmsModal6.classList.contains('modal__show')) {
       evt.preventDefault();
 			fmsModal6.classList.remove('modal__show');
+			body.style.position = '';
 			fmsModalVideo6.autoplay = false;
 			fmsModalVideo6.load();
     }
@@ -377,6 +406,7 @@ fmsModalClose6.addEventListener('click', function(evt) {
 	if (fmsModal6.classList.contains('modal__show')) {
 		evt.preventDefault();
 		fmsModal6.classList.remove('modal__show');
+		body.style.position = '';
 		fmsModalVideo6.autoplay = false;
 		fmsModalVideo6.load();
 	}
