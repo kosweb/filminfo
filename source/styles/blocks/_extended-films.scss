@@ -46,33 +46,6 @@
 			padding-left: 0;
 			list-style: none;
     }
-
-		.swiper-pagination {
-			top: 0;
-			bottom: unset;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-
-			@media (min-width: 360px) {
-				top: 9px;
-				justify-content: space-around;
-			}
-		}
-
-		.swiper-pagination-bullet {
-			margin: 0 !important;
-			width: 12px;
-			height: 12px;
-			border: 1px solid $turquoise;
-			background-color: transparent;
-			opacity: 1;
-			transition: background-color 0.2s;
-
-			&-active {
-				background-color: $turquoise;
-			}
-		}
 	}
 
 	&__poster-wrapper {
