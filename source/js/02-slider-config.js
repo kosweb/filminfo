@@ -14,9 +14,10 @@ let mySwiperHead = new Swiper(headerSlider, {
 })
 
 let mySwiperEx = new Swiper(extendedSlider, {
-	slidesPerView: 2,
-	// spaceBetween: 0,
-	loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
+  cssMode: true,
+  loop: false,
 	// pagination: {
   //   el: '.extended-pagination',
 	// 	type: 'bullets',
@@ -25,23 +26,18 @@ let mySwiperEx = new Swiper(extendedSlider, {
 })
 
 let mySwiperFms = new Swiper(famousSlider, {
-	slidesPerView: 3,
-	spaceBetween: 10,
-	// loop: true,
-	// slidesPerView: 'auto',
-	// loopedSlides: 6,
-	cssMode: false,
-	centeredSlides: true,
-	// slidesPerGroup: 3,
-	// pagination: {
-  //   el: '.famous-pagination',
-	// 	type: 'bullets',
-	// 	clickable: true,
-	// },
-	navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+	slidesPerView: 1,
+	spaceBetween: 20,
+	loop: true,
+	pagination: {
+    el: '.famous-pagination',
+		type: 'bullets',
+		clickable: true,
 	},
+	// navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+	// },
 })
 
 

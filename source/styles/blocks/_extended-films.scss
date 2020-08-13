@@ -28,8 +28,7 @@
 		// 	border: 1px solid rgba(0, 204, 255, 0.7);
     // }
 
-    padding-top: 20px;
-    padding-bottom: 20px;
+
     position: relative;
     z-index: 1;
     background-color: $space-light;
@@ -37,14 +36,21 @@
     border-bottom: 1px solid rgba(0, 204, 255, 0.7);
 
 		&-container {
-      box-shadow: 0 0 5px 5px #000;
+
 		}
 
 		.swiper-wrapper {
+      padding-top: 15px;
+      padding-bottom: 15px;
 			margin-top: 0;
 			margin-bottom: 0;
 			padding-left: 0;
 			list-style: none;
+    }
+
+    .swiper-slide {
+      width: 280px;
+      scroll-snap-align: none !important;
     }
 	}
 
@@ -53,12 +59,18 @@
 	}
 
 	&__poster-link {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
 		position: relative;
-		display: block;
+    display: block;
 	}
 
 	&__poster {
-		pointer-events: none;
+    pointer-events: none;
+    border-radius: 15px;
+		box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.8);
 	}
 
 	&__trailer-play {
