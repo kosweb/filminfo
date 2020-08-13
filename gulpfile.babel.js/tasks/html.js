@@ -1,19 +1,29 @@
 "use strict";
 
-import { paths } from "../index";
-import gulp from "gulp";
-import gulpif from "gulp-if";
-import replace from "gulp-replace";
-import browsersync from "browser-sync";
-import yargs from "yargs";
+import { task, src, dest }       from "gulp";
+import gulpif                    from "gulp-if";
+import changed                   from "gulp-changed";
+import replace                   from "gulp-replace";
+import htmlmin                   from "gulp-htmlmin";
+import debug                     from "gulp-debug";
+import browsersync               from "browser-sync";
 
-const argv = yargs.argv,
-  production = !!argv.production;
+const optionsHtmlmin = {
+  collapseInlineTagWhitespace: true,
+  collapseWhitespace: true,
+  removeComments: true,
+};
 
-gulp.task("html", () => {
-  return gulp.src(paths.views.src)
-    .pipe(gulpif(production, replace(".css", ".min.css")))
-    .pipe(gulpif(production, replace(".js", ".min.js")))
-    .pipe(gulp.dest(paths.views.dist))
+function html() {
+  return src(cfg.src.html)
+    .pipe(gulpif(cfg.isDev,  changed(cfg.build.root)))
+    .pipe(gulpif(cfg.isProd, replace(".css", ".min.css")))
+    .pipe(gulpif(cfg.isProd, replace(".js", ".min.js")))
+    .pipe(gulpif(cfg.isProd, htmlmin(optionsHtmlmin)))
+    .pipe(gulpif(cfg.debug,  debug({title: 'html:'})))
+    .pipe(dest(cfg.build.root))
     .pipe(browsersync.stream());
-});
+}
+
+html.description = 'Clears HTML folder in destination, copies all HTML files';
+task(html);

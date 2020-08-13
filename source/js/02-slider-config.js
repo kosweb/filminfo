@@ -7,37 +7,43 @@ let mySwiperHead = new Swiper(headerSlider, {
 	slidesPerView: 1,
 	loop: true,
 	effect: 'fade',
-	speed: 500,
-	autoplay: {
-		delay: 2000,
-  },
+  speed: 500,
+	// autoplay: {
+	// 	delay: 2000,
+  // },
 })
 
 let mySwiperEx = new Swiper(extendedSlider, {
-	slidesPerView: 1,
-	spaceBetween: 20,
+	slidesPerView: 2,
+	// spaceBetween: 0,
 	loop: true,
-	pagination: {
-    el: '.extended-pagination',
-		type: 'bullets',
-		clickable: true,
-	},
+	// pagination: {
+  //   el: '.extended-pagination',
+	// 	type: 'bullets',
+	// 	clickable: true,
+	// },
 })
 
 let mySwiperFms = new Swiper(famousSlider, {
-	slidesPerView: 1,
-	spaceBetween: 20,
-	loop: true,
-	pagination: {
-    el: '.famous-pagination',
-		type: 'bullets',
-		clickable: true,
-	},
+	slidesPerView: 3,
+	spaceBetween: 10,
+	// loop: true,
+	// slidesPerView: 'auto',
+	// loopedSlides: 6,
+	cssMode: false,
+	centeredSlides: true,
+	// slidesPerGroup: 3,
+	// pagination: {
+  //   el: '.famous-pagination',
+	// 	type: 'bullets',
+	// 	clickable: true,
+	// },
 	navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
-  },
+	},
 })
+
 
 let mySwiperNews = new Swiper(newsSlider, {
 	slidesPerView: 1,
@@ -48,3 +54,8 @@ let mySwiperNews = new Swiper(newsSlider, {
 		type: 'fraction',
 	},
 })
+
+
+
+
+// GLIDER CONFIG

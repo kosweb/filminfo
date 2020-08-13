@@ -1,15 +1,13 @@
 "use strict";
 
-import { paths } from "../index";
-import gulp from "gulp";
-import gulpif from "gulp-if";
-import imagemin from "gulp-imagemin";
-// import debug from "gulp-debug";
-import browsersync from "browser-sync";
-import yargs from "yargs";
-
-const argv = yargs.argv,
-  production = !!argv.production;
+import { task, src, dest }       from "gulp";
+import gulpif                    from "gulp-if";
+import imagemin                  from "gulp-imagemin";
+import imageminWebp              from "imagemin-webp";
+import svgstore                  from "gulp-svgstore";
+import rename                    from "gulp-rename";
+import debug                     from "gulp-debug";
+import browserSync               from "browser-sync";
 
 const pluginsSvgo = [
   { removeViewBox: false },
@@ -18,20 +16,53 @@ const pluginsSvgo = [
 ];
 
 const pluginsImagemin = [
-  imagemin.optipng(),
+  imagemin.optipng(), // {optimizationLevel: 5}
   imagemin.svgo({ plugins: pluginsSvgo }),
   imagemin.mozjpeg({
-    quality: 20,
-    progressive: true
+    quality: 85,
   })
 ];
 
-gulp.task("images", () => {
-  return gulp.src(paths.images.src)
-    // .pipe(gulpif(production, imagemin(pluginsImagemin)))
-    .pipe(gulp.dest(paths.images.dist))
-    // .pipe(debug({
-    //     "title": "Images"
-    // }))
-    .on("end", browsersync.reload);
-});
+const pluginsWebp = [
+  imageminWebp({ preset: 'picture' }),
+  // lossless: false,    //false
+  // quality: 90,        // 75
+  // alphaQuality: 95,   // 100
+];
+
+function images() {
+  return src(cfg.src.images.all)
+    .pipe(imagemin(pluginsImagemin))
+    .pipe(dest(cfg.build.images))
+    .pipe(gulpif(cfg.debug, debug({title: 'images:'})))
+    .on("end", browserSync.reload);
+}
+
+function webp() {
+  return src(cfg.src.images.webp)
+    .pipe(imagemin(pluginsWebp))
+    .pipe(rename({
+      extname: '.webp'
+    }))
+    .pipe(dest(cfg.build.images))
+    .pipe(gulpif(cfg.debug, debug({title: 'webp:'})))
+    .on("end", browserSync.reload);
+}
+
+function sprites() {
+  return src(cfg.src.images.icons)
+    .pipe(gulpif(cfg.debug, debug({title: 'svg-sprite:'})))
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename('svg-sprite.svg'))
+    .pipe(dest(cfg.build.images))
+    .on("end", browserSync.reload);
+};
+
+task(images);
+images.description  = 'Minify png/jpeg/gif/svg images';
+
+task(webp);
+webp.description    = 'Convert images to webp';
+
+task(sprites);
+sprites.description = 'Combine svg files into one with <symbol> elements';

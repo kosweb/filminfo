@@ -1,81 +1,39 @@
+/*
+  gulpfile.js
+  ===========
+  Rather than manage one giant configuration file responsible
+  for creating multiple tasks, each task has been broken out into
+  its own file in gulpfile.js/tasks. Any files in that directory get
+  automatically required below.
+*/
+
 "use strict";
 
-import gulp from "gulp";
+import { gulp, series, parallel } from "gulp";
+import requireDir                 from "require-dir";
 
-const requireDir = require("require-dir"),
-    paths = {
-        views: {
-            src: [
-                "./source/*.html"
-            ],
-            dist: "./build/",
-            watch: [
-                "./source/*.html"
-            ]
-        },
-        styles: {
-            src: "./source/styles/style.scss",
-            dist: "./build/css/",
-            watch: [
-                "./source/styles/**/*.scss"
-            ]
-        },
-        scripts: {
-            src: "./source/js/**/*.js",
-            dist: "./build/js/",
-            watch: [
-                "./source/js/**/*.js"
-            ]
-        },
-        images: {
-            src: [
-                "./source/img/**/*.{jpg,jpeg,png,gif,tiff,svg}",
-                "!./source/img/favicon/*.{jpg,jpeg,png,gif,tiff}",
-                "!./source/img/icons/*.{jpg,png,svg}"
-            ],
-            dist: "./build/img/",
-            watch: "./source/img/**/*.{jpg,jpeg,png,gif,svg,tiff}"
-        },
-        webp: {
-            src: [
-                "./source/img/**/*.{jpg,jpeg,png,tiff}",
-                "!./source/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
-            ],
-            dist: "./build/img/",
-            watch: [
-                "./source/img/**/*.{jpg,jpeg,png,tiff}",
-                "!./source/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
-            ]
-        },
-        sprites: {
-            src: "./source/img/icons/*.svg",
-            dist: "./build/img/",
-            watch: "./source/img/icons/*.svg"
-        },
-        fonts: {
-            src: "./source/fonts/**/*.{woff,woff2}",
-            dist: "./build/fonts/",
-            watch: "./source/fonts/**/*.{woff,woff2}"
-        },
-        favicons: {
-            src: "./source/img/favicon/*.{jpg,jpeg,png,gif}",
-            dist: "./build/img/favicons/",
-        },
-        video: {
-            src: "./source/video/*mp4",
-            dist: "./build/video"
-        }
-    };
+global.cfg = require("./config.js");
 
 requireDir("./tasks/");
 
-export { paths };
 
-export const development = gulp.series("clean",
-    gulp.parallel(["html", "styles", "scripts", "images", "webp", "sprites", "fonts", "video"]),
-    gulp.parallel("serve"));
+// development.description = 'Development env task';
 
-export const prod = gulp.series("clean",
-    gulp.series(["html", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons"]));
 
-export default development;
+// export const build = series("clean",
+export const build = series(
+  parallel(["html", "styles", "scripts", "images", "webp", "sprites", "fonts", "video"]),
+  parallel(["serve", "watch"]));
+
+build.flags = {
+  '--prod': 'Builds in production mode (minification, etc).'
+};
+
+// export const build = gulp.series("clean",
+//   gulp.parallel(["html", "styles", "scripts", "images", "webp", "sprites", "fonts", "video"]),
+//   gulp.parallel("serve"));
+
+// export const prod = gulp.series("clean",
+//   gulp.series(["html", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons"]));
+
+export default build;

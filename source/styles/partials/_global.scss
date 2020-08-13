@@ -10,7 +10,6 @@
 body {
 	position: relative;
 	min-width: $phone;
-	max-width: 600px;
 	box-shadow: 0 0 60px 60px rgba(0, 0, 0, 1);
 	margin: 0;
 	margin-left: auto;
@@ -28,6 +27,11 @@ body {
     font-size: 18px;
     line-height: 26px;
 	}
+}
+
+picture {
+  display: flex;
+  align-items: center;
 }
 
 img {

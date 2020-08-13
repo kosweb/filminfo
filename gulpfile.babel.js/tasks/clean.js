@@ -1,8 +1,11 @@
 "use strict";
 
-import gulp from "gulp";
-import del from "del";
+import { gulp, task } from "gulp";
+import del            from "del";
 
-gulp.task("clean", () => {
-  return del(["./build/*"]);
-});
+function clean() {
+  return del(`${cfg.build.root}/*`);
+}
+
+clean.description = 'Removes the destination folder';
+task(clean);

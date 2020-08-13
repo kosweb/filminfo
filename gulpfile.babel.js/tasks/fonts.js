@@ -1,14 +1,28 @@
-"use strict";
+'use strict';
 
-import { paths } from "../index";
-import { task, src, dest } from "gulp";
-import debug from "gulp-debug";
+import { task, src, dest }       from "gulp";
+import changed                   from "gulp-changed";
+import gulpif                    from "gulp-if";
+import fonter                    from "gulp-fonter";
+import debug                     from "gulp-debug";
 
-task("fonts", () => {
-  return src(paths.fonts.src)
-    .pipe(dest(paths.fonts.dist))
-    .pipe(debug({
-      title: "Fonts",
-      showFiles: false
-    }));
-});
+function fonts() {
+  return src(`${cfg.src.fonts}**/*.{woff,woff2}`)
+    .pipe(changed(cfg.build.fonts))
+    .pipe(dest(cfg.build.fonts));
+}
+
+fonts.description = 'Copy fonts';
+task(fonts);
+
+function fontsConvert() {
+  return src(`${cfg.src.fonts}**/*.{ttf,otf,eot}`)
+    .pipe(fonter({
+      formats: ['woff']
+    }))
+    .pipe(gulpif(cfg.debug,  debug({title: 'fonts:'})))
+    .pipe(dest(cfg.build.fonts));
+}
+
+fontsConvert.description = 'Convert ttf/otf/eot fonts to woff';
+task(fontsConvert);

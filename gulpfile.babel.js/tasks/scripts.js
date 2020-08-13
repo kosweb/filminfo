@@ -1,51 +1,36 @@
 "use strict";
 
-import { paths } from "../index";
+import { gulp, src, dest, task } from "gulp";
+import gulpif                    from "gulp-if";
+import sourcemaps                from "gulp-sourcemaps";
+import concat                    from "gulp-concat";
+import terser                    from "gulp-terser";
+import rename                    from "gulp-rename";
+
+import debug                     from "gulp-debug";
+import browsersync               from "browser-sync";
+
 // import webpack from "webpack";
 // import webpackStream from "webpack-stream";
-import concat from "gulp-concat";
-import terser from "gulp-terser";
-import gulp from "gulp";
-import gulpif from "gulp-if";
-import rename from "gulp-rename";
-import browsersync from "browser-sync";
-// import debug from "gulp-debug";
-import yargs from "yargs";
-
-// const webpackConfig = require("../webpack.config.js"),
-//     argv = yargs.argv,
-//     production = !!argv.production;
+// const webpackConfig = require("../webpack.config.js");
 
 // webpackConfig.mode = production ? "production" : "development";
 // webpackConfig.devtool = production ? false : "source-map";
 
-const argv = yargs.argv,
-    production = !!argv.production;
-
-gulp.task("scripts", () => {
-  return gulp.src(paths.scripts.src)
+function scripts() {
+  return src(cfg.src.scripts)
     // .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(gulpif(production, rename({
-        suffix: ".min"
-    })))
+    .pipe(gulpif(cfg.isDev, sourcemaps.init()))
     .pipe(concat('index.js'))
-    .pipe(terser())
-    .pipe(gulp.dest(paths.scripts.dist))
-    // .pipe(debug({
-    //     "title": "JS files"
-    // }))
+    .pipe(gulpif(cfg.isProd, terser()))
+    .pipe(gulpif(cfg.isDev, sourcemaps.write("./")))
+    .pipe(gulpif(cfg.isProd, rename({
+      suffix: ".min"
+    })))
+    .pipe(gulpif(cfg.debug,  debug({title: 'scripts:'})))
+    .pipe(dest(cfg.build.scripts))
     .on("end", browsersync.reload);
-});
+}
 
-
-// task('scripts', function () {
-//   return src(`${cfg.paths.src.scripts}**/*.js`)
-//     .pipe(gulpIf(isDev, sourcemaps.init()))
-//     .pipe(concat('index.js'))
-//     .pipe(terser())
-//     .pipe(gulpIf(isDev, sourcemaps.write()))
-//     .pipe(rename({
-//       suffix: '.min'
-//     }))
-//     .pipe(dest(cfg.paths.dest.scripts));
-// });
+scripts.description = 'Concat JS files';
+task(scripts);

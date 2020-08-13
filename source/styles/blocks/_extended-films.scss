@@ -1,25 +1,43 @@
 .extended-films {
 
 	&__title-wrapper {
+    padding-left: $phones-paddings;
+		padding-right: $phones-paddings;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
+  }
+
+  &__title-description {
+    padding-left: $phones-paddings;
+		padding-right: $phones-paddings;
+  }
 
 	&__slider {
-		position: relative;
-		z-index: 1;
+		// position: relative;
+		// z-index: 1;
+		// max-width: 620px;
+		// margin-left: auto;
+		// margin-right: auto;
 
-		@media (min-width: 360px) {
-			padding-left: 10px;
-			padding-right: 10px;
-			border-radius: 20px;
-			background-color: $black;
-			border: 1px solid rgba(0, 204, 255, 0.7);
-		}
+		// @media (min-width: 360px) {
+		// 	padding-left: 10px;
+		// 	padding-right: 10px;
+		// 	border-radius: 20px;
+		// 	background-color: $black;
+		// 	border: 1px solid rgba(0, 204, 255, 0.7);
+    // }
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    background-color: $space-light;
+    border-top: 1px solid rgba(0, 204, 255, 0.7);
+    border-bottom: 1px solid rgba(0, 204, 255, 0.7);
 
 		&-container {
-			padding-top: 30px;
+      box-shadow: 0 0 5px 5px #000;
 		}
 
 		.swiper-wrapper {
@@ -27,7 +45,7 @@
 			margin-bottom: 0;
 			padding-left: 0;
 			list-style: none;
-		}
+    }
 
 		.swiper-pagination {
 			top: 0;
@@ -64,7 +82,6 @@
 	&__poster-link {
 		position: relative;
 		display: block;
-		min-height: 401px;
 	}
 
 	&__poster {
@@ -79,7 +96,7 @@
 		width: 80px;
 		height: 80px;
 		padding: 0;
-		display: flex;
+		display: none;
 		justify-content: center;
 		align-items: center;
 		background-color: rgba(0, 0, 0, 0.7);
@@ -113,7 +130,7 @@
 	}
 
 	&__description {
-		display: flex;
+		display: none;
 		align-items: flex-start;
 		justify-content: space-around;
 		margin-bottom: 15px;
