@@ -1,8 +1,9 @@
 @import './partials/fonts';
-// @import-normalize;
+@import './partials/vendor';
 @import './partials/variables';
 @import './partials/mixins';
 @import './partials/global';
+@import './partials/swiper-bundle-min';
 @import './blocks/page-header';
 @import './blocks/page-main';
 @import './blocks/extended-films';

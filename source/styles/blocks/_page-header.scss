@@ -17,7 +17,7 @@
 
 		@media (min-width: $tablet) {
 			padding-left: $tablets-paddings;
-			padding-right: $tablets-paddings;
+      padding-right: $tablets-paddings;
 		}
 
 		@media (min-width: $desktop) {
@@ -34,7 +34,22 @@
 
 		svg {
 			width: 115px;
-			height: 16px;
+      height: 16px;
+
+      path {
+        transition: fill 0.1s;
+      }
+    }
+
+    &:active svg path {
+		  fill: $turquoise;
+    }
+
+    @media (min-width: $desktop) {
+
+      &:hover svg path {
+        fill: $turquoise;
+      }
 		}
 	}
 
@@ -54,11 +69,7 @@
 			border: none;
 			background-color: transparent;
 			user-select: none;
-			outline: transparent;
-
-			&-text {
-				display: none;
-			}
+      outline: transparent;
 
 			&-burger {
 				position: relative;
@@ -86,8 +97,8 @@
 
 				&::after {
 					top: -10px;
-				}
-			}
+        }
+      }
 
 			&--open {
 
@@ -98,15 +109,17 @@
 					&::before,
 					&::after {
 						top: 0;
-						transition: top .2s, transform .2s .4s;
+						transition: top .2s, transform .2s .4s, background 3s;
 					}
 
 					&::before {
-						transform: rotate3d(0,0,1,45deg);
+            transform: rotate3d(0,0,1,45deg);
+            background: $turquoise;
 					}
 
 					&::after {
-						transform: rotate3d(0,0,1,-45deg);
+            transform: rotate3d(0,0,1,-45deg);
+            background: $turquoise;
 					}
 				}
 			}
@@ -143,13 +156,15 @@
 			padding-top: 15px;
 			padding-bottom: 15px;
 			color: $white;
-			font-family: Roboto;
 			font-weight: 400;
-			font-size: 16px;
-			line-height: 20px;
 			text-decoration: none;
 			text-transform: uppercase;
-			background-color: $space-light;
+      background-color: $space-light;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $turquoise;
+      }
 		}
 	}
 
@@ -163,7 +178,20 @@
 		padding: 0;
 		background-color: transparent;
 		border: none;
-		outline: transparent;
+    outline: transparent;
+
+    svg path {
+      transition: fill  0.1s;
+    }
+
+    @media (min-width: $desktop) {
+
+      &:hover {
+        svg path {
+          fill: $turquoise;
+        }
+      }
+		}
 
 		&--open {
 			position: absolute;
@@ -177,7 +205,7 @@
 				left: 18px;
 				width: 23px;
 				height: 2px;
-				background-color: $white;
+				background-color: $turquoise;
 			}
 
 			&::before {
@@ -189,7 +217,7 @@
 			}
 
 			svg {
-				display: none;
+        display: none;
 			}
 		}
 	}
@@ -253,15 +281,36 @@
 		height: 60px;
 		text-transform: uppercase;
 		background-color: transparent;
-		border: none;
+    border: none;
+    transition: color 0.1s;
+
+    &:active {
+      color: $turquoise;
+    }
+
+    @media (min-width: $desktop) {
+      transition: color 0.2s;
+
+      &:hover {
+        color: $turquoise;
+      }
+		}
 	}
 
-	&__slider {
+	&__bottom {
 		margin-top: 61px;
-		background-color: $black;
+    border-top: 1px solid transparent;
+    background-color: $black;
+  }
 
-		&-container {
-			overflow: hidden;
+  &__slider {
+    @media (min-width: 1278px) {
+      width: 100%;
+      height: 370px;
+    }
+
+    &-container {
+      overflow: hidden;
 		}
 
 		.swiper-wrapper {
@@ -269,8 +318,34 @@
 			margin-bottom: 0;
 			padding-left: 0;
 			list-style: none;
-		}
-	}
+    }
+
+    .swiper-slide {
+
+      @media (min-width: 1278px) {
+        picture {
+          display: none;
+        }
+
+        position: relative;
+        height: 370px;
+        background-image: url('../../img/content/header-banner2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient(to top, $black, transparent);
+        }
+      }
+    }
+  }
 
 	&__trailer-play {
     position: relative;
@@ -279,33 +354,30 @@
     z-index: 2;
     transform: translateY(-50%);
 		padding: 20px;
-		border-radius: 30px;
+		border-radius: 35px;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+    align-items: center;
+    font-weight: 400;
+		text-transform: uppercase;
 		background-color: $black;
 		border: none;
 		overflow: hidden;
 		border: 2px solid $turquoise;
 		box-shadow: 0 0 3px 3px rgba(0, 0, 0, 1);
-		transition: all 0.2s;
-
-		span {
-			color: $white;
-			font-weight: 400;
-			text-transform: uppercase;
-			font-size: 14px;
-			line-height: 16px;
-			transition: color 0.2s;
-		}
+    transition: all 0.1s;
 
 		&:active {
-			box-shadow: 0 0 3px 1px rgba(0, 204, 255, 1);
-			animation: none;
-		}
+      color: $turquoise;
+    }
 
-		&:active span {
-			color: $turquoise;
+    @media (min-width: $desktop) {
+      transition: all 0.3s;
+		  box-shadow: unset;
+
+      &:hover {
+        box-shadow: 0 0 5px 1px rgba(0, 204, 255, 1);
+      }
 		}
 	}
 }

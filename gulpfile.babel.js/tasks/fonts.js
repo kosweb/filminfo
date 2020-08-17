@@ -25,4 +25,4 @@ function fontsConvert() {
 }
 
 fontsConvert.description = 'Convert ttf/otf/eot fonts to woff';
-task(fontsConvert);
+task('fonts-convert', fontsConvert);

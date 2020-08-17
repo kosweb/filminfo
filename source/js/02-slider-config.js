@@ -1,5 +1,6 @@
 const headerSlider = document.querySelector('.page-header__slider-container');
-const extendedSlider = document.querySelector('.swiper-container');
+const extendedSlider = document.querySelector('.extended-films__slider-container');
+const digitalSlider = document.querySelector('.digital-release__slider-container');
 const famousSlider = document.querySelector('.famous-movies__slider-container');
 const newsSlider = document.querySelector('.movie-news__slider-container');
 
@@ -18,11 +19,31 @@ let mySwiperEx = new Swiper(extendedSlider, {
   spaceBetween: 0,
   cssMode: true,
   loop: false,
-	// pagination: {
-  //   el: '.extended-pagination',
-	// 	type: 'bullets',
-	// 	clickable: true,
-	// },
+
+  breakpoints: {
+    1280: {
+      cssMode: false,
+      slidesPerView: 5,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    },
+  }
+})
+
+let mySwiperDig = new Swiper(digitalSlider, {
+  breakpoints: {
+    1280: {
+      slidesPerView: 5,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    },
+  }
 })
 
 let mySwiperFms = new Swiper(famousSlider, {

@@ -5,29 +5,25 @@
 		padding-right: $phones-paddings;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+    align-items: center;
+
+    @media (min-width: $desktop) {
+      padding-left: $desktops-paddings;
+		  padding-right: $desktops-paddings;
+    }
   }
 
   &__title-description {
     padding-left: $phones-paddings;
-		padding-right: $phones-paddings;
+    padding-right: $phones-paddings;
+
+    @media (min-width: $desktop) {
+      padding-left: $desktops-paddings;
+		  padding-right: $desktops-paddings;
+    }
   }
 
 	&__slider {
-		// position: relative;
-		// z-index: 1;
-		// max-width: 620px;
-		// margin-left: auto;
-		// margin-right: auto;
-
-		// @media (min-width: 360px) {
-		// 	padding-left: 10px;
-		// 	padding-right: 10px;
-		// 	border-radius: 20px;
-		// 	background-color: $black;
-		// 	border: 1px solid rgba(0, 204, 255, 0.7);
-    // }
-
 
     position: relative;
     z-index: 1;
@@ -35,9 +31,11 @@
     border-top: 1px solid rgba(0, 204, 255, 0.7);
     border-bottom: 1px solid rgba(0, 204, 255, 0.7);
 
-		&-container {
-
-		}
+    @media (min-width: $desktop) {
+      border-top: none;
+      background-color: unset;
+      background-image: linear-gradient(to bottom, transparent 73px, rgba(0, 204, 255, 0.7) 73px, rgba(0, 204, 255, 0.7) 74px, $space-light 74px);
+    }
 
 		.swiper-wrapper {
       padding-top: 15px;
@@ -45,12 +43,86 @@
 			margin-top: 0;
 			margin-bottom: 0;
 			padding-left: 0;
-			list-style: none;
+      list-style: none;
+
+      @media (min-width: $desktop) {
+        padding-top: 90px;
+        padding-bottom: none;
+      }
     }
 
     .swiper-slide {
       width: 280px;
       scroll-snap-align: none !important;
+
+      @media (min-width: $desktop) {
+        position: relative;
+        width: auto;
+        transition: all 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+
+          .extended-films__poster {
+            box-shadow: unset;
+            filter: blur(3px) brightness(25%);
+          }
+
+          .extended-films__description {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      display: none;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+      top: 30px;
+      width: 90px;
+      height: 40px;
+		  border: 2px solid $turquoise;
+      background-color: rgba(0,0,0,0.7);
+      border-radius: 35px;
+      animation: pulse-soso 1.5s infinite alternate;
+      transition: all 0.3s;
+
+      @media (min-width: $desktop) {
+        display: flex;
+      }
+
+      svg path {
+        fill: $white;
+        transition: fill 0.1s;
+      }
+
+      &:hover  {
+        box-shadow: 0 0 5px 1px rgba(0, 204, 255, 1);
+      }
+
+      &:active {
+
+        svg path {
+          fill: $turquoise;
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      left: 40px;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .swiper-button-next {
+      right: 40px;
     }
 	}
 
@@ -60,85 +132,86 @@
 
 	&__poster-link {
     padding-top: 10px;
-    padding-right: 15px;
+    padding-right: 20px;
     padding-bottom: 10px;
-    padding-left: 15px;
+    padding-left: 20px;
 		position: relative;
     display: block;
+
+    @media (min-width: $desktop) {
+      padding-left: $desktops-paddings;
+		  padding-right: $desktops-paddings;
+    }
 	}
 
 	&__poster {
     pointer-events: none;
     border-radius: 15px;
-		box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.8);
+    transition: all 0.2s;
 	}
 
-	&__trailer-play {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+	&__description {
+    padding-top: 30px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+	}
+
+	&__name {
+    text-align: center;
+    flex-shrink: 0;
+		color: $white;
+    text-decoration: none;
+    word-wrap: break-word;
+  }
+
+  &__trailer-play {
+    flex-shrink: 0;
 		width: 80px;
 		height: 80px;
-		padding: 0;
-		display: none;
+    padding: 0;
+    display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.5);
 		border: none;
-		overflow: hidden;
 		border: 2px solid $turquoise;
-		box-shadow: 0 0 3px 3px rgba(0, 0, 0, 1);
 		border-radius: 50%;
 		animation: pulse 1.5s infinite alternate;
 		animation-delay: 1.5s;
-		transition: all 0.2s;
+		transition: all 0.3s;
 
 		svg {
 			margin-left: 25px;
 			width: 60%;
 			height: 60%;
 			fill: $white;
-			transition: fill 0.2s;
+			transition: fill 0.1s;
 			pointer-events: none;
-		}
+    }
 
-		&:active {
+    &:hover {
 			background-color: rgba(0, 0, 0, 1);
-			box-shadow: 0 0 3px 1px rgba(0, 204, 255, 1);
-			animation: none;
-		}
+      box-shadow: 0 0 5px 1px rgba(0, 204, 255, 1);
+    }
 
 		&:active svg {
 			fill: $turquoise;
 		}
 	}
 
-	&__description {
-		display: none;
-		align-items: flex-start;
-		justify-content: space-around;
-		margin-bottom: 15px;
-
-		@media (min-width: 360px) {
-			top: 9px;
-			justify-content: space-around;
-			padding-left: 10px;
-			padding-right: 10px;
-		}
-	}
-
-	&__name {
-		margin-right: auto;
-		color: $white;
-		text-decoration: none;
-		text-align: left;
-	}
-
 	&__year	{
-		flex: 0 0 85px;
-		width: 85px;
-		text-align: right;
+    flex-shrink: 0;
 		font-weight: 700;
 		color: $turquoise;
 	}
