@@ -1,90 +1,146 @@
 .famous-movies {
-	position: relative;
+  position: relative;
+  overflow: hidden;
+
+  &__title  {
+    z-index: 1;
+  }
 
 	&__title-wrapper {
 		padding-left: $phones-paddings;
 		padding-right: $phones-paddings;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+    align-items: center;
+
+    @media (min-width: $tablet) {
+      padding-left: $tablets-paddings;
+	  	padding-right: $tablets-paddings;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: $desktops-paddings;
+	  	padding-right: $desktops-paddings;
+    }
 	}
 
 	&__title-description {
 		padding-left: $phones-paddings;
 		padding-right: $phones-paddings;
-		margin-bottom: 30px;
+    margin-bottom: 30px;
+    z-index: 1;
+
+    @media (min-width: $tablet) {
+      padding-left: $tablets-paddings;
+	  	padding-right: $tablets-paddings;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: $desktops-paddings;
+	  	padding-right: $desktops-paddings;
+    }
 	}
 
 	&__slider {
 		position: relative;
-		border-top: 1px solid rgba(0, 204, 255, 0.7);
 		border-bottom: 1px solid rgba(0, 204, 255, 0.7);
-		background-color: $black;
 
 		&-container {
-			position: relative;
-			padding-top: 45px;
-			padding-bottom: 20px;
-			overflow: hidden;
-		}
+      width: 100%;
+      padding-bottom: 20px;
 
-		.swiper-slide {
-			transition: 0.2s;
-		}
+      @media (min-width: $desktop) {
+        padding-bottom: 150px;
+      }
+    }
 
-		// .swiper-slide-active {
-		// 	transform: scale(1.3);
-		// }
+	// 	.swiper-slide {
+  //     width: 300px;
+  //     height: 195px;
+  //     background-position: center;
+  //     background-size: cover;
+  //     background-color: $black;
+  //     filter: blur(3px) saturate(0%);
+  //     box-shadow: 0 0 5px 5px transparent;
+  //     transition: all 0.2s;
+  //     // -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
 
-		.swiper-wrapper {
-			margin-top: 0;
-			margin-bottom: 0;
-			padding-left: 0;
-			list-style: none;
-		}
+  //     .famous-movies__trailer-play {
+  //       opacity: 0;
+  //     }
 
-		.swiper-pagination {
-			// padding-left: 5px;
-			// padding-right: 5px;
-			padding-left: $phones-paddings;
-			padding-right: $phones-paddings;
-			top: 14px;
-			bottom: unset;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
+  //     .famous-movies__description {
+  //       opacity: 0;
+  //     }
 
-		.swiper-pagination-bullet {
-			margin: 0 !important;
-			width: 15px;
-			height: 15px;
-			border: 1px solid $turquoise;
-			background-color: transparent;
-			opacity: 1;
-			transition: background-color 0.2s;
+  //     &-active {
+  //       filter: blur(0) saturate(100%);
+  //       box-shadow: 0 0 5px 5px $black;
 
-			&-active {
-				background-color: $turquoise;
-			}
-		}
+  //       .famous-movies__trailer-play {
+  //         opacity: 1;
+  //       }
+
+  //       .famous-movies__description {
+  //         animation-name: glide;
+  //         animation-duration: 0.5s;
+  //         animation-delay: 0.5s;
+  //         animation-fill-mode: forwards;
+  //       }
+  //     }
+
+  //     @media (min-width: $desktop) {
+  //       width: 600px;
+  //       height: 390px;
+  //     }
+	// 	}
+
+	// 	.swiper-wrapper {
+	// 		margin-top: 0;
+	// 		margin-bottom: 0;
+	// 		padding-left: 0;
+	// 		list-style: none;
+	// 	}
+
+	// 	.swiper-pagination {
+	// 		padding-left: $phones-paddings;
+	// 		padding-right: $phones-paddings;
+	// 		top: 14px;
+	// 		bottom: unset;
+	// 		display: flex;
+	// 		align-items: center;
+  //     justify-content: space-between;
+
+  //     @media (min-width: $desktop) {
+  //       display: none;
+  //     }
+	// 	}
+
+	// 	.swiper-pagination-bullet {
+	// 		margin: 0 !important;
+	// 		width: 15px;
+	// 		height: 15px;
+	// 		border: 1px solid $turquoise;
+	// 		background-color: transparent;
+	// 		opacity: 1;
+	// 		transition: background-color 0.2s;
+
+	// 		&-active {
+	// 			background-color: $turquoise;
+	// 		}
+	// 	}
 	}
 
 	&__poster-wrapper {
 		position: relative;
 	}
 
-	&__poster-link {
-		position: relative;
-		display: block;
-		background-color: $black;
-	}
-
 	&__poster {
-		pointer-events: none;
+		position: relative;
 	}
 
 	&__trailer-play {
+    display: none;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -92,15 +148,15 @@
 		width: 80px;
 		height: 80px;
 		padding: 0;
-		display: flex;
+		// display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.8);
 		border: none;
 		overflow: hidden;
 		border: 2px solid $turquoise;
-		box-shadow: 0 0 3px 3px rgba(0, 0, 0, 1);
-		border-radius: 50%;
+    border-radius: 50%;
+		box-shadow: 0 0 3px 3px $black;
 		animation: pulse 1.5s infinite alternate;
 		animation-delay: 1.5s;
 		transition: all 0.2s;
@@ -110,25 +166,24 @@
 			width: 60%;
 			height: 60%;
 			fill: $white;
-			transition: fill 0.2s;
+			transition: fill 0.1s;
 			pointer-events: none;
 		}
 
-		&:active {
+    &:hover {
 			background-color: rgba(0, 0, 0, 1);
-			box-shadow: 0 0 3px 1px rgba(0, 204, 255, 1);
-			animation: none;
-		}
+      box-shadow: 0 0 5px 1px rgba(0, 204, 255, 1);
+    }
 
 		&:active svg {
 			fill: $turquoise;
-		}
+    }
 	}
 
 	&__control-block {
 		padding-left: 10px;
 		padding-right: 10px;
-		display: none;
+		display: block;
 	}
 
 	&__control-wrapper {
@@ -173,24 +228,30 @@
 	}
 
 	&__description {
-		margin-top: 20px;
-		position: relative;
-		padding-left: $phones-paddings;
-		padding-right: $phones-paddings;
-		display: block;
+    display: none;
+    position: absolute;
+    top: 105%;
+    width: 100%;
 		text-decoration: none;
-		z-index: 1;
+    z-index: 1;
 
-		&-wrapper {
-			display: flex;
-			font-size: 20px;
-			line-height: 24px;
-			justify-content: space-between;
-		}
+    &-wrapper {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $desktop) {
+
+      &-wrapper {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
 	}
 
 	&__name {
-		margin-bottom: 10px;
 		display: block;
 		color: $white;
 		text-decoration: none;

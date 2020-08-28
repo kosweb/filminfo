@@ -64,62 +64,83 @@
 			<section class="page-header__bottom">
         <h3 class="visually-hidden">Новые трейлеры</h3>
         <div class="page-header__slider">
-          <div class="page-header__slider-container swiper-no-swiping">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <picture>
-                  <source type="image/webp" srcset="./img/content/header-slider1.webp">
+          <div class="page-header__slider-container splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <picture>
+                    <source type="image/webp" srcset="./img/content/header-slider1.webp">
                     <img class="page-header__image" src="./img/content/header-slider1.jpg" alt="Кадр из мультфильма «Скуби»">
-                </picture>
-              </li>
-              <li class="swiper-slide">
-                <picture>
-                  <source type="image/webp" srcset="./img/content/header-slider2.webp">
-                  <img class="page-header__image" src="./img/content/header-slider2.jpg" alt="Кадр из сериала «Boys»">
-                </picture>
-              </li>
-              <li class="swiper-slide">
-                <picture>
-                  <source type="image/webp" srcset="./img/content/header-slider3.webp">
-                  <img class="page-header__image" src="./img/content/header-slider3.jpg" alt="Кадр из сериала «Очень странные дела»">
-                </picture>
-              </li>
-              <li class="swiper-slide">
-                <picture>
-                  <source type="image/webp" srcset="./img/content/header-slider4.webp">
-                  <img class="page-header__image" src="./img/content/header-slider4.jpg" alt="Кадр из аниме «Атака титанов»">
-                </picture>
-              </li>
-              <li class="swiper-slide">
-                <picture>
-                  <source type="image/webp" srcset="./img/content/header-slider5.webp">
-                  <img class="page-header__image" src="./img/content/header-slider5.jpg" alt="Кадр из фильма «Морбиус»">
-                </picture>
-              </li>
-            </ul>
+                  </picture>
+                </li>
+                <li class="splide__slide">
+                  <picture>
+                    <source type="image/webp" srcset="./img/content/header-slider2.webp">
+                    <img class="page-header__image" src="./img/content/header-slider2.jpg" alt="Кадр из сериала «Boys»">
+                  </picture>
+                </li>
+                <li class="splide__slide">
+                  <picture>
+                    <source type="image/webp" srcset="./img/content/header-slider3.webp">
+                    <img class="page-header__image" src="./img/content/header-slider3.jpg" alt="Кадр из сериала «Очень странные дела»">
+                  </picture>
+                </li>
+                <li class="splide__slide">
+                  <picture>
+                    <source type="image/webp" srcset="./img/content/header-slider4.webp">
+                    <img class="page-header__image" src="./img/content/header-slider4.jpg" alt="Кадр из аниме «Атака титанов»">
+                  </picture>
+                </li>
+                <li class="splide__slide">
+                  <picture>
+                    <source type="image/webp" srcset="./img/content/header-slider5.webp">
+                    <img class="page-header__image" src="./img/content/header-slider5.jpg" alt="Кадр из фильма «Морбиус»">
+                  </picture>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <button class="page-header__trailer-play anime-pulse-soso" type="button" aria-label="Перейти на станицу новых трейлеров">Новые трейлеры</button>
+        <button class="page-header__trailer-play" type="button" aria-label="Перейти на станицу новых трейлеров">Новые трейлеры</button>
 			</section>
-		</header>
+    </header>
+
 		<main class="page-main">
 			<section class="page-main__extended-films extended-films">
-				<div class="extended-films__title-wrapper main-title__wrapper">
-					<h2 class="extended-films__title main-title">
-						Ожидаемые<br><span class="main-title__stroke">фильмы</span>
-					</h2>
-					<a href="#" class="extended-films__link main-title__link">
-						<span class="visually-hidden">Просмотреть все</span>
-						<svg width="20" height="20" viewbox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-							<path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
-						</svg>
-					</a>
-				</div>
-				<p class="extended-films__title-description main-title__description">Примьеры, которые выйдут на большие экраны в ближайшее время</p>
-				<div class="extended-films__slider">
-					<div class="extended-films__slider-container swiper-container">
-						<ul class="swiper-wrapper">
-							<li class="swiper-slide">
+				<div class="extended-films__title-wrapper main-title-wrapper">
+          <h2 class="extended-films__title main-title">
+            Ожидаемые<br><span class="main-title__stroke">фильмы</span>
+            <a href="#" class="extended-films__link main-title__link">
+            <span class="visually-hidden">Просмотреть все</span>
+            <svg width="20" height="20" viewbox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
+            </svg>
+          </a>
+          </h2>
+        </div>
+        <p class="extended-films__title-description main-title__description">Примьеры, которые выйдут на большие экраны в ближайшее время</p>
+				<div class="extended-films__slider splide">
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+              <svg width="18px" height="17px" viewbox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                  <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"/>
+                  <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
+                </g>
+              </svg>
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+              <svg width="18px" height="17px" viewbox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                  <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"/>
+                  <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
+                </g>
+              </svg>
+            </button>
+          </div>
+					<div class="extended-films__slider-container splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -140,7 +161,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -161,7 +182,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -182,7 +203,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -203,7 +224,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -224,7 +245,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -245,7 +266,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -266,7 +287,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -287,7 +308,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -308,7 +329,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -329,7 +350,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -350,7 +371,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -371,7 +392,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="extended-films__poster-wrapper">
 									<div class="extended-films__poster-link" href="#">
 										<picture>
@@ -393,29 +414,21 @@
 								</div>
 							</li>
             </ul>
-            <div class="swiper-button-prev">
-              <svg width="58" height="8" viewBox="0 0 58 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M57.3536 4.35355C57.5488 4.15829 57.5488 3.84171 57.3536 3.64645L54.1716 0.464466C53.9763 0.269204 53.6597 0.269204 53.4645 0.464466C53.2692 0.659728 53.2692 0.976311 53.4645 1.17157L56.2929 4L53.4645 6.82843C53.2692 7.02369 53.2692 7.34027 53.4645 7.53553C53.6597 7.7308 53.9763 7.7308 54.1716 7.53553L57.3536 4.35355ZM0 4.5H57V3.5H0V4.5Z" fill="white"/>
-              </svg>
-            </div>
-            <div class="swiper-button-next">
-              <svg width="58" height="8" viewBox="0 0 58 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M57.3536 4.35355C57.5488 4.15829 57.5488 3.84171 57.3536 3.64645L54.1716 0.464466C53.9763 0.269204 53.6597 0.269204 53.4645 0.464466C53.2692 0.659728 53.2692 0.976311 53.4645 1.17157L56.2929 4L53.4645 6.82843C53.2692 7.02369 53.2692 7.34027 53.4645 7.53553C53.6597 7.7308 53.9763 7.7308 54.1716 7.53553L57.3536 4.35355ZM0 4.5H57V3.5H0V4.5Z" fill="white"/>
-              </svg>
-            </div>
 					</div>
 				</div>
       </section>
 
 			<section class="page-main__digital-release digital-release">
-				<div class="digital-release__title-wrapper main-title__wrapper">
-					<h2 class="digital-release__title main-title">Цифровые<br><span class="main-title__stroke">релизы</span></h2>
-					<a href="#" class="digital-release__link main-title__link">
-						<span class="visually-hidden">Просмотреть все</span>
-						<svg width="20" height="20" viewbox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-							<path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
-						</svg>
-					</a>
+				<div class="digital-release__title-wrapper main-title-wrapper">
+          <h2 class="digital-release__title main-title">
+            Цифровые<br><span class="main-title__stroke">релизы</span>
+            <a href="#" class="digital-release__link main-title__link">
+              <span class="visually-hidden">Просмотреть все</span>
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
+              </svg>
+            </a>
+          </h2>
 				</div>
 				<p class="digital-release__title-description main-title__description">Фильмы, которые недавно появились в онлайн кинотеатрах и на DVD</p>
 				<div class="digital-release__list-wrapper">
@@ -442,10 +455,28 @@
 						</li>
 					</ul>
         </div>
-        <div class="digital-release__slider">
-					<div class="digital-release__slider-container swiper-container">
-						<ul class="swiper-wrapper">
-							<li class="swiper-slide">
+        <div class="digital-release__slider splide">
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+              <svg width="18px" height="17px" viewbox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                  <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"/>
+                  <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
+                </g>
+              </svg>
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+              <svg width="18px" height="17px" viewbox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                  <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"/>
+                  <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
+                </g>
+              </svg>
+            </button>
+          </div>
+					<div class="digital-release__slider-container splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
 								<div class="digital-release__poster-wrapper">
 									<div class="digital-release__poster-link" href="#">
 										<picture>
@@ -466,7 +497,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="digital-release__poster-wrapper">
 									<div class="digital-release__poster-link" href="#">
 										<picture>
@@ -487,7 +518,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="digital-release__poster-wrapper">
 									<div class="digital-release__poster-link" href="#">
 										<picture>
@@ -508,7 +539,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="digital-release__poster-wrapper">
 									<div class="digital-release__poster-link" href="#">
 										<picture>
@@ -529,7 +560,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="digital-release__poster-wrapper">
 									<div class="digital-release__poster-link" href="#">
 										<picture>
@@ -550,7 +581,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="digital-release__poster-wrapper">
 									<div class="digital-release__poster-link" href="#">
 										<picture>
@@ -571,7 +602,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="digital-release__poster-wrapper">
 									<div class="digital-release__poster-link" href="#">
 										<picture>
@@ -592,7 +623,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="digital-release__poster-wrapper">
 									<div class="digital-release__poster-link" href="#">
 										<picture>
@@ -613,7 +644,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="digital-release__poster-wrapper">
 									<div class="digital-release__poster-link" href="#">
 										<picture>
@@ -634,7 +665,7 @@
                   </div>
 								</div>
 							</li>
-							<li class="swiper-slide">
+							<li class="splide__slide">
 								<div class="digital-release__poster-wrapper">
 									<div class="digital-release__poster-link" href="#">
 										<picture>
@@ -650,194 +681,140 @@
                         </g>
                       </svg>
                     </button>
-                    <a class="digital-films__name" href="#">Удивительная миссис Мэй</a>
-                    <b class="digital-films__rating">IMDb: 6.70</b>
+                    <a class="digital-release__name" href="#">Удивительная миссис Мэй</a>
+                    <b class="digital-release__rating">IMDb: 6.70</b>
                   </div>
 								</div>
 							</li>
             </ul>
-            <div class="swiper-button-prev">
-              <svg width="58" height="8" viewBox="0 0 58 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M57.3536 4.35355C57.5488 4.15829 57.5488 3.84171 57.3536 3.64645L54.1716 0.464466C53.9763 0.269204 53.6597 0.269204 53.4645 0.464466C53.2692 0.659728 53.2692 0.976311 53.4645 1.17157L56.2929 4L53.4645 6.82843C53.2692 7.02369 53.2692 7.34027 53.4645 7.53553C53.6597 7.7308 53.9763 7.7308 54.1716 7.53553L57.3536 4.35355ZM0 4.5H57V3.5H0V4.5Z" fill="white"/>
-              </svg>
-            </div>
-            <div class="swiper-button-next">
-              <svg width="58" height="8" viewBox="0 0 58 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M57.3536 4.35355C57.5488 4.15829 57.5488 3.84171 57.3536 3.64645L54.1716 0.464466C53.9763 0.269204 53.6597 0.269204 53.4645 0.464466C53.2692 0.659728 53.2692 0.976311 53.4645 1.17157L56.2929 4L53.4645 6.82843C53.2692 7.02369 53.2692 7.34027 53.4645 7.53553C53.6597 7.7308 53.9763 7.7308 54.1716 7.53553L57.3536 4.35355ZM0 4.5H57V3.5H0V4.5Z" fill="white"/>
-              </svg>
-            </div>
 					</div>
 				</div>
       </section>
 
 			<section class="page-main__top-movies top-movies">
-				<div class="top-movies__title-wrapper main-title__wrapper">
-					<h2 class="top-movies__title main-title">Топ 10 фильмов<br>к просмотру</h2>
-					<a href="#" class="top-movies__link main-title__link">
-						<span class="visually-hidden">Просмотреть все</span>
-						<svg width="20" height="20" viewbox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-							<path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
-						</svg>
-					</a>
-				</div>
-				<p class="top-movies__description main-title__description">Подборка лучших фильмов этой недели по версии нашего сайта, которые заслуживают вашего внимания!</p>
+				<div class="top-movies__title-wrapper main-title-wrapper">
+					<h2 class="top-movies__title main-title">
+            Топ 10 фильмов<br>к просмотру
+            <a href="#" class="top-movies__link main-title__link">
+              <span class="visually-hidden">Просмотреть все</span>
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
+              </svg>
+            </a>
+          </h2>
+        </div>
+        <video src="./video/top-movies.mp4" class="top-movies__video-player" width="100%"autoplay loop crossorigin></video>
+        <p class="top-movies__description main-title__description">Подборка лучших фильмов этой недели по версии нашего сайта, которые заслуживают вашего внимания!</p>
       </section>
 
 			<section class="page-main__famous-movies famous-movies">
-				<div class="famous-movies__title-wrapper main-title__wrapper">
-					<h2 class="famous-movies__title main-title">Популярные<br><span class="main-title__stroke">фильмы</span></h2>
-					<a href="#" class="famous-movies__link main-title__link">
-						<span class="visually-hidden">Просмотреть все</span>
-						<svg width="20" height="20" viewbox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-							<path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
-						</svg>
-					</a>
+				<div class="famous-movies__title-wrapper main-titlewrapper">
+					<h2 class="famous-movies__title main-title">
+            Популярные<br><span class="main-title__stroke">фильмы</span>
+            <a href="#" class="famous-movies__link main-title__link">
+              <span class="visually-hidden">Просмотреть все</span>
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
+              </svg>
+            </a>
+          </h2>
 				</div>
 				<p class="famous-movies__title-description main-title__description">Список фильмов с высоким рейтингом</p>
 				<div class="famous-movies__slider">
 					<div class="famous-movies__slider-container">
-						<ul class="swiper-wrapper">
-							<li class="swiper-slide">
-								<div class="famous-movies__poster-wrapper">
-									<a href="#" class="famous-movies__poster-link">
-										<picture>
-											<source type="image/webp" srcset="./img/content/famous-movie-1.webp">
-											<img class="famous-movies__image" src="./img/content/famous-movie-1.jpg" alt="Кадр из фильма «Человек-паук»">
-										</picture>
-									</a>
-									<button class="famous-movies__trailer-play famous-movies__trailer-play-1" type="button" aria-label="Воспроизвести трейлер фильма">
-										<svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-											<g>
-												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
-											</g>
-										</svg>
-									</button>
-								</div>
-								<a class="famous-movies__description" href="#">
-									<b class="famous-movies__name">Человек-паук</b>
-									<div class="famous-movies__description-wrapper">
-										<span class="famous-movies__year">2002</span><b class="famous-movies__rating">7.6 / 10</b>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<div class="famous-movies__poster-wrapper">
-									<a href="#" class="famous-movies__poster-link">
-										<picture>
-											<source type="image/webp" srcset="./img/content/famous-movie-2.webp">
-											<img class="famous-movies__image" src="./img/content/famous-movie-2.jpg" alt="Кадр из фильма «Мстители‎»">
-										</picture>
-									</a>
-									<button class="famous-movies__trailer-play famous-movies__trailer-play-2" type="button" aria-label="Воспроизвести трейлер фильма">
-										<svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-											<g>
-												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
-											</g>
-										</svg>
-									</button>
-								</div>
-								<a class="famous-movies__description" href="#">
-									<b class="famous-movies__name">Мстители: Война бесконечности</b>
-									<div class="famous-movies__description-wrapper">
-										<span class="famous-movies__year">2018</span><b class="famous-movies__rating">8.4 / 10</b>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<div class="famous-movies__poster-wrapper">
-									<a href="#" class="famous-movies__poster-link">
-										<picture>
-											<source type="image/webp" srcset="./img/content/famous-movie-3.webp">
-											<img class="famous-movies__image" src="./img/content/famous-movie-3.jpg" alt="Кадр из фильма «Гарри Поттер и философский камень‎»">
-										</picture>
-									</a>
-									<button class="famous-movies__trailer-play famous-movies__trailer-play-3" type="button" aria-label="Воспроизвести трейлер фильма">
-										<svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-											<g>
-												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
-											</g>
-										</svg>
-									</button>
-								</div>
-								<a class="famous-movies__description" href="#">
-									<b class="famous-movies__name">Гарри Поттер и философский камень‎</b>
-									<div class="famous-movies__description-wrapper">
-										<span class="famous-movies__year">2001</span><b class="famous-movies__rating">8.2 / 10</b>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<div class="famous-movies__poster-wrapper">
-									<a href="#" class="famous-movies__poster-link">
-										<picture>
-											<source type="image/webp" srcset="./img/content/famous-movie-4.webp">
-											<img class="famous-movies__image" src="./img/content/famous-movie-4.jpg" alt="Кадр из фильма «Звёздные войны: Месть ситхов»">
-										</picture>
-									</a>
-									<button class="famous-movies__trailer-play famous-movies__trailer-play-4" type="button" aria-label="Воспроизвести трейлер фильма">
-										<svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-											<g>
-												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
-											</g>
-										</svg>
-									</button>
-								</div>
-								<a class="famous-movies__description" href="#">
-									<b class="famous-movies__name">Звёздные войны: Месть ситхов</b>
-									<div class="famous-movies__description-wrapper">
-										<span class="famous-movies__year">2005</span><b class="famous-movies__rating">8.1 / 10</b>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<div class="famous-movies__poster-wrapper">
-									<a href="#" class="famous-movies__poster-link">
-										<picture>
-											<source type="image/webp" srcset="./img/content/famous-movie-5.webp">
-											<img class="famous-movies__image" src="./img/content/famous-movie-5.jpg" alt="Кадр из фильма «Побег из Шоушенка‎»">
-										</picture>
-									</a>
-									<button class="famous-movies__trailer-play famous-movies__trailer-play-5" type="button" aria-label="Воспроизвести трейлер фильма">
-										<svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-											<g>
-												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
-											</g>
-										</svg>
-									</button>
-								</div>
-								<a class="famous-movies__description" href="#">
-									<b class="famous-movies__name">Побег из Шоушенка</b>
-									<div class="famous-movies__description-wrapper">
-										<span class="famous-movies__year">1994</span><b class="famous-movies__rating">9.1 / 10</b>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<div class="famous-movies__poster-wrapper">
-									<a href="#" class="famous-movies__poster-link">
-										<picture>
-											<source type="image/webp" srcset="./img/content/famous-movie-6.webp">
-											<img class="famous-movies__image" src="./img/content/famous-movie-6.jpg" alt="Кадр из фильма «Властелин колец: Братство кольца‎»">
-										</picture>
-									</a>
-									<button class="famous-movies__trailer-play famous-movies__trailer-play-6" type="button" aria-label="Воспроизвести трейлер фильма">
-										<svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-											<g>
-												<path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
-											</g>
-										</svg>
-									</button>
-								</div>
-								<a class="famous-movies__description" href="#">
-									<b class="famous-movies__name">Властелин колец: Братство кольца‎</b>
-									<div class="famous-movies__description-wrapper">
-										<span class="famous-movies__year">2001</span><b class="famous-movies__rating">8.6 / 10</b>
-									</div>
-								</a>
-							</li>
-						</ul>
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide" style="background-image:url(./img/content/famous-movie-1.jpg)">
+                <button class="famous-movies__trailer-play famous-movies__trailer-play-1" type="button" aria-label="Воспроизвести трейлер фильма">
+                  <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                      <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
+                    </g>
+                  </svg>
+                </button>
+                <div class="famous-movies__description">
+                  <a class="famous-movies__name" href="#">Человек-паук</a>
+                  <div class="famous-movies__description-wrapper">
+                    <span class="famous-movies__year">2002</span><b class="famous-movies__rating">IMDb: 7.6</b>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" style="background-image:url(./img/content/famous-movie-2.jpg)">
+                <button class="famous-movies__trailer-play famous-movies__trailer-play-2" type="button" aria-label="Воспроизвести трейлер фильма">
+                  <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                      <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
+                    </g>
+                  </svg>
+                </button>
+                <div class="famous-movies__description">
+                  <a class="famous-movies__name" href="#">Мстители: Война бесконечности</a>
+                  <div class="famous-movies__description-wrapper">
+                    <span class="famous-movies__year">2018</span><b class="famous-movies__rating">IMDb: 8.4</b>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" style="background-image:url(./img/content/famous-movie-3.jpg)">
+                <button class="famous-movies__trailer-play famous-movies__trailer-play-3" type="button" aria-label="Воспроизвести трейлер фильма">
+                  <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                      <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
+                    </g>
+                  </svg>
+                </button>
+                <div class="famous-movies__description">
+                  <a class="famous-movies__name" href="#">Гарри Поттер и философский камень‎</b>
+                  <div class="famous-movies__description-wrapper">
+                    <span class="famous-movies__year">2001</span><b class="famous-movies__rating">IMDb: 8.2</b>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" style="background-image:url(./img/content/famous-movie-4.jpg)">
+                <button class="famous-movies__trailer-play famous-movies__trailer-play-4" type="button" aria-label="Воспроизвести трейлер фильма">
+                  <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                      <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
+                    </g>
+                  </svg>
+                </button>
+                <div class="famous-movies__description">
+                  <a class="famous-movies__name" href="#">Звёздные войны: Месть ситхов</a>
+                  <div class="famous-movies__description-wrapper">
+                    <span class="famous-movies__year">2005</span><b class="famous-movies__rating">IMDb: 8.1</b>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide" style="background-image:url(./img/content/famous-movie-5.jpg)">
+                <button class="famous-movies__trailer-play famous-movies__trailer-play-5" type="button" aria-label="Воспроизвести трейлер фильма">
+                  <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                      <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
+                    </g>
+                  </svg>
+                </button>
+                <div class="famous-movies__description">
+                  <a class="famous-movies__name" href="#">Побег из Шоушенка</a>
+                  <div class="famous-movies__description-wrapper">
+                    <span class="famous-movies__year">1994</span><b class="famous-movies__rating">IMDb: 9.1</b>
+                  </div>
+                </div></li>
+              <li class="swiper-slide" style="background-image:url(./img/content/famous-movie-6.jpg)">
+                <button class="famous-movies__trailer-play famous-movies__trailer-play-6" type="button" aria-label="Воспроизвести трейлер фильма">
+                  <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                      <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"/>
+                    </g>
+                  </svg>
+                </button>
+                <div class="famous-movies__description">
+                  <a class="famous-movies__name" href="#">Властелин колец: Братство кольца‎</a>
+                  <div class="famous-movies__description-wrapper">
+                    <span class="famous-movies__year">2001</span><b class="famous-movies__rating">IMDb: 8.6</b>
+                  </div>
+                </div>
+              </li>
+            </ul>
 						<div class="swiper-pagination famous-pagination"></div>
-						<div class="famous-movies__control-block">
+						<!-- <div class="famous-movies__control-block">
 							<div class="famous-movies__control-wrapper">
 								<button class="famous-movies__slider-control swiper-button-prev" type="button" aria-label="Предыдущий постер фильма">
 									<svg width="18px" height="17px" viewbox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -856,7 +833,7 @@
 									</svg>
 								</button>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
       </section>

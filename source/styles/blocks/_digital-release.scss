@@ -88,199 +88,183 @@
 		color: $turquoise;
   }
 
-  &__slider {
+  .splide {
+    position: relative;
     display: none;
-  }
+    z-index: 1;
+    background-color: $space-light;
+    border-top: 1px solid rgba(0, 204, 255, 1);
+    border-bottom: 1px solid rgba(0, 204, 255, 1);
+    box-shadow: inset 0 35px 35px 0 $black,
+                inset 0 -35px 35px 0 $black;
 
-  @media (min-width: $desktop) {
-
-    &__slider {
+    @media (min-width: $desktop) {
       display: block;
-      position: relative;
-      z-index: 1;
-
-      @media (min-width: $desktop) {
-        background-image: linear-gradient(to bottom, transparent 73px, rgba(0, 204, 255, 0.7) 73px, rgba(0, 204, 255, 0.7) 74px, $space-light 74px);
-        border-bottom: 1px solid rgba(0, 204, 255, 0.7);
-      }
-
-      .swiper-wrapper {
-        padding-top: 15px;
-        padding-bottom: 15px;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-left: 0;
-        list-style: none;
-
-        @media (min-width: $desktop) {
-          padding-top: 90px;
-          padding-bottom: none;
-        }
-      }
-
-      .swiper-slide {
-        width: 280px;
-        scroll-snap-align: none !important;
-
-        @media (min-width: $desktop) {
-          position: relative;
-          width: auto;
-          transition: all 0.2s;
-
-          &:hover {
-            transform: scale(1.1);
-
-            .digital-release__poster {
-              box-shadow: unset;
-              filter: blur(3px) brightness(25%);
-            }
-
-            .digital-release__description {
-              display: flex;
-            }
-          }
-        }
-      }
-
-      .swiper-button-prev::after,
-      .swiper-button-next::after {
-        display: none;
-      }
-
-      .swiper-button-prev,
-      .swiper-button-next {
-        display: none;
-        top: 30px;
-        width: 90px;
-        height: 40px;
-        border: 2px solid $turquoise;
-        background-color: rgba(0,0,0,0.7);
-        border-radius: 35px;
-        animation: pulse-soso 1.5s infinite alternate;
-        transition: all 0.3s;
-
-        @media (min-width: $desktop) {
-          display: flex;
-        }
-
-        svg path {
-          fill: $white;
-          transition: fill 0.1s;
-        }
-
-        &:hover  {
-          box-shadow: 0 0 5px 1px rgba(0, 204, 255, 1);
-        }
-
-        &:active {
-
-          svg path {
-            fill: $turquoise;
-          }
-        }
-      }
-
-      .swiper-button-prev {
-        left: 40px;
-
-        svg {
-          transform: rotate(180deg);
-        }
-      }
-
-      .swiper-button-next {
-        right: 40px;
-      }
     }
 
-    &__poster-wrapper {
-      position: relative;
-    }
-
-    &__poster-link {
-      padding-top: 10px;
-      padding-right: 20px;
-      padding-bottom: 10px;
-      padding-left: 20px;
-      position: relative;
-      display: block;
-
-      @media (min-width: $desktop) {
-        padding-left: $desktops-paddings;
-        padding-right: $desktops-paddings;
-      }
-    }
-
-    &__poster {
-      pointer-events: none;
-      border-radius: 15px;
-      box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.8);
-      transition: all 0.2s;
-    }
-
-    &__description {
-      padding-top: 30px;
-      padding-left: 45px;
-      padding-right: 45px;
-      padding-bottom: 30px;
+    &__arrows {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
       height: 100%;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+      width: 100%;
     }
 
-    &__name {
-      text-align: center;
-      flex-shrink: 0;
-      color: $white;
-      text-decoration: none;
-      word-wrap: break-word;
-    }
-
-    &__trailer-play {
-      flex-shrink: 0;
-      width: 80px;
-      height: 80px;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.5);
+    &__arrow {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      display: block;
+      width: 111px;
+      height: 96%;
+      background-color: $black;
+      box-shadow: 0 0 5px 5px $black;
       border: none;
-      border: 2px solid $turquoise;
-      border-radius: 50%;
-      animation: pulse 1.5s infinite alternate;
-      animation-delay: 1.5s;
-      transition: all 0.3s;
+      opacity: 0.9;
+      transition: all 0.2s;
 
       svg {
-        margin-left: 25px;
-        width: 60%;
-        height: 60%;
+        width: 70px;
+        height: 71px;
         fill: $white;
         transition: fill 0.1s;
         pointer-events: none;
       }
 
-      &:hover {
-        background-color: rgba(0, 0, 0, 1);
-        box-shadow: 0 0 5px 1px rgba(0, 204, 255, 1);
+      &:hover  {
+        opacity: 1;
       }
 
       &:active svg {
         fill: $turquoise;
       }
+
+      &--prev {
+        left: 0;
+
+        svg {
+          left: 40px;
+          transform: rotate(180deg);
+        }
+      }
+
+      &--next {
+        right: 0;
+
+        svg {
+          right: 40px;
+        }
+      }
     }
 
-    &__rating	{
-      flex-shrink: 0;
-      font-weight: 700;
-      color: $turquoise;
+		&__track {
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
+
+    &__slide {
+      margin-left: -30px;
+    }
+  }
+
+  &__poster-wrapper {
+    position: relative;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+
+      .digital-release__poster {
+        filter: blur(3px) brightness(25%);
+      }
+
+      .digital-release__description {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__poster-link {
+    display: block;
+  }
+
+  &__poster {
+    pointer-events: none;
+    border-radius: 15px;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.8);
+    transition: all 0.2s;
+  }
+
+  &__description {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s;
+  }
+
+  &__name {
+    text-align: center;
+    flex-shrink: 0;
+    color: $white;
+    text-decoration: none;
+    word-wrap: break-word;
+  }
+
+  &__trailer-play {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border: 2px solid $turquoise;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite alternate;
+    animation-delay: 1.5s;
+    transition: all 0.3s;
+
+    svg {
+      margin-left: 25px;
+      width: 60%;
+      height: 60%;
+      fill: $white;
+      transition: fill 0.1s;
+      pointer-events: none;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 1);
+      box-shadow: 0 0 5px 1px rgba(0, 204, 255, 1);
+    }
+
+    &:active svg {
+      fill: $turquoise;
+    }
+  }
+
+  &__rating	{
+    flex-shrink: 0;
+    font-weight: 700;
+    color: $turquoise;
   }
 }

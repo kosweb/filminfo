@@ -4,14 +4,36 @@
 	background-image: url('../img/content/mm-mobile.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: cover;
-	box-shadow: inset 0 30px 35px 0 $black,
-              inset 0 -35px 35px 0 $black;
+  background-size: cover;
+
+  &__video-player {
+    display: none;
+  }
 
   @media (min-width: $desktop) {
     min-height: 500px;
-    background-image: url('../img/content/top-movies.gif');
-	  background-position: center center;
+    overflow: hidden;
+	  background-image: none;
+
+    &__video-player {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    box-shadow: inset 0 30px 35px 0 $black,
+                inset 0 -35px 35px 0 $black;
   }
 
 	&__title-wrapper {
@@ -21,15 +43,21 @@
 		justify-content: space-between;
 		align-items: center;
     margin-bottom: 50px;
+		z-index: 1;
 
     @media (min-width: $desktop) {
       padding-left: $desktops-paddings;
       padding-right: $desktops-paddings;
+    }
 
-      &::before {
+    &::before {
+			box-shadow: 0 0 3px 3px $black;
+      opacity: 0.5;
+
+      @media (min-width: $desktop) {
         display: none;
       }
-    }
+		}
   }
 
 	&__link {
@@ -39,32 +67,15 @@
 	&__title {
 		text-shadow: 0 0 9px $black;
 		background-color: unset;
-		box-shadow: unset;
+    box-shadow: unset;
+
+    @media (min-width: $desktop) {
+      text-align: left;
+    }
 
 		.main-title__stroke {
 			color: $turquoise;
 			-webkit-text-stroke: unset;
-		}
-	}
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: $black;
-		opacity: 0.6;
-		z-index: 0;
-	}
-
-	&__title-wrapper {
-		z-index: 1;
-
-		&::before {
-			box-shadow: 0 0 3px 3px $black;
-			opacity: 0.5;
 		}
 	}
 
@@ -84,6 +95,7 @@
       padding-left: $desktops-paddings;
       padding-right: $desktops-paddings;
       width: 500px;
+      text-align: left;
     }
 	}
 }
