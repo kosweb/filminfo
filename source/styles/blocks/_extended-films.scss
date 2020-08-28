@@ -52,13 +52,12 @@
       padding-bottom: 0;
       padding-left: 0;
       padding-right: 0;
-      display: none;
       width: 112px;
       height: 96%;
       background-color: $black;
       box-shadow: 0 0 3px 3px $black;
       border: none;
-      opacity: 0.9;
+      opacity: 0.7;
       transition: all 0.2s;
 
       @media (min-width: $desktop) {

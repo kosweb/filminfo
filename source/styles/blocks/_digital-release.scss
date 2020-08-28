@@ -123,7 +123,7 @@
       background-color: $black;
       box-shadow: 0 0 5px 5px $black;
       border: none;
-      opacity: 0.9;
+      opacity: 0.7;
       transition: all 0.2s;
 
       svg {
@@ -163,10 +163,6 @@
 		&__track {
       padding-top: 40px;
       padding-bottom: 40px;
-    }
-
-    &__slide {
-      margin-left: -30px;
     }
   }
 

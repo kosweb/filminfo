@@ -39,9 +39,9 @@ const exSlider = new Splide('.extended-films__slider', {
 
 const digitalSlider = new Splide('.digital-release__slider', {
   rewind : true,
+  gap: 40,
   pagination: false,
-  gap: 0,
-  perPage: 7,
+  perPage: 4,
   perMove: 1,
   padding: {
     left : 150,
@@ -67,11 +67,11 @@ const digitalSlider = new Splide('.digital-release__slider', {
 //     right: 150,
 //   },
 
-//   // breakpoints: {
-// 	// 	1280: {
-//   //    destroy: true,
-// 	// 	},
-//   // },
+//   breakpoints: {
+// 		1280: {
+//      destroy: true,
+// 		},
+//   },
 // }).mount();
 
 
