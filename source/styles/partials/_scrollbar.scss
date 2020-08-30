@@ -1,0 +1,35 @@
+$custom-track-color: #0000;
+$custom-thumb-color: #4f8cc999;
+$custom-width: thin;
+$webkit-scrollbar-thumb-hover: #4f8cc9cc;
+$webkit-scrollbar-track-hover: #0000;
+$webkit-scrollbar-width-height: 4px;
+$webkit-scrollbar-border-radius: 4px;
+
+*:not(select) {
+  scrollbar-color: $custom-thumb-color $custom-track-color !important;
+  scrollbar-width: $custom-width !important;
+}
+/* Chrome and derivatives*/
+::-webkit-scrollbar {
+  max-width: $webkit-scrollbar-width-height !important;
+  max-height: $webkit-scrollbar-width-height !important;
+  background: $custom-track-color !important;
+}
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background: $custom-track-color !important;
+}
+::-webkit-scrollbar-thumb {
+  background: $custom-thumb-color !important;
+  border-radius: $webkit-scrollbar-border-radius !important;
+}
+::-webkit-scrollbar-corner:hover,
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track-piece:hover {
+  background: $webkit-scrollbar-track-hover !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $webkit-scrollbar-thumb-hover !important;
+}
