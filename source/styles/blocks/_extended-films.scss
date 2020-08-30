@@ -1,12 +1,15 @@
 .extended-films {
 
+  background-image: linear-gradient(to bottom, $black 20%, $space-light);
+
 	&__title-wrapper {
     padding-left: $phones-paddings;
 		padding-right: $phones-paddings;
 
     @media (min-width: $desktop) {
       padding-left: $desktops-paddings;
-		  padding-right: $desktops-paddings;
+      padding-right: $desktops-paddings;
+      margin-bottom: 20px;
     }
   }
 
@@ -46,21 +49,25 @@
       padding-bottom: 0;
       padding-left: 0;
       padding-right: 0;
-      width: 112px;
-      height: 96%;
+      width: 50px;
+      height: 100%;
       background-color: $black;
-      box-shadow: 0 0 3px 3px $black;
+      // box-shadow: 0 0 3px 3px $black;
       border: none;
-      opacity: 0.7;
+      opacity: 1;
       transition: all 0.2s;
+
+      &::before {
+        content: '';
+      }
 
       @media (min-width: $desktop) {
         display: block;
       }
 
       svg {
-        width: 70px;
-        height: 71px;
+        width: 40px;
+        height: 40px;
         fill: $white;
         transition: fill 0.1s;
         pointer-events: none;

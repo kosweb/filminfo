@@ -22,12 +22,12 @@ const exSlider = new Splide('.extended-films__slider', {
   rewind : true,
   pagination: false,
   speed: 125,
-  gap: 40,
-  perPage: 3,
+  gap: 25,
+  perPage: 5,
   perMove: 1,
   padding: {
-    left : 150,
-    right: 150,
+    left : 70,
+    right: 70,
   },
 
   breakpoints: {
