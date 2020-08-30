@@ -379,16 +379,16 @@
       letter-spacing: 2px;
       color: rgba(0, 12, 12, 0.5);
       -webkit-text-stroke: 1px $turquoise;
-      transition: all 0.3s;
+      transition: all 0.3s, text-shadow 0ms;
 
       &:hover {
         color: rgba(0, 12, 12, 1);
-		    text-shadow: 0 0 3px $black;
+		    text-shadow: 0 -3px 3px $black;
       }
 
       &:active {
         -webkit-text-stroke: 1.5px $turquoise;
-		    text-shadow: 0 0 9px $black;
+		    // text-shadow: 0 3px 3px $black;
       }
 		}
 	}

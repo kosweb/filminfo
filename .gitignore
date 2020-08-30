@@ -1,5 +1,6 @@
 build
 dist
+*.zip
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows,node,yarn,VisualStudioCode,vim,zsh,
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,windows,node,yarn,VisualStudioCode,vim,zsh,

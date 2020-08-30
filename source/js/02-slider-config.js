@@ -21,6 +21,7 @@ const headerSlider = new Splide('.page-header__slider-container', {
 const exSlider = new Splide('.extended-films__slider', {
   rewind : true,
   pagination: false,
+  speed: 125,
   gap: 40,
   perPage: 3,
   perMove: 1,
@@ -56,23 +57,25 @@ const digitalSlider = new Splide('.digital-release__slider', {
 }).mount();
 
 
-// const fmsSlider = new Splide('.famous-movies__slider-container', {
-//   rewind : true,
-//   pagination: false,
-//   gap: 20,
-//   perPage: 2,
-//   perMove: 1,
-//   padding: {
-//     left : 150,
-//     right: 150,
-//   },
+const fmsSlider = new Splide('.famous-movies__slider', {
+  rewind : true,
+  pauseOnHover: true,
+  pagination: false,
+  speed: 150,
+  gap: 0,
+  perPage: 3,
+  perMove: 1,
+  padding: {
+    left : 50,
+    right: 50,
+  },
 
-//   breakpoints: {
-// 		1280: {
-//      destroy: true,
-// 		},
-//   },
-// }).mount();
+  // breakpoints: {
+	// 	1280: {
+  //    destroy: true,
+	// 	},
+  // },
+}).mount();
 
 
 exSlider.on( 'moved', function(newIndex, oldIndex, destIndex) {

@@ -1,5 +1,6 @@
 .movie-news {
-	background-color: $black;
+  padding-top: 60px;
+  background-color: $black;
 
 	&__header {
 		margin-bottom: 25px;
@@ -56,7 +57,7 @@
 			top: 0;
 			text-align: left;
 			padding-left: $phones-paddings;
-				padding-right: $phones-paddings;
+			padding-right: $phones-paddings;
 		}
 	}
 
