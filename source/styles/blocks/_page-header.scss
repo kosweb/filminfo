@@ -27,7 +27,8 @@
 
 		@media (min-width: $desktop) {
 			padding-left: $desktops-paddings;
-			padding-right: $desktops-paddings;
+      padding-right: $desktops-paddings;
+      max-width: 1440px;
 		}
 	}
 
@@ -350,7 +351,7 @@
     @media (min-width: $desktop) {
       filter: blur(3px);
       height: 370px;
-      background-image: url('../img/content/header-banner-desktop.jpg');
+      background-image: url('../img/content/header-banner-desktop.webp');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
