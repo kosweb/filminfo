@@ -298,7 +298,8 @@
 		background-color: rgba(0, 0, 0, 0.5);
 		border: none;
 		border: 1px solid $turquoise;
-		border-radius: 50%;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite alternate;
 		transition: background-color 0.3s, box-shadow 0.3s;
 
 		svg {
@@ -306,7 +307,7 @@
 			width: 45px;
 			height: 45px;
 			fill: $white;
-			pointer-events: none;
+      pointer-events: none;
     }
 
     &:hover {
@@ -315,7 +316,8 @@
     }
 
     &:active {
-		  border: 2px solid $turquoise;
+      border: 2px solid $turquoise;
+      animation: none;
     }
 
 		&:active svg {
