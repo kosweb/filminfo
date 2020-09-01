@@ -313,6 +313,16 @@
         left: unset;
         right: 0;
       }
+
+      @media (min-width: $desktop) {
+        svg path {
+          transition: 0.2s;
+        }
+
+        &:hover svg path {
+          fill: $turquoise;
+        }
+      }
 		}
 	}
 
