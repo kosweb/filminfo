@@ -1,18 +1,36 @@
 .digital-release {
 
+  padding-top: 40px;
+
+  @media (min-width: $desktop) {
+    box-shadow: none;
+    padding-bottom: 0;
+  }
+
 	&__title-wrapper {
     padding-left: $phones-paddings;
     padding-right: $phones-paddings;
 
+    @media (min-width: $tablet) {
+      padding-left: $tablets-paddings;
+      padding-right: $tablets-paddings;
+    }
+
     @media (min-width: $desktop) {
       padding-left: $desktops-paddings;
-		  padding-right: $desktops-paddings;
+      padding-right: $desktops-paddings;
+      margin-bottom: 20px;
     }
   }
 
   &__title-description {
     padding-left: $phones-paddings;
     padding-right: $phones-paddings;
+
+    @media (min-width: $tablet) {
+      padding-left: $tablets-paddings;
+      padding-right: $tablets-paddings;
+    }
 
     @media (min-width: $desktop) {
       padding-left: $desktops-paddings;
@@ -25,12 +43,11 @@
 		margin-top: 0;
 		margin-bottom: 0;
 		padding-left: 0;
-		list-style: none;
+    list-style: none;
 
 		&-wrapper {
-      padding-top: 20px;
-      padding-left: $phones-paddings;
-      padding-right: $phones-paddings;
+      padding: 20px;
+      background-image: linear-gradient(to bottom, $black, $space-light, $black);
 
       @media (min-width: $desktop) {
         display: none;
@@ -87,42 +104,40 @@
 
   .splide {
     position: relative;
-    display: none;
     z-index: 1;
     border-bottom: 1px solid rgba(0, 204, 255, 1);
-
-
-    @media (min-width: $desktop) {
-      display: block;
-    }
+    background-image: linear-gradient(to bottom, $black, $space-light);
 
     &__arrows {
+      overflow: hidden;
       position: absolute;
       height: 100%;
       width: 100%;
+      display: none;
+
+      @media (min-width: $desktop) {
+        display: unset;
+      }
     }
 
     &__arrow {
       position: absolute;
       z-index: 1;
-      top: 50%;
-      transform: translateY(-50%);
       padding-top: 0;
       padding-bottom: 0;
       padding-left: 0;
       padding-right: 0;
-      display: block;
-      width: 111px;
-      height: 96%;
+      width: 45px;
+      height: 100%;
       background-color: $black;
-      box-shadow: 0 0 5px 5px $black;
+      box-shadow: 0 0 3px 3px $black;
       border: none;
-      opacity: 0.7;
-      transition: all 0.2s;
+      opacity: 0.8;
+      transition: opacity 0.2s;
 
       svg {
-        width: 70px;
-        height: 71px;
+        width: 40px;
+        height: 40px;
         fill: $white;
         transition: fill 0.1s;
         pointer-events: none;
@@ -154,30 +169,76 @@
       }
     }
 
-		&__track {
-      padding-top: 40px;
-      padding-bottom: 40px;
+    &__track {
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      @media (min-width: $desktop) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+    }
+
+    @media (max-width: $tablet-max) {
+
+      &__list {
+        display: flex;
+        flex: none;
+        flex-flow: row nowrap;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      &__slide {
+        flex: none;
+        scroll-snap-align: center;
+        margin-right: 20px;
+
+        @media (min-width: $tablet) {
+          margin-right: 30px;
+        }
+
+        &:first-child {
+          margin-left: 20px;
+
+          @media (min-width: $tablet) {
+            margin-left: 30px;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
   }
 
   &__poster-wrapper {
+    padding-top: 5px;
+    padding-bottom: 5px;
     position: relative;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: all 0.2s;
 
-    &:hover {
-      transform: scale(1.1);
+    @media (min-width: $desktop) {
+      transition: transform 0.1s;
 
-      .digital-release__poster {
-        filter: blur(3px) brightness(25%);
-      }
+      &:hover {
+        transform: scale(1.1);
 
-      .digital-release__description {
-        opacity: 1;
+        .digital-release__poster {
+          filter: blur(3px) brightness(25%);
+        }
+
+        .digital-release__description {
+          opacity: 1;
+        }
       }
     }
+
   }
 
   &__poster-link {
@@ -185,17 +246,24 @@
   }
 
   &__poster {
+    height: 80vw;
     pointer-events: none;
     border-radius: 15px;
-    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.8);
-    transition: all 0.2s;
+    box-shadow: 0 3px 3px 1px $black;
+
+    @media (max-width: $tablet-max) {
+      height: auto;
+      max-width: 270px;
+    }
+
+    @media (min-width: $desktop) {
+      height: auto;
+      transition: filter 0.2s;
+    }
   }
 
   &__description {
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
     position: absolute;
     top: 0;
     left: 0;
@@ -206,55 +274,59 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    transition: all 0.2s;
+    opacity: 0;
+    transition: opacity 0.2s;
   }
 
   &__name {
     text-align: center;
-    flex-shrink: 0;
+    flex: none;
     color: $white;
     text-decoration: none;
     word-wrap: break-word;
+    text-shadow: 0 0 15px $black;
   }
 
   &__trailer-play {
-    flex-shrink: 0;
-    width: 80px;
-    height: 80px;
+    flex: none;
+		width: 80px;
+		height: 80px;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border: 2px solid $turquoise;
-    border-radius: 50%;
-    animation: pulse 1.5s infinite alternate;
-    animation-delay: 1.5s;
-    transition: all 0.3s;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.5);
+		border: none;
+		border: 1px solid $turquoise;
+		border-radius: 50%;
+		transition: background-color 0.3s, box-shadow 0.3s;
 
-    svg {
-      margin-left: 25px;
-      width: 60%;
-      height: 60%;
-      fill: $white;
-      transition: fill 0.1s;
-      pointer-events: none;
+		svg {
+			margin-left: 25px;
+			width: 45px;
+			height: 45px;
+			fill: $white;
+			pointer-events: none;
     }
 
     &:hover {
-      background-color: rgba(0, 0, 0, 1);
+			background-color: rgba(0, 0, 0, 1);
       box-shadow: 0 0 6px 1px rgba(0, 204, 255, 1);
     }
 
-    &:active svg {
-      fill: $turquoise;
+    &:active {
+		  border: 2px solid $turquoise;
     }
-  }
+
+		&:active svg {
+			fill: $turquoise;
+		}
+	}
 
   &__rating	{
     flex-shrink: 0;
     font-weight: 700;
     color: $turquoise;
+		text-shadow: 0 0 15px $black;
   }
 }

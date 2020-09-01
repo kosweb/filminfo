@@ -1,4 +1,9 @@
 .page-header {
+  position: relative;
+
+  @media (max-width: $tablet-max) {
+    margin-bottom: 70px;
+  }
 
 	&__top {
 		position: fixed;
@@ -134,20 +139,33 @@
 			margin-bottom: 0;
 			padding-left: 0;
 			list-style: none;
-			width: 100%;
-			max-width: 600px;
-			background-color: $space-light;
+      width: 100%;
 
-			&--show {
+      &--show {
 				display: block;
 				animation-name: yo_navi;
 				animation-duration: .4s;
 			}
+
+      @media (min-width: 1024px) {
+			  top: 60px;
+        background-color: $space;
+        border-bottom: 1px solid $black;
+
+        &--show {
+          display: flex;
+				  animation: none;
+        }
+      }
 		}
 
 		&-item {
 			background-color: $space-light;
-			border-bottom: 1px solid $black;
+      border-bottom: 1px solid $black;
+
+      @media (min-width: 1024px) {
+        border-bottom: none;
+      }
 		}
 
 		&-link {
@@ -159,11 +177,19 @@
 			font-weight: 400;
 			text-decoration: none;
 			text-transform: uppercase;
-      background-color: $space-light;
+      background-color: $space;
       transition: color 0.2s;
 
-      &:hover {
-        color: $turquoise;
+      @media (min-width: 1024px) {
+        padding-left: 80px;
+      }
+
+      @media (min-width: $desktop) {
+        padding-left: 90px;
+
+        &:hover {
+          color: $turquoise;
+        }
       }
 		}
 	}
@@ -184,13 +210,8 @@
       transition: fill  0.1s;
     }
 
-    @media (min-width: $desktop) {
-
-      &:hover {
-        svg path {
-          fill: $turquoise;
-        }
-      }
+    @media (min-width: 1024px) {
+      display: none;
 		}
 
 		&--open {
@@ -235,14 +256,23 @@
 
 		&--open {
 			display: block;
+    }
+
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: center;
+      position: static;
 		}
 	}
 
 	&__search-form {
 		position: relative;
 		display: flex;
-		align-items: center;
-		height: 60px;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      width: 90%;
+    }
 
 		&-field {
 			user-select: text;
@@ -253,7 +283,17 @@
 			height: 60px;
 			background-color: transparent;
 			border: none;
-			outline: transparent;
+      outline: transparent;
+      color: $white;
+
+      @media (min-width: 1024px) {
+        background-color: $space;
+        padding-left: 20px;
+        padding-right: 60px;
+        height: 40px;
+        border-radius: 35px;
+        color: $white;
+      }
 		}
 
 		&-button {
@@ -266,7 +306,12 @@
 			height: 60px;
 			padding: 0;
 			background-color: transparent;
-			border: none;
+      border: none;
+
+      @media (min-width: 1024px) {
+        left: unset;
+        right: 0;
+      }
 		}
 	}
 
@@ -303,6 +348,7 @@
     background-color: $black;
 
     @media (min-width: $desktop) {
+      filter: blur(3px);
       height: 370px;
       background-image: url('../img/content/header-banner-desktop.jpg');
       background-repeat: no-repeat;
@@ -341,11 +387,9 @@
   }
 
 	&__trailer-play {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 2;
-    transform: translateY(-50%);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
 		padding: 20px;
 		border-radius: 35px;
 		display: flex;
@@ -354,20 +398,23 @@
     font-weight: 400;
 		text-transform: uppercase;
 		background-color: $black;
-		border: 2px solid $turquoise;
-		box-shadow: 0 0 3px 3px rgba(0, 0, 0, 1);
-    transition: color 0.1s;
-    animation: pulse-soso 1.5s infinite alternate;
+    border: 1px solid $turquoise;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 1);
 
-		&:active {
-      color: $turquoise;
+    @media (max-width: $tablet-max) {
+      animation: pulse-soso 1.5s infinite alternate;
+
+      &:active {
+        color: $turquoise;
+        transform: translate(-50%, -50%) scale(0.96);
+        border: 2px solid $turquoise;
+        animation: none;
+      }
     }
 
     @media (min-width: $desktop) {
       position: absolute;
       top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       font-family: Montserrat, Arial, Helvetica, sans-serif;
       font-size: 100px;
       line-height: 110px;
@@ -375,11 +422,10 @@
 		  background-color: unset;
       box-shadow: none;
       border: none;
-      animation: none;
       letter-spacing: 2px;
       color: rgba(0, 12, 12, 0.5);
       -webkit-text-stroke: 1px $turquoise;
-      transition: all 0.3s, text-shadow 0ms;
+      transition: color 0.3s, text-shadow 0.3ms;
 
       &:hover {
         color: rgba(0, 12, 12, 1);
@@ -388,7 +434,6 @@
 
       &:active {
         -webkit-text-stroke: 1.5px $turquoise;
-		    // text-shadow: 0 3px 3px $black;
       }
 		}
 	}

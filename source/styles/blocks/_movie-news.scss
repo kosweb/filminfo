@@ -1,24 +1,46 @@
 .movie-news {
   padding-top: 60px;
-  background-color: $black;
+
+  @media (max-width: 600px) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 600px) {
+    background-image: linear-gradient(to bottom, $black, $space-light, $black);
+  }
+
 
 	&__header {
-		margin-bottom: 25px;
 		padding-left: $phones-paddings;
-		padding-right: $phones-paddings;
+    padding-right: $phones-paddings;
+    margin-bottom: 30px;
+
+    @media (min-width: $desktop) {
+      padding-left: $desktops-paddings;
+      padding-right: $desktops-paddings;
+    }
 	}
 
 	&__title {
-		margin-bottom: 25px;
-		display: flex;
-		flex-direction: column;
+    margin-bottom: 25px;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 		font-size: 24px;
-		align-items: center;
 		box-shadow: none;
-		background-color: unset;
+    background-color: unset;
+    text-align: center;
+    background-image: none !important;
+
+    @media (min-width: $desktop) {
+      font-size: 55px;
+      line-height: 65px;
+      margin-bottom: 20px;
+    }
 
 		.main-title__stroke {
-			font-size: 28px;
+      font-size: 28px;
 		}
 	}
 
@@ -30,58 +52,155 @@
 		margin-top: 0;
 		margin-bottom: 0;
 		padding-left: 0;
-		display: flex;
-		justify-content: space-between;
-		list-style: none;
-	}
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+
+    @media (min-width: $tablet) {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__nav-item {
+    justify-self: center;
+    text-decoration: underline;
+
+    &:first-child {
+      justify-self: start;
+    }
+
+    &:last-child {
+      justify-self: end;
+    }
+  }
 
 	&__nav-link {
 		color: $turquoise;
 		text-transform: uppercase;
 		text-decoration: none;
-		font-size: 13px;
+    font-size: 13px;
+
+    @media (min-width: $desktop) {
+      font-size: 18px;
+      line-height: 24px;
+      transition: color 0.2s;
+
+      &:hover {
+		    color: $turquoise;
+      }
+    }
 	}
 
-	&__slider-container {
+	.splide {
 		position: relative;
-		padding-top: 40px;
+    padding-top: 50px;
 
-		.swiper-wrapper {
+    @media (min-width: 600px) {
+      padding-top: 70px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-top: 20px;
+      padding-left: $desktops-paddings;
+      padding-right: $desktops-paddings;
+    }
+
+		&__track {
 			margin-top: 0;
 			margin-bottom: 0;
 			padding-left: 0;
-			list-style: none;
-		}
+      list-style: none;
+    }
 
-		.swiper-pagination {
-			top: 0;
-			text-align: left;
-			padding-left: $phones-paddings;
-			padding-right: $phones-paddings;
-		}
-	}
+    &__list {
 
-	&__description {
-		padding-left: $phones-paddings;
-		padding-right: $phones-paddings;
+      @media (min-width: $desktop) {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+      }
+    }
+
+    &__slide {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 40px;
+      box-shadow: 0 0 3px 1px $black;
+      border-radius: 15px;
+      background-color: $black;
+
+      @media (min-width: 600px) {
+        border: 1px solid $turquoise;
+        padding: 20px;
+        padding-bottom: 40px;
+        margin-bottom: 50px;
+      }
+    }
+
+    &__pagination {
+      padding-left: 20px !important;
+      padding-right: 20px;
+      position: absolute;
+      justify-content: space-between;
+      top: 10px !important;
+      padding-left: 0;
+      width: 100%;
+
+      @media (min-width: 600px) {
+        justify-content: center;
+      }
+
+      &__page {
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border: 1px solid $turquoise;
+        border-radius: 50%;
+        transition: background-color 0.2s;
+
+        @media (min-width: 600px) {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+
+      .is-active {
+        background-color: $turquoise;
+      }
+    }
 	}
 
 	&__date {
 		display: block;
 		margin-top: 15px;
-		font-size: 14px;
+    font-size: 14px;
+
+    @media (max-width: 600px) {
+      padding-left: $phones-paddings;
+      padding-right: $phones-paddings;
+    }
 	}
 
 	&__text	{
-		min-height: 100px;
+		min-height: 80px;
 		position: relative;
-		font-size: 14px;
+    font-size: 14px;
+
+    @media (max-width: 600px) {
+      padding-left: $phones-paddings;
+      padding-right: $phones-paddings;
+    }
 	}
 
 	&__text-link {
 		display: block;
 		color: $turquoise;
 		text-align: right;
-		position: relative;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 	}
 }

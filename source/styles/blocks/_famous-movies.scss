@@ -1,7 +1,15 @@
 .famous-movies {
   position: relative;
-  padding-bottom: 50px;
-  border-bottom: 1px solid rgba(0, 204, 255, 1);
+
+  @media (max-width: 600px) {
+    box-shadow: 0 0 60px 60px $space-light;
+    padding-top: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+    box-shadow: none;
+  }
 
 	&__title-wrapper {
 		padding-left: $phones-paddings;
@@ -14,15 +22,14 @@
 
     @media (min-width: $desktop) {
       padding-left: $desktops-paddings;
-	  	padding-right: $desktops-paddings;
+      padding-right: $desktops-paddings;
+      margin-bottom: 20px;
     }
 	}
 
 	&__title-description {
 		padding-left: $phones-paddings;
 		padding-right: $phones-paddings;
-    margin-bottom: 30px;
-    z-index: 1;
 
     @media (min-width: $tablet) {
       padding-left: $tablets-paddings;
@@ -32,60 +39,60 @@
     @media (min-width: $desktop) {
       padding-left: $desktops-paddings;
       padding-right: $desktops-paddings;
-      margin-bottom: 70px;
     }
 	}
 
   .splide {
     position: relative;
     z-index: 1;
-    // background-color: $space-light;
-    // border-top: 1px solid rgba(0, 204, 255, 1);
+    border-bottom: 1px solid rgba(0, 204, 255, 1);
 
-    @media (min-width: $desktop) {
-      // box-shadow: inset 0 35px 35px 0 $black,
-      // inset 0 -35px 35px 0 $black;
+    @media (min-width: 600px) {
+      background-image: linear-gradient(to bottom, $black, $space-light);
     }
 
     &__arrows {
+      overflow: hidden;
       position: absolute;
       height: 100%;
       width: 100%;
+      display: none;
+
+      @media (min-width: $desktop) {
+        display: unset;
+      }
     }
 
     &__arrow {
       position: absolute;
       z-index: 1;
-      top: 50%;
-      transform: translateY(-50%);
       padding-top: 0;
       padding-bottom: 0;
       padding-left: 0;
       padding-right: 0;
-      margin-top: -20px;
-      width: 52px;
-      height: 400px;
+      width: 45px;
+      height: 100%;
       background-color: $black;
       box-shadow: 0 0 3px 3px $black;
       border: none;
-      transition: all 0.2s;
+      opacity: 0.8;
+      transition: opacity 0.2s;
 
       @media (min-width: $desktop) {
         display: block;
       }
 
       svg {
-        margin-top: 50px;
         width: 40px;
-        height: 41px;
+        height: 40px;
         fill: $white;
         transition: fill 0.1s;
         pointer-events: none;
       }
 
-      // &:hover  {
-      //   opacity: 1;
-      // }
+      &:hover  {
+        opacity: 1;
+      }
 
       &:active svg {
         fill: $turquoise;
@@ -105,42 +112,65 @@
     }
 
 		&__track {
-      // padding-top: 15px;
-      // padding-bottom: 15px;
+      padding-top: 50px;
+      padding-bottom: 15px;
 
-      // @media (min-width: $desktop) {
-      //   padding-top: 40px;
-      //   padding-bottom: 40px;
-      // }
+      @media (min-width: 600px) {
+        padding-top: 70px;
+      }
+
+      @media (min-width: 600px) {
+        padding-bottom: 25px;
+      }
     }
 
-    @media (max-width: $tablet-max) {
+    &__slide {
+      border-radius: 15px;
+      background-color: $black;
 
-      &__list {
-        display: flex;
-        flex: none;
-        flex-flow: row nowrap;
-        overflow: auto;
-        scroll-snap-type: x mandatory;
-        width: 100%;
+      @media (min-width: 600px) {
+        border: 1px solid $turquoise;
+        padding: 20px;
+        padding-bottom: 20px;
+      }
 
-        &::-webkit-scrollbar {
-          display: none;
+      @media (min-width: $desktop) {
+        border: none;
+        padding: 0;
+        background-color: unset;
+      }
+    }
+
+    &__pagination {
+      padding-left: 20px !important;
+      padding-right: 20px;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      top: 10px !important;
+      padding-left: 0;
+      width: 100%;
+
+      @media (min-width: 600px) {
+        justify-content: center;
+      }
+
+      &__page {
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border: 1px solid $turquoise;
+        border-radius: 50%;
+        transition: background-color 0.2s;
+
+        @media (min-width: 600px) {
+          margin-left: 20px;
+          margin-right: 20px;
         }
       }
 
-      &__slide {
-        flex: none;
-        scroll-snap-align: center;
-        margin-right: 20px;
-
-        &:first-child {
-          margin-left: 20px;
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
+      .is-active {
+        background-color: $turquoise;
       }
     }
 	}
@@ -157,6 +187,7 @@
       margin-right: auto;
 
       &:hover {
+         transform: scale(1.05);
 
         .famous-movies__poster {
           filter: saturate(0%) blur(3px) brightness(25%);
@@ -165,23 +196,25 @@
         .famous-movies__description {
           opacity: 1;
         }
+
+        .famous-movies__trailer-play {
+          opacity: 1;
+        }
       }
     }
 	}
 
 	&__poster-link {
     display: block;
+    position: relative;
 	}
 
 	&__poster {
-    height: 80vw;
     pointer-events: none;
-    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 3px 3px 1px $black;
 
     @media (min-width: $desktop) {
-      height: auto;
-      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.8);
-      transition: 0.2s;
+      transition: filter 0.2s;
     }
 	}
 
@@ -189,38 +222,52 @@
     padding-top: 20px;
     padding-left: 25px;
     padding-right: 25px;
-    padding-bottom: 20px;
-    position: absolute;
     display: flex;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    opacity: 0;
-    transition: 0.2s;
+    opacity: 1;
+    min-height: 60px;
+
+    @media (min-width: 600px) {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $desktop) {
+      position: absolute;
+      height: 55%;
+      top: 45%;
+      left: 0;
+      padding-bottom: 20px;
+      flex-direction: column;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
 	}
 
 	&__name {
     text-align: center;
-    flex-shrink: 0;
+    flex: none;
     color: $white;
-    font-size: 24px;
-    line-height: 30px;
     text-decoration: none;
     word-wrap: break-word;
     text-shadow: 0 0 15px $black;
-    transition: 0.2s;
 
-    &:hover {
-      transform: scale(1.05);
+    @media (max-width: $tablet-max) {
+      width: 70%;
+      text-align: left;
     }
   }
 
   &__trailer-play {
-    flex-shrink: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -40px;
+    flex: none;
 		width: 80px;
 		height: 80px;
     padding: 0;
@@ -229,18 +276,29 @@
 		align-items: center;
 		background-color: rgba(0, 0, 0, 0.5);
 		border: none;
-		border: 2px solid $turquoise;
-		border-radius: 50%;
-		animation: pulse 1.5s infinite alternate;
-		animation-delay: 1.5s;
-		transition: all 0.3s;
+		border: 1px solid $turquoise;
+    border-radius: 50%;
+    opacity: 0;
+    transition: background-color 0.3s, box-shadow 0.3s;
+	  animation: pulse 1.5s infinite alternate;
+
+    @media (max-width: $tablet-max) {
+      top: 50%;
+      margin-left: -40px;
+      margin-top: -40px;
+      box-shadow: 0 0 3px 3px $black;
+      opacity: 1;
+
+      svg {
+        margin-left: 25px;
+      }
+    }
 
 		svg {
 			margin-left: 25px;
-			width: 60%;
-			height: 60%;
+			width: 45px;
+			height: 45px;
 			fill: $white;
-			transition: fill 0.1s;
 			pointer-events: none;
     }
 
@@ -249,17 +307,23 @@
       box-shadow: 0 0 6px 1px rgba(0, 204, 255, 1);
     }
 
+    &:active {
+      border: 2px solid $turquoise;
+      animation: none;
+    }
+
 		&:active svg {
 			fill: $turquoise;
 		}
 	}
 
-	&__year	{
-    flex-shrink: 0;
+	&__rating	{
+    flex: none;
     color: $turquoise;
-    font-size: 24px;
-    line-height: 30px;
 		font-weight: 700;
-		text-shadow: 0 0 15px $black;
+    text-shadow: 0 0 15px $black;
+
+    @media (max-width: $tablet-max) {
+    }
 	}
 }

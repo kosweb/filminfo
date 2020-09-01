@@ -101,8 +101,8 @@
             </div>
           </div>
         </div>
-        <button class="page-header__trailer-play" type="button" aria-label="Перейти на станицу новых трейлеров">Новые трейлеры</button>
 			</section>
+      <button class="page-header__trailer-play" type="button" aria-label="Перейти на станицу новых трейлеров">Новые трейлеры</button>
     </header>
 
 		<main class="page-main">
@@ -111,11 +111,11 @@
           <h2 class="extended-films__title main-title">
             Ожидаемые<br><span class="main-title__stroke">фильмы</span>
             <a href="#" class="extended-films__link main-title__link">
-            <span class="visually-hidden">Просмотреть все</span>
-            <svg width="20" height="20" viewbox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
-            </svg>
-          </a>
+              <span class="visually-hidden">Просмотреть все</span>
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.49967 4.16675V5.83341H12.9913L3.33301 15.4917L4.50801 16.6667L14.1663 7.00841V12.5001H15.833V4.16675H7.49967Z" fill="white"/>
+              </svg>
+            </a>
           </h2>
         </div>
         <p class="extended-films__title-description main-title__description">Примьеры, которые выйдут на большие экраны в ближайшее время</p>
@@ -431,30 +431,6 @@
           </h2>
 				</div>
 				<p class="digital-release__title-description main-title__description">Фильмы, которые недавно появились в онлайн кинотеатрах и на DVD</p>
-				<div class="digital-release__list-wrapper">
-					<ul class="digital-release__list">
-						<li class="digital-release__item">
-							<a href="#" class="digital-release__item-link">Она видела небо</a>
-							<b class="digital-release__imdb">6.8 / 10</b>
-						</li>
-						<li class="digital-release__item">
-							<a href="#" class="digital-release__item-link">Некуда бежать</a>
-							<b class="digital-release__imdb">6.1 / 10</b>
-						</li>
-						<li class="digital-release__item">
-							<a href="#" class="digital-release__item-link">Комната</a>
-							<b class="digital-release__imdb">8.1 / 10</b>
-						</li>
-						<li class="digital-release__item">
-							<a href="#" class="digital-release__item-link">Незваный гость</a>
-							<b class="digital-release__imdb">6.4 / 10</b>
-						</li>
-						<li class="digital-release__item">
-							<a href="#" class="digital-release__item-link">Любовь между строк</a>
-							<b class="digital-release__imdb">6.4 / 10</b>
-						</li>
-					</ul>
-        </div>
         <div class="digital-release__slider splide">
           <div class="splide__arrows">
             <button class="splide__arrow splide__arrow--prev">
@@ -703,7 +679,7 @@
             </a>
           </h2>
         </div>
-        <video src="./video/top-movies.mp4" class="top-movies__video-player" width="100%"autoplay loop crossorigin></video>
+        <video src="./video/top-movies.mp4" class="top-movies__video-player" width="100%" muted autoplay loop crossorigin></video>
         <p class="top-movies__description main-title__description">Подборка лучших фильмов этой недели по версии нашего сайта, которые заслуживают вашего внимания!</p>
       </section>
 
@@ -719,7 +695,7 @@
             </a>
           </h2>
 				</div>
-				<p class="famous-movies__title-description main-title__description">Список фильмов с высоким рейтингом</p>
+				<p class="famous-movies__title-description main-title__description">Фильмы с высоким рейтингом</p>
         <div class="famous-movies__slider splide">
           <div class="splide__arrows">
             <button class="splide__arrow splide__arrow--prev">
@@ -743,13 +719,11 @@
 						<ul class="splide__list">
 							<li class="splide__slide">
 								<div class="famous-movies__poster-wrapper">
-									<div class="famous-movies__poster-link" href="#">
+									<div class="famous-movies__poster-link">
 										<picture>
 											<source type="image/webp" srcset="./img/content/famous-movie-1.webp">
 											<img class="famous-movies__poster" src="./img/content/famous-movie-1.jpg" alt="Постер фильма «‎King's man: Начало»‎">
-										</picture>
-                  </div>
-                  <div class="famous-movies__description">
+                    </picture>
                     <button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
                       <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g>
@@ -757,20 +731,20 @@
                         </g>
                       </svg>
                     </button>
-                    <a class="famous-movies__name" href="#">Заклятие 3: По воле дьявола</a>
-                    <b class="famous-movies__year">17.09.2020</b>
+                  </div>
+                  <div class="famous-movies__description">
+                    <a class="famous-movies__name" href="#">Человек паук</a>
+                    <b class="famous-movies__rating">IMDb: 7.3</b>
                   </div>
 								</div>
 							</li>
 							<li class="splide__slide">
 								<div class="famous-movies__poster-wrapper">
-									<div class="famous-movies__poster-link" href="#">
+									<div class="famous-movies__poster-link">
 										<picture>
 											<source type="image/webp" srcset="./img/content/famous-movie-2.webp">
 											<img class="famous-movies__poster" src="./img/content/famous-movie-2.jpg" alt="Постер фильма «‎King's man: Начало»‎">
-										</picture>
-                  </div>
-                  <div class="famous-movies__description">
+                    </picture>
                     <button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
                       <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g>
@@ -778,8 +752,10 @@
                         </g>
                       </svg>
                     </button>
-                    <a class="famous-movies__name" href="#">Главный герой</a>
-                    <b class="famous-movies__year">11.12.2020</b>
+                  </div>
+                  <div class="famous-movies__description">
+                    <a class="famous-movies__name" href="#">Мстители: Война бесконечности</a>
+                    <b class="famous-movies__rating">IMDb: 8.40</b>
                   </div>
 								</div>
 							</li>
@@ -789,9 +765,7 @@
 										<picture>
 											<source type="image/webp" srcset="./img/content/famous-movie-3.webp">
 											<img class="famous-movies__poster" src="./img/content/famous-movie-3.jpg" alt="Постер фильма «‎King's man: Начало»‎">
-										</picture>
-                  </div>
-                  <div class="famous-movies__description">
+                    </picture>
                     <button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
                       <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g>
@@ -799,8 +773,10 @@
                         </g>
                       </svg>
                     </button>
-                    <a class="famous-movies__name" href="#">Новые мутанты</a>
-                    <b class="famous-movies__year">03.09.2020</b>
+                  </div>
+                  <div class="famous-movies__description">
+                    <a class="famous-movies__name" href="#">Гарри Поттер и философский камень</a>
+                    <b class="famous-movies__rating">IMDb: 7.6</b>
                   </div>
 								</div>
 							</li>
@@ -810,9 +786,7 @@
 										<picture>
 											<source type="image/webp" srcset="./img/content/famous-movie-4.webp">
 											<img class="famous-movies__poster" src="./img/content/famous-movie-4.jpg" alt="Постер фильма «‎King's man: Начало»‎">
-										</picture>
-                  </div>
-                  <div class="famous-movies__description">
+                    </picture>
                     <button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
                       <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g>
@@ -820,8 +794,10 @@
                         </g>
                       </svg>
                     </button>
-                    <a class="famous-movies__name" href="#">Чудо-женщина: 1984</a>
-                    <b class="famous-movies__year">01.10.2020</b>
+                  </div>
+                  <div class="famous-movies__description">
+                    <a class="famous-movies__name" href="#">Звёздные войны. Эпизод 3: Месть Ситхов</a>
+                    <b class="famous-movies__rating">IMDb: 7.50</b>
                   </div>
 								</div>
 							</li>
@@ -831,9 +807,7 @@
 										<picture>
 											<source type="image/webp" srcset="./img/content/famous-movie-5.webp">
 											<img class="famous-movies__poster" src="./img/content/famous-movie-5.jpg" alt="Постер фильма «‎King's man: Начало»‎">
-										</picture>
-                  </div>
-                  <div class="famous-movies__description">
+                    </picture>
                     <button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
                       <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g>
@@ -841,8 +815,10 @@
                         </g>
                       </svg>
                     </button>
-                    <a class="famous-movies__name" href="#">Бесславные крепостные</a>
-                    <b class="famous-movies__year">08.10.2020</b>
+                  </div>
+                  <div class="famous-movies__description">
+                    <a class="famous-movies__name" href="#">Побег из Шоушенка</a>
+                    <b class="famous-movies__rating">IMDb: 9.3</b>
                   </div>
 								</div>
 							</li>
@@ -852,9 +828,7 @@
 										<picture>
 											<source type="image/webp" srcset="./img/content/famous-movie-6.webp">
 											<img class="famous-movies__poster" src="./img/content/famous-movie-6.jpg" alt="Постер фильма «‎King's man: Начало»‎">
-										</picture>
-                  </div>
-                  <div class="famous-movies__description">
+                    </picture>
                     <button class="famous-movies__trailer-play" type="button" aria-label="Воспроизвести трейлер фильма">
                       <svg width="18px" height="17px" viewbox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g>
@@ -862,8 +836,10 @@
                         </g>
                       </svg>
                     </button>
-                    <a class="famous-movies__name" href="#">На связи</a>
-                    <b class="famous-movies__year">22.10.2020</b>
+                  </div>
+                  <div class="famous-movies__description">
+                    <a class="famous-movies__name" href="#">Властелин колец: Братство кольца</a>
+                    <b class="famous-movies__rating">IMDb: 8.8</b>
                   </div>
 								</div>
 							</li>
@@ -888,55 +864,56 @@
 							</li>
 						</ul>
 					</nav>
-				</div>
-				<div class="movie-news__slider-container">
-					<ul class="swiper-wrapper">
-						<li class="swiper-slide">
-							<picture>
-								<source type="image/webp" srcset="./img/content/news-slide1.webp">
-								<img class="movie-news__image" src="./img/content/news-slide1.jpg" alt="Фото Фрэнсиса Форда Копполы">
-							</picture>
-							<div class="movie-news__description">
-								<b class="movie-news__date">21 октября 2019</b>
-								<p class="movie-news__text">Режиссер «Крестного отца» Фрэнсис Форд Коппола поддержал Мартина Скорсезе в критике фильмов студии Marvel..</p>
-								<a href="#" class="movie-news__text-link">Читать далее</a>
-							</div>
-						</li>
-						<li class="swiper-slide">
-							<picture>
-								<source type="image/webp" srcset="./img/content/news-slide2.webp">
-								<img class="movie-news__image" src="./img/content/news-slide2.jpg" alt="Фото Гендальфа">
-							</picture>
-							<div class="movie-news__description">
-								<b class="movie-news__date">16 июня 2020</b>
-								<p class="movie-news__text">В начале июля министерство экономического развития Новой Зеландии ослабило меры по борьбе с COVID-19..</p>
-								<a href="#" class="movie-news__text-link">Читать далее</a>
-							</div>
-						</li>
-						<li class="swiper-slide">
-							<picture>
-								<source type="image/webp" srcset="./img/content/news-slide3.webp">
-								<img class="movie-news__image" src="./img/content/news-slide3.jpg" alt="Фото Джависии Лесли">
-							</picture>
-							<div class="movie-news__description">
-								<b class="movie-news__date">9 июля 2020</b>
-								<p class="movie-news__text">Создатели сериала «Бэтвумен» выбрали новую исполнительницу главной роли: Джависия Лесли («Бог меня зафрендил») заменит во втором сезоне Руби Роуз..</p>
-								<a href="#" class="movie-news__text-link">Читать далее</a>
-							</div>
-						</li>
-						<li class="swiper-slide">
-							<picture>
-								<source type="image/webp" srcset="./img/content/news-slide4.webp">
-								<img class="movie-news__image" src="./img/content/news-slide4.jpg" alt="Фото Элизабет Дебики">
-							</picture>
-							<div class="movie-news__description">
-								<b class="movie-news__date">10 июля 2020</b>
-								<p class="movie-news__text">В беседе с Variety режиссер Кристофер Нолан признался, что изначально не планировал брать Элизабет Дебики на главную женскую роль в «Доводе»..</p>
-								<a href="#" class="movie-news__text-link">Читать далее</a>
-							</div>
-						</li>
-					</ul>
-					<div class="swiper-pagination news-pagination"></div>
+        </div>
+        <div class="movie-news__slider splide">
+					<div class="movie-news__slider-container splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
+                <picture>
+                  <source type="image/webp" srcset="./img/content/news-slide1.webp">
+                  <img class="movie-news__image" src="./img/content/news-slide1.jpg" alt="Фото Фрэнсиса Форда Копполы">
+                </picture>
+                <div class="movie-news__description">
+                  <b class="movie-news__date">21 октября 2019</b>
+                  <p class="movie-news__text">Режиссер «Крестного отца» Фрэнсис Форд Коппола поддержал Мартина Скорсезе в критике фильмов студии Marvel..</p>
+                  <a href="#" class="movie-news__text-link">Читать далее</a>
+                </div>
+							</li>
+							<li class="splide__slide">
+								<picture>
+                  <source type="image/webp" srcset="./img/content/news-slide2.webp">
+                  <img class="movie-news__image" src="./img/content/news-slide2.jpg" alt="Фото Гендальфа">
+                </picture>
+                <div class="movie-news__description">
+                  <b class="movie-news__date">16 июня 2020</b>
+                  <p class="movie-news__text">В начале июля министерство экономического развития Новой Зеландии ослабило меры по борьбе с COVID-19..</p>
+                  <a href="#" class="movie-news__text-link">Читать далее</a>
+                </div>
+							</li>
+							<li class="splide__slide">
+								<picture>
+                  <source type="image/webp" srcset="./img/content/news-slide3.webp">
+                  <img class="movie-news__image" src="./img/content/news-slide3.jpg" alt="Фото Джависии Лесли">
+                </picture>
+                <div class="movie-news__description">
+                  <b class="movie-news__date">9 июля 2020</b>
+                  <p class="movie-news__text">Создатели сериала «Бэтвумен» выбрали новую исполнительницу главной роли: Джависия Лесли («Бог меня зафрендил») заменит во втором сезоне Руби Роуз..</p>
+                  <a href="#" class="movie-news__text-link">Читать далее</a>
+                </div>
+							</li>
+							<li class="splide__slide">
+                <picture>
+                  <source type="image/webp" srcset="./img/content/news-slide4.webp">
+                  <img class="movie-news__image" src="./img/content/news-slide4.jpg" alt="Фото Элизабет Дебики">
+                </picture>
+                <div class="movie-news__description">
+                  <b class="movie-news__date">10 июля 2020</b>
+                  <p class="movie-news__text">В беседе с Variety режиссер Кристофер Нолан признался, что изначально не планировал брать Элизабет Дебики на главную женскую роль в «Доводе»..</p>
+                  <a href="#" class="movie-news__text-link">Читать далее</a>
+                </div>
+							</li>
+            </ul>
+					</div>
 				</div>
 			</section>
     </main>

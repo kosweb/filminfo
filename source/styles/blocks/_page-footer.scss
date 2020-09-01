@@ -1,9 +1,15 @@
 .page-footer {
-	position: relative;
-	padding-top: 90px;
+  position: relative;
+	padding-top: 30px;
 	padding-left: $phones-paddings;
 	padding-right: $phones-paddings;
-	padding-bottom: 25px;
+  padding-bottom: 25px;
+  background-image: linear-gradient(to bottom, $black, $space 5px);
+
+  @media (min-width: $desktop) {
+    padding-left: $desktops-paddings;
+    padding-right: $desktops-paddings;
+  }
 
 	&__logo-wrapper {
 		margin-bottom: 35px;
@@ -28,7 +34,13 @@
 		padding-left: 0;
 		display: flex;
 		justify-content: space-between;
-		list-style: none;
+    list-style: none;
+
+    @media (min-width: $tablet) {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 	}
 
 	&__nav-link {

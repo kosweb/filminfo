@@ -5,15 +5,19 @@
 	background-repeat: no-repeat;
 	background-position: center center;
   background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 80px;
 
   &__video-player {
     display: none;
   }
 
-  @media (min-width: $desktop) {
-    min-height: 500px;
+  @media (min-width: $tablet) {
     overflow: hidden;
-	  background-image: none;
+    background-image: none;
+    padding-top: 70px;
+    margin-bottom: 30px;
+    min-height: 45vw;
 
     &__video-player {
       display: block;
@@ -23,6 +27,10 @@
     }
   }
 
+  @media (min-width: $desktop) {
+    min-height: 40vw;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -30,20 +38,29 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
-    box-shadow: inset 0 30px 35px 0 $black,
-                inset 0 -35px 35px 0 $black;
+    background-image: linear-gradient(to bottom, $black 10%, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0.6) 75%, $black);
+
+    @media (min-width: $tablet) {
+      background-image: linear-gradient(to bottom, $black 1%, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0.6) 75%, $black 95%);
+    }
+
+    @media (min-width: $desktop) {
+      background-image: linear-gradient(to bottom, $black 1%, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0.6) 75%, $black 99%);
+    }
   }
 
 	&__title-wrapper {
     padding-left: $phones-paddings;
 		padding-right: $phones-paddings;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-    margin-bottom: 50px;
-		z-index: 1;
+    margin-bottom: 80px;
+    z-index: 1;
+
+    @media (min-width: $tablet) {
+      padding-left: $tablets-paddings;
+      padding-right: $tablets-paddings;
+      margin-bottom: 30px;
+    }
 
     @media (min-width: $desktop) {
       padding-left: $desktops-paddings;
@@ -51,17 +68,36 @@
     }
 
     &::before {
+      height: 150%;
+      top: -25%;
 			box-shadow: 0 0 3px 3px $black;
       opacity: 0.5;
 
-      @media (min-width: $desktop) {
+      @media (min-width: $tablet) {
         display: none;
       }
 		}
   }
 
+  &__title {
+    background-image: none;
+  }
+
 	&__link {
-		background-color: rgba(0, 0, 0, 0.3);
+    background-color: $space;
+
+    @media (min-width: $tablet) {
+      background-color: rgba(0, 22, 22, 0.3);
+      transition: background-color 0.3s;
+    }
+
+    @media (min-width: $desktop) {
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: rgba(0, 22, 22, 1);
+      }
+    }
 	}
 
 	&__title {
@@ -70,11 +106,8 @@
     box-shadow: unset;
 
     @media (min-width: $desktop) {
-      padding-left: 0;
-      padding-right: 0;
       text-align: left;
-      margin-right: auto;
-      margin-left: 0;
+      background-image: none !important;
     }
 
 		.main-title__stroke {
@@ -94,6 +127,12 @@
 
     padding-left: $phones-paddings;
     padding-right: $phones-paddings;
+
+    @media (min-width: $tablet) {
+      padding-left: $tablets-paddings;
+      padding-right: $tablets-paddings;
+      width: 400px;
+    }
 
     @media (min-width: $desktop) {
       padding-left: $desktops-paddings;
