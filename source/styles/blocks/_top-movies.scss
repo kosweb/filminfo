@@ -84,12 +84,7 @@
   }
 
 	&__link {
-    background-color: $space;
-
-    @media (min-width: $tablet) {
-      transition: background-color 0.3s;
-      background-color: rgba(0, 22, 22, 0.3);
-    }
+    background-color: rgba(0, 22, 22, 0.3);
 
     @media (min-width: $desktop) {
       transition: background-color 0.3s, box-shadow 0.3s;
