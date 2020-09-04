@@ -4,7 +4,7 @@
 	padding-left: $phones-paddings;
 	padding-right: $phones-paddings;
   padding-bottom: 25px;
-  background-image: linear-gradient(to bottom, $black, $space 5px);
+  background-image: linear-gradient(to bottom, $black, $space-light);
 
   @media (min-width: $desktop) {
     padding-left: $desktops-paddings;
@@ -28,31 +28,49 @@
 		}
   }
 
-	&__nav-list {
-		margin-top: 0;
-		margin-bottom: 0;
-		padding-left: 0;
-		display: flex;
-		justify-content: space-between;
-    list-style: none;
+  &__like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @media (min-width: $tablet) {
-      width: 75%;
-      margin-left: auto;
-      margin-right: auto;
+    &-tap {
+      padding: 12px 10px;
+      // min-width: 110px;
+      min-height: 60px;
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-image: url('../img/content/heart.svg');
+      background-size: 30px 30px;
+      background-position: left center;
+      opacity: 0.7;
+      cursor: pointer;
+
+      &:focus {
+        opacity: 1;
+      }
+
+      @media (min-width: $desktop) {
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
-	}
 
-	&__nav-link {
-    color: $white;
-		text-transform: uppercase;
-		text-decoration: none;
-    font-size: 16px;
-    transition: color 0.2s;
+    &--added {
+      background-image: url('../img/content/heart-fill.svg');
+    }
 
-    &:hover,
-    &:active {
-		  color: $turquoise;
-		}
-	}
+    &-number {
+      color: $turquoise;
+      margin-left: 30px;
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
 }

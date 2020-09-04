@@ -78,7 +78,6 @@
 
 	&__nav-link {
 		color: $turquoise;
-		text-transform: uppercase;
 		text-decoration: none;
     font-size: 13px;
 
@@ -141,6 +140,7 @@
     }
 
     &__pagination {
+      display: flex;
       padding-left: 20px !important;
       padding-right: 20px;
       position: absolute;
@@ -154,11 +154,15 @@
       }
 
       &__page {
-        width: 15px;
-        height: 15px;
+        height: 10px;
+        width: 35px;
+        display: block;
+        border-radius: 15px;
+        align-items: center;
+        flex: none;
+        align-self: center;
         background-color: transparent;
         border: 1px solid $turquoise;
-        border-radius: 50%;
         transition: background-color 0.2s;
 
         @media (min-width: 600px) {

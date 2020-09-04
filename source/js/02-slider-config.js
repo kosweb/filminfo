@@ -71,6 +71,7 @@ const fmsSlider = new Splide('.famous-movies__slider', {
   breakpoints: {
 		600: {
       pagination: true,
+      speed: 400,
       perPage: 1,
       perMove: 1,
       padding: {
@@ -81,6 +82,7 @@ const fmsSlider = new Splide('.famous-movies__slider', {
 
 		1280: {
       pagination: true,
+      speed: 400,
       perPage: 2,
       perMove: 2,
       gap: 20,
@@ -96,15 +98,15 @@ const fmsSlider = new Splide('.famous-movies__slider', {
 const newsSlider = new Splide('.movie-news__slider', {
   arrows: false,
   destroy: true,
+  pagination: false,
 
   breakpoints: {
 		600: {
+      pagination: true,
       perPage: 1,
       perMove: 1,
       rewind : true,
-      speed: 150,
       gap: 25,
-      pagination: true,
       padding: {
         left : 0,
         right: 0,
@@ -113,6 +115,7 @@ const newsSlider = new Splide('.movie-news__slider', {
 
 		1280: {
       destroy: false,
+      pagination: true,
       perPage: 2,
       perMove: 2,
       gap: 20,
