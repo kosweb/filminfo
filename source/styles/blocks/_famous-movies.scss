@@ -164,9 +164,10 @@
         align-items: center;
         flex: none;
         align-self: center;
-        background-color: transparent;
+        background-color: $turquoise;
         border: 1px solid $turquoise;
-        transition: background-color 0.2s;
+        opacity: 0.3;
+        transition: background-color 0.2s opacity 0.2s;
 
         @media (min-width: 600px) {
           margin-left: 20px;
@@ -175,7 +176,7 @@
       }
 
       .is-active {
-        background-color: $turquoise;
+        opacity: 1;
       }
     }
 	}
