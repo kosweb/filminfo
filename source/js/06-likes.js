@@ -1,11 +1,12 @@
 let heart = document.querySelector('.page-footer__like-tap');
 let likesNumber = document.querySelector('.page-footer__like-number');
+let counter = 0;
 
 heart.onclick = function () {
   if (heart.classList.contains('page-footer__like--added')) {
-    likesNumber.textContent--;
+    counter--;
   } else {
-    likesNumber.textContent++;
+    counter++;
   }
   heart.classList.toggle('page-footer__like--added');
 };
