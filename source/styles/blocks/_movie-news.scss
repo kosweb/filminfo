@@ -141,6 +141,7 @@
 
     &__pagination {
       display: flex;
+      flex-wrap: nowrap;
       padding-left: 20px !important;
       padding-right: 20px;
       position: absolute;
@@ -154,17 +155,14 @@
       }
 
       &__page {
-        height: 10px;
-        width: 35px;
-        display: block;
+        height: 3px;
         border-radius: 15px;
-        align-items: center;
         flex: none;
         align-self: center;
         background-color: $turquoise;
         border: 1px solid $turquoise;
         opacity: 0.3;
-        transition: background-color 0.2s opacity 0.2s;
+        transition: opacity 0.2s;
 
         @media (min-width: 600px) {
           margin-left: 20px;

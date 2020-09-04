@@ -147,6 +147,7 @@
       padding-right: 20px;
       position: absolute;
       display: flex;
+      flex-wrap: nowrap;
       justify-content: space-between;
       top: 10px !important;
       padding-left: 0;
@@ -157,17 +158,14 @@
       }
 
       &__page {
-        height: 10px;
-        width: 35px;
-        display: block;
+        height: 3px;
         border-radius: 15px;
-        align-items: center;
         flex: none;
         align-self: center;
         background-color: $turquoise;
         border: 1px solid $turquoise;
         opacity: 0.3;
-        transition: background-color 0.2s opacity 0.2s;
+        transition: opacity 0.2s;
 
         @media (min-width: 600px) {
           margin-left: 20px;
@@ -218,6 +216,8 @@
 	&__poster {
     pointer-events: none;
     box-shadow: 0 3px 3px 1px $black;
+    margin-left: auto;
+    margin-right: auto;
 
     @media (min-width: $desktop) {
       transition: filter 0.2s;

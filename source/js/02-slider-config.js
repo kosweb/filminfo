@@ -19,6 +19,7 @@ const headerSlider = new Splide('.page-header__slider-container', {
 const exSlider = new Splide('.extended-films__slider', {
   rewind : true,
   pagination: false,
+  flickVelocityThreshold: 0.6,
   speed: 125,
   gap: 25,
   perPage: 5,
@@ -29,18 +30,43 @@ const exSlider = new Splide('.extended-films__slider', {
   },
 
   breakpoints: {
-		1280: {
-     destroy: true,
-		},
+    760: {
+      pagination: true,
+      gap: 10,
+      speed: 300,
+      perPage: 2,
+      perMove: 1,
+      flickVelocityThreshold: 500,
+      focus: 'center',
+      padding: {
+        left : 5,
+        right: 5,
+      },
+    },
+
+    1280: {
+      pagination: true,
+      gap: 10,
+      speed: 300,
+      perPage: 3,
+      perMove: 1,
+      focus: 0,
+      flickVelocityThreshold: 500,
+      padding: {
+        left : 5,
+        right: 5,
+      },
+    }
   },
 }).mount();
 
 
 const digitalSlider = new Splide('.digital-release__slider', {
   rewind : true,
+  pagination: false,
   gap: 25,
   speed: 125,
-  pagination: false,
+  flickVelocityThreshold: 0.6,
   perPage: 5,
   perMove: 1,
   padding: {
@@ -49,16 +75,40 @@ const digitalSlider = new Splide('.digital-release__slider', {
   },
 
   breakpoints: {
-		1280: {
-     destroy: true,
-		},
+		767: {
+      pagination: true,
+      flickVelocityThreshold: 500,
+      gap: 10,
+      speed: 300,
+      perPage: 2,
+      focus: 'center',
+      perMove: 1,
+      padding: {
+        left : 5,
+        right: 5,
+      },
+    },
+
+    1280: {
+      flickVelocityThreshold: 500,
+      pagination: true,
+      gap: 10,
+      speed: 300,
+      focus: 0,
+      perPage: 4,
+      perMove: 1,
+      padding: {
+        left : 5,
+        right: 5,
+      },
+    }
   },
 }).mount();
 
 
 const fmsSlider = new Splide('.famous-movies__slider', {
   rewind : true,
-  pagination: false,
+  flickVelocityThreshold: 0.6,
   speed: 150,
   gap: 25,
   perPage: 3,
@@ -70,8 +120,8 @@ const fmsSlider = new Splide('.famous-movies__slider', {
 
   breakpoints: {
 		600: {
-      pagination: true,
-      speed: 400,
+      speed: 300,
+      flickVelocityThreshold: 500,
       perPage: 1,
       perMove: 1,
       padding: {
@@ -81,10 +131,12 @@ const fmsSlider = new Splide('.famous-movies__slider', {
     },
 
 		1280: {
+      focus: 'center',
+      flickVelocityThreshold: 500,
       pagination: true,
-      speed: 400,
+      speed: 300,
       perPage: 2,
-      perMove: 2,
+      perMove: 1,
       gap: 20,
       padding: {
         left : 20,
@@ -99,10 +151,12 @@ const newsSlider = new Splide('.movie-news__slider', {
   arrows: false,
   destroy: true,
   pagination: false,
+  flickVelocityThreshold: 0.6,
 
   breakpoints: {
 		600: {
       pagination: true,
+      flickVelocityThreshold: 500,
       perPage: 1,
       perMove: 1,
       rewind : true,
@@ -114,10 +168,12 @@ const newsSlider = new Splide('.movie-news__slider', {
     },
 
 		1280: {
+      focus: 'center',
+      flickVelocityThreshold: 500,
       destroy: false,
       pagination: true,
       perPage: 2,
-      perMove: 2,
+      perMove: 1,
       gap: 20,
       padding: {
         left : 20,
