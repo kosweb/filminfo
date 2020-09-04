@@ -110,6 +110,7 @@ const fmsSlider = new Splide('.famous-movies__slider', {
   rewind : true,
   flickVelocityThreshold: 0.6,
   speed: 150,
+  pagination: false,
   gap: 25,
   perPage: 3,
   perMove: 1,
@@ -122,6 +123,7 @@ const fmsSlider = new Splide('.famous-movies__slider', {
 		600: {
       speed: 300,
       flickVelocityThreshold: 500,
+      pagination: true,
       perPage: 1,
       perMove: 1,
       padding: {
